@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DD8B0738-2C6A-4EA9-88E8-050893DE6854}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cs_Gerencial.Infra.Data</RootNamespace>
+    <AssemblyName>Cs_Gerencial.Infra.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.9\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Contexto\Context.cs" />
+    <Compile Include="EntityConfig\AdicionalConfig.cs" />
+    <Compile Include="EntityConfig\AtribuicoesConfig.cs" />
+    <Compile Include="EntityConfig\BancosConfig.cs" />
+    <Compile Include="EntityConfig\CompraSeloConfig.cs" />
+    <Compile Include="EntityConfig\ConjuntosConfig.cs" />
+    <Compile Include="EntityConfig\ContasConfig.cs" />
+    <Compile Include="EntityConfig\FornecedoresConfig.cs" />
+    <Compile Include="EntityConfig\IndisponibilidadesConfig.cs" />
+    <Compile Include="EntityConfig\LogSistemaConfig.cs" />
+    <Compile Include="EntityConfig\MunicipiosCensecConfig.cs" />
+    <Compile Include="EntityConfig\MunicipiosConfig.cs" />
+    <Compile Include="EntityConfig\NacionalidadesConfig.cs" />
+    <Compile Include="EntityConfig\NacionalidadesOnuConfig.cs" />
+    <Compile Include="EntityConfig\ParametrosConfig.cs" />
+    <Compile Include="EntityConfig\ParticipantesConfig.cs" />
+    <Compile Include="EntityConfig\PessoasConfig.cs" />
+    <Compile Include="EntityConfig\PlanosConfig.cs" />
+    <Compile Include="EntityConfig\SelosConfig.cs" />
+    <Compile Include="EntityConfig\SeriesConfig.cs" />
+    <Compile Include="EntityConfig\ServentiaConfig.cs" />
+    <Compile Include="EntityConfig\ServentiasOutrasConfig.cs" />
+    <Compile Include="EntityConfig\TabelaCustasConfig.cs" />
+    <Compile Include="EntityConfig\UsuarioConfig.cs" />
+    <Compile Include="Migrations\201802191354186_Inicial.cs" />
+    <Compile Include="Migrations\201802191354186_Inicial.Designer.cs">
+      <DependentUpon>201802191354186_Inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802211748578_AddEstado.cs" />
+    <Compile Include="Migrations\201802211748578_AddEstado.Designer.cs">
+      <DependentUpon>201802211748578_AddEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Repositorios\RepositorioAdicional.cs" />
+    <Compile Include="Repositorios\RepositorioAtribuicoes.cs" />
+    <Compile Include="Repositorios\RepositorioBancos.cs" />
+    <Compile Include="Repositorios\RepositorioBase.cs" />
+    <Compile Include="Repositorios\RepositorioCompraSelo.cs" />
+    <Compile Include="Repositorios\RepositorioConjuntos.cs" />
+    <Compile Include="Repositorios\RepositorioContas.cs" />
+    <Compile Include="Repositorios\RepositorioFornecedores.cs" />
+    <Compile Include="Repositorios\RepositorioIndisponibilidades.cs" />
+    <Compile Include="Repositorios\RepositorioLogSistema.cs" />
+    <Compile Include="Repositorios\RepositorioMunicipios.cs" />
+    <Compile Include="Repositorios\RepositorioMunicipiosCensec.cs" />
+    <Compile Include="Repositorios\RepositorioNacionalidades.cs" />
+    <Compile Include="Repositorios\RepositorioNacionalidadesOnu.cs" />
+    <Compile Include="Repositorios\RepositorioParametros.cs" />
+    <Compile Include="Repositorios\RepositorioParticipantes.cs" />
+    <Compile Include="Repositorios\RepositorioPessoas.cs" />
+    <Compile Include="Repositorios\RepositorioPlanos.cs" />
+    <Compile Include="Repositorios\RepositorioSelos.cs" />
+    <Compile Include="Repositorios\RepositorioSeries.cs" />
+    <Compile Include="Repositorios\RepositorioServentia.cs" />
+    <Compile Include="Repositorios\RepositorioServentiasOutras.cs" />
+    <Compile Include="Repositorios\RepositorioTabelaCustas.cs" />
+    <Compile Include="Repositorios\RepositorioUsuario.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CrossCutting\CrossCutting.csproj">
+      <Project>{55afceee-fe18-40c1-8d1c-eec0488f5916}</Project>
+      <Name>CrossCutting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cs_Gerencial.Dominio\Cs_Gerencial.Dominio.csproj">
+      <Project>{78b0b9b9-f686-410f-a6cb-9ac972f6c71b}</Project>
+      <Name>Cs_Gerencial.Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201802191354186_Inicial.resx">
+      <DependentUpon>201802191354186_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802211748578_AddEstado.resx">
+      <DependentUpon>201802211748578_AddEstado.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

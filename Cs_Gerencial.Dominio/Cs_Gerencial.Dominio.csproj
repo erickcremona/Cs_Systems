@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\xunit.core.2.1.0\build\portable-net45+win8+wp8+wpa81\xunit.core.props" Condition="Exists('..\packages\xunit.core.2.1.0\build\portable-net45+win8+wp8+wpa81\xunit.core.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{78B0B9B9-F686-410F-A6CB-9AC972F6C71B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cs_Gerencial.Dominio</RootNamespace>
+    <AssemblyName>Cs_Gerencial.Dominio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>b36aa0fa</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.assert, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.assert.2.1.0\lib\dotnet\xunit.assert.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.core.2.1.0\lib\dotnet\xunit.core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\packages\xunit.extensibility.execution.2.1.0\lib\net45\xunit.execution.desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Adicional.cs" />
+    <Compile Include="Entities\Participantes.cs" />
+    <Compile Include="Entities\Pessoas.cs" />
+    <Compile Include="Entities\TabelaCustas.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioAdicional.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioParticipantes.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioPessoas.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioTabelaCustas.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoAdicional.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoParticipantes.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoPessoas.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoTabelaCustas.cs" />
+    <Compile Include="Servicos\ServicoAdicional.cs" />
+    <Compile Include="Servicos\ServicoParticipantes.cs" />
+    <Compile Include="Servicos\ServicoPessoas.cs" />
+    <Compile Include="Servicos\ServicoTabelaCustas.cs" />
+    <Compile Include="ValuesObject\LeituraArquivoSeloComprado.cs" />
+    <Compile Include="Entities Xsd\ordem.cs" />
+    <Compile Include="Entities\Atribuicoes.cs" />
+    <Compile Include="Entities\Bancos.cs" />
+    <Compile Include="Entities\CompraSelo.cs" />
+    <Compile Include="Entities\Conjuntos.cs" />
+    <Compile Include="Entities\Contas.cs" />
+    <Compile Include="Entities\Fornecedores.cs" />
+    <Compile Include="Entities\Indisponibilidades.cs" />
+    <Compile Include="Entities\LogSistema.cs" />
+    <Compile Include="Entities\Municipios.cs" />
+    <Compile Include="Entities\MunicipiosCensec.cs" />
+    <Compile Include="Entities\Nacionalidades.cs" />
+    <Compile Include="Entities\NacionalidadesOnu.cs" />
+    <Compile Include="Entities\Parametros.cs" />
+    <Compile Include="Entities\Planos.cs" />
+    <Compile Include="Entities\Selos.cs" />
+    <Compile Include="Entities\Series.cs" />
+    <Compile Include="Entities\Serventia.cs" />
+    <Compile Include="Entities\ServentiasOutras.cs" />
+    <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioAtribuicoes.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioIndisponibilidades.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioBancos.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioBase.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioCompraSelo.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioConjuntos.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioContas.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioFornecedores.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioLogSistema.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioMunicipios.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioMunicipiosCensec.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioNacionalidades.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioNacionalidadesOnu.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioParametros.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioPlanos.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioSelos.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioSeries.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioServentia.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioServentiasOutras.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioUsuario.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoAtribuicoes.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoBancos.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoBase.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoCompraSelo.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoConjuntos.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoContas.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoFornecedores.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoIndisponibilidades.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoLogSistema.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoMunicipios.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoMunicipiosCensec.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoNacionalidades.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoNacionalidadesOnu.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoParametros.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoPlanos.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoSelos.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoSeries.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoServentia.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoServentiasOutras.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoUsuario.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicos\ServicoAtribuicoes.cs" />
+    <Compile Include="Servicos\ServicoBancos.cs" />
+    <Compile Include="Servicos\ServicoBase.cs" />
+    <Compile Include="Servicos\ServicoCompraSelo.cs" />
+    <Compile Include="Servicos\ServicoConjuntos.cs" />
+    <Compile Include="Servicos\ServicoContas.cs" />
+    <Compile Include="Servicos\ServicoFornecedores.cs" />
+    <Compile Include="Servicos\ServicoIndisponibilidades.cs" />
+    <Compile Include="Servicos\ServicoLogSistema.cs" />
+    <Compile Include="Servicos\ServicoMunicipios.cs" />
+    <Compile Include="Servicos\ServicoMunicipiosCensec.cs" />
+    <Compile Include="Servicos\ServicoNacionalidades.cs" />
+    <Compile Include="Servicos\ServicoNacionalidadesOnu.cs" />
+    <Compile Include="Servicos\ServicoParametros.cs" />
+    <Compile Include="Servicos\ServicoPlanos.cs" />
+    <Compile Include="Servicos\ServicoSelos.cs" />
+    <Compile Include="Servicos\ServicoSeries.cs" />
+    <Compile Include="Servicos\ServicoServentia.cs" />
+    <Compile Include="Servicos\ServicoServentiasOutras.cs" />
+    <Compile Include="Servicos\ServicoUsuario.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\xunit.core.2.1.0\build\portable-net45+win8+wp8+wpa81\xunit.core.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\xunit.core.2.1.0\build\portable-net45+win8+wp8+wpa81\xunit.core.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,212 @@
+﻿<Window x:Class="Cs_Notas.Windows.Principal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         Title="Sistema Notas" MinWidth="1019" MinHeight="700" Height="504" Width="982" Loaded="Window_Loaded" Closed="Window_Closed" Icon="/Cs_Notas;component/Notas.ico" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFA3FFFF" Offset="0"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Grid>
+        <StatusBar Height="28" VerticalAlignment="Bottom" Background="#FF4F4F4F" >
+            <Label Name="lblNomeUsuario" Content="Nome Usuário" Width="906" Height="28" Background="#FF4F4F4F" Foreground="AliceBlue" />
+        </StatusBar>
+
+        <Menu Height="22" VerticalAlignment="Top" Background="#FF4F4F4F">
+            <MenuItem Header="Arquivo" Foreground="AliceBlue">
+                <MenuItem Name="MenuItemReservaSelo" Header="Reservar Selo" Background="#FF4F4F4F" Foreground="AliceBlue" MouseEnter="MenuItemReservaSelo_MouseEnter" MouseLeave="MenuItemReservaSelo_MouseLeave" Click="MenuItemReservaSelo_Click">
+                    <MenuItem.Icon>
+                        <Image  Width="20" Height="20" Source="/Cs_Notas;component/Imagens/SeloEletronico.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="MenuItemSerieSelo" Header="Série de Selo" Background="#FF4F4F4F" Foreground="AliceBlue" MouseEnter="MenuItemSerieSelo_MouseEnter" MouseLeave="MenuItemSerieSelo_MouseLeave" Click="MenuItemSerieSelo_Click">
+                    <MenuItem.Icon>
+                        <Image  Width="20" Height="20" Source="/Cs_Notas;component/Imagens/AlterarSerieSelo.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Relatórios" Foreground="AliceBlue">
+
+            </MenuItem>
+            <MenuItem Header="Cadastros" Foreground="AliceBlue">
+                <MenuItem Name="MenuItemCadUsuario" Header="Usuários" Background="#FF4F4F4F" Foreground="AliceBlue" MouseEnter="MenuItemCadUsuario_MouseEnter" MouseLeave="MenuItemCadUsuario_MouseLeave" Click="MenuItemCadUsuario_Click">
+                    <MenuItem.Icon>
+                        <Image  Width="20" Height="20" Source="/Cs_Notas;component/Imagens/CadUsuario.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Consultas" Foreground="AliceBlue">
+                <MenuItem Background="#FF4F4F4F" Name="menuBtnConsultarEscrituras" Header="Escrituras" MouseEnter="menuBtnConsultarEscrituras_MouseEnter" MouseLeave="menuBtnConsultarEscrituras_MouseLeave" Foreground="AliceBlue" Click="menuBtnConsultarEscrituras_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Cs_Notas;component/Imagens/EscrituraMenu.png" Height="19" Width="21"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Background="#FF4F4F4F" Name="menuBtnConsultarProcuracao" Header="Procuração" Foreground="AliceBlue" MouseEnter="menuBtnConsultarProcuracao_MouseEnter" MouseLeave="menuBtnConsultarProcuracao_MouseLeave" Click="menuBtnConsultarProcuracao_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Cs_Notas;component/Imagens/ProcuracaoMenu.png" Height="21" Width="21"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Background="#FF4F4F4F" Name="menuBtnConsultarTestamento" Header="Testamento" Foreground="AliceBlue" MouseEnter="menuBtnConsultarTestamento_MouseEnter" MouseLeave="menuBtnConsultarTestamento_MouseLeave" Click="menuBtnConsultarTestamento_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/Cs_Notas;component/Imagens/TestamentoMenu.png" Height="21" Width="21"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Configurações" Foreground="AliceBlue">
+                <MenuItem Header="Importar Base de Dados" Name="MenuItemExportarBaseDados" Foreground="AliceBlue" Background="#FF4F4F4F" MouseEnter="MenuItemExportarBaseDados_MouseEnter" MouseLeave="MenuItemExportarBaseDados_MouseLeave" Click="MenuItemExportarBaseDados_Click">
+                    <MenuItem.Icon>
+                        <Image  Width="20" Height="20" Source="/Cs_Notas;component/Imagens/SeloEletronico.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Atualizar Custas 2018" Name="MenuItemAtualizarCustas" Foreground="AliceBlue" Background="#FF4F4F4F" MouseEnter="MenuItemAtualizarCustas_MouseEnter" MouseLeave="MenuItemAtualizarCustas_MouseLeave" Click="MenuItemAtualizarCustas_Click">
+                    <MenuItem.Icon>
+                        <Image  Width="20" Height="20" Source="/Cs_Notas;component/Imagens/Dinheiro.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+
+        </Menu>
+        <Viewbox Margin="300,213,340,281" x:Name="viewbox1">
+            <Image Height="196" x:Name="image1" Stretch="Fill" Width="215" Source="/Cs_Notas;component/Imagens/Notas.png" />
+        </Viewbox>
+        <ToolBarPanel Height="56" Margin="0,27,0,0" VerticalAlignment="Top" Orientation="Horizontal">
+            <ToolBarPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFA3FFFF" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </ToolBarPanel.Background>
+            <StackPanel Width="4" Background="#FFA4A4A4"/>
+            <Button x:Name="btnEscritura" Padding="0" BorderThickness="0" Cursor="Hand" Width="70" ToolTip="Digitar Escritura" Height="56" VerticalAlignment="Top" Click="btnEscritura_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="36" Width="36">
+                            <TextBlock.Background>
+                                <ImageBrush ImageSource="/Cs_Notas;component/Imagens/Escritura.png"/>
+                            </TextBlock.Background>
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Style.Triggers>
+                                        <Trigger Property ="IsMouseOver" Value="True">
+                                            <Setter Property= "Background" Value="Transparent"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <StackPanel Width="4" Background="#FFA4A4A4"/>
+            <Button x:Name="btnProcuração" Padding="0" BorderThickness="0" Cursor="Hand" Width="70" ToolTip="Digitar Procuração" Height="56" VerticalAlignment="Top" Click="btnProcuração_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="36" Width="36">
+                            <TextBlock.Background>
+                                <ImageBrush ImageSource="/Cs_Notas;component/Imagens/Procuracao.png"/>
+                            </TextBlock.Background>
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Style.Triggers>
+                                        <Trigger Property ="IsMouseOver" Value="True">
+                                            <Setter Property= "Background" Value="Transparent"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <StackPanel Width="4" Background="#FFA4A4A4"/>
+            <Button x:Name="btnTestamento" Padding="0" BorderThickness="0" Cursor="Hand" Width="70" ToolTip="Digitar Testamento" Height="56" VerticalAlignment="Top" Click="btnTestamento_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="36" Width="36">
+                            <TextBlock.Background>
+                                <ImageBrush ImageSource="/Cs_Notas;component/Imagens/Testamento.png"/>
+                            </TextBlock.Background>
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Style.Triggers>
+                                        <Trigger Property ="IsMouseOver" Value="True">
+                                            <Setter Property= "Background" Value="Transparent"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <StackPanel Width="4" Background="#FFA4A4A4"/>
+            <Button x:Name="btnCertidao" Padding="0" BorderThickness="0" Cursor="Hand" Width="70" ToolTip="Digitar Certidão" Height="56" VerticalAlignment="Top" Click="btnCertidao_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="36" Width="36">
+                            <TextBlock.Background>
+                                <ImageBrush ImageSource="/Cs_Notas;component/Imagens/Certidao.png"/>
+                            </TextBlock.Background>
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Style.Triggers>
+                                        <Trigger Property ="IsMouseOver" Value="True">
+                                            <Setter Property= "Background" Value="Transparent"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <StackPanel Width="4" Background="#FFA4A4A4"/>
+            <Button x:Name="btnConsulta" Padding="0" BorderThickness="0" Cursor="Hand" Width="70" ToolTip="Consultar Atos" Height="56" VerticalAlignment="Top" Click="btnConsulta_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="36" Width="36">
+                            <TextBlock.Background>
+                                <ImageBrush ImageSource="/Cs_Notas;component/Imagens/Lupa grande.png"/>
+                            </TextBlock.Background>
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Style.Triggers>
+                                        <Trigger Property ="IsMouseOver" Value="True">
+                                            <Setter Property= "Background" Value="Transparent"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <StackPanel Width="4" Background="#FFA4A4A4"/>
+        </ToolBarPanel>
+        <Label x:Name="lblNomeCartorio" Content="" Margin="0,0,0,28" VerticalAlignment="Bottom" FontSize="20" FontFamily="Castellar" FontWeight="Bold" Foreground="#FF383838"/>
+        <StackPanel Background="#FFA4A4A4" Margin="0,83,0,0" Height="23" VerticalAlignment="Top">
+            <Label Content="  Escritura       Procuração    Testamento      Certidão      Consutar Atos" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1011" Height="23" Foreground="#FF252525"/>
+
+        </StackPanel>
+        <StackPanel Background="#FFA4A4A4" Margin="0,22,0,0" Height="5" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

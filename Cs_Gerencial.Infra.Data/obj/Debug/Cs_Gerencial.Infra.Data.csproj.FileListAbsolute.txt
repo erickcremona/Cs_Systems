@@ -1,0 +1,220 @@
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll.config
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.dll
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.dll
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.xml
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll.config
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll.config
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.xml
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.Entity.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.Inicial.resources
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csproj.GenerateResource.Cache
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\CrossCutting.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\CrossCutting.pdb
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll.config
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\CrossCutting.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\CrossCutting.pdb
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll.config
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\CrossCutting.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\CrossCutting.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.xml
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.Inicial.resources
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csproj.GenerateResource.Cache
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll.config
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\CrossCutting.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\CrossCutting.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.xml
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.Inicial.resources
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csproj.GenerateResource.Cache
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll.config
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\CrossCutting.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\CrossCutting.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.xml
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csprojResolveAssemblyReference.cache
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\xunit.execution.desktop.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\xunit.execution.desktop.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll.config
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\CrossCutting.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\CrossCutting.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.xml
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csprojResolveAssemblyReference.cache
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.Inicial.resources
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.UpdateAdicional.resources
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.UpdateServentiasOutras.resources
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.AddCustas.resources
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.AlterarParametros.resources
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csproj.GenerateResource.Cache
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\xunit.execution.desktop.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll.config
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\CrossCutting.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\CrossCutting.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.xml
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csprojResolveAssemblyReference.cache
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.Inicial.resources
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.UpdateAdicional.resources
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.UpdateServentiasOutras.resources
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.AddCustas.resources
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.AlterarParametros.resources
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csproj.GenerateResource.Cache
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\xunit.execution.desktop.dll
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll.config
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\CrossCutting.dll
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.dll
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.dll
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\CrossCutting.pdb
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.xml
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csprojResolveAssemblyReference.cache
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.Inicial.resources
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.UpdateAdicional.resources
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.UpdateServentiasOutras.resources
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.AddCustas.resources
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.AlterarParametros.resources
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csproj.GenerateResource.Cache
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\ERICK\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.Inicial.resources
+C:\Users\ERICK\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csproj.GenerateResource.Cache
+C:\Users\ERICK\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.AddEstado.resources
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\xunit.execution.desktop.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll.config
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\CrossCutting.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\CrossCutting.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.xml
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csprojResolveAssemblyReference.cache
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.Inicial.resources
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.AddEstado.resources
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csproj.GenerateResource.Cache
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\xunit.execution.desktop.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll.config
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\CrossCutting.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\CrossCutting.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.xml
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csprojResolveAssemblyReference.cache
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.Inicial.resources
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.Migrations.AddEstado.resources
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.csproj.GenerateResource.Cache
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Infra.Data\obj\Debug\Cs_Gerencial.Infra.Data.pdb

@@ -1,0 +1,64 @@
+﻿<Window x:Class="Cs_Notas.Windows.SerieSeloAtual"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Série Selo Atual" Height="321" Width="471" WindowState="Normal" ShowInTaskbar="False" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Icon="/Cs_Notas;component/Imagens/Notas.ico" Background="#FFE6F2F9" Loaded="Window_Loaded" PreviewKeyDown="Window_PreviewKeyDown">
+    <Grid RenderTransformOrigin="0.475,0.504">
+        <Button x:Name="btnSalvar" TabIndex="6" Padding="0" BorderThickness="0" Cursor="Hand" ToolTip="Salvar" Height="50" VerticalAlignment="Top" RenderTransformOrigin="-0.357,0.569" Margin="200,223,0,0" Click="btnSalvar_Click" HorizontalAlignment="Left" Width="65">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <TextBlock Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="40" Width="50">
+                        <TextBlock.Background>
+                            <ImageBrush ImageSource="/Cs_Notas;component/Imagens/Check.png"/>
+                        </TextBlock.Background>
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Style.Triggers>
+                                    <Trigger Property ="IsMouseOver" Value="True">
+                                        <Setter Property= "Background" Value="Transparent"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </DataTemplate>
+            </Button.ContentTemplate>
+        </Button>
+        <GroupBox Header="Série Selecionda" Height="107" Margin="9,111,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="435">
+            <Grid Margin="0,0,-2,-1">
+                <Label Content="Letra:" HorizontalAlignment="Left" Margin="11,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.5" Height="24" Width="47"/>
+                <TextBox x:Name="txtSerieLetra" HorizontalAlignment="Left" Height="24" Margin="62,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" IsReadOnly="True" IsReadOnlyCaretVisible="True" Background="#FFD6F7F7"/>
+                <Label Content="Inicial:" HorizontalAlignment="Left" Margin="146,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.5" Height="24" Width="51"/>
+                <TextBox x:Name="txtSerieInicial" HorizontalAlignment="Left" Height="24" Margin="199,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" IsReadOnly="True" IsReadOnlyCaretVisible="True" Background="#FFD6F7F7"/>
+                <Label Content="Final:" HorizontalAlignment="Left" Margin="282,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.5" Height="24" Width="46"/>
+                <TextBox x:Name="txtSerieFinal" HorizontalAlignment="Left" Height="24" Margin="332,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" IsReadOnly="True" IsReadOnlyCaretVisible="True" Background="#FFD6F7F7"/>
+                <Label Content="Qtd:" HorizontalAlignment="Left" Margin="19,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.5" Height="24" Width="39"/>
+                <TextBox x:Name="txtSerieQtd" HorizontalAlignment="Left" Height="24" Margin="62,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" IsReadOnly="True" IsReadOnlyCaretVisible="True" Background="#FFD6F7F7"/>
+                <Label Content="Utiliz.:" HorizontalAlignment="Left" Margin="146,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.5" Height="24" Width="51"/>
+                <TextBox x:Name="txtSerieUtilizado" HorizontalAlignment="Left" Height="24" Margin="199,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" IsReadOnly="True" IsReadOnlyCaretVisible="True" Background="#FFD6F7F7"/>
+                <Label Content="Livre:" HorizontalAlignment="Left" Margin="282,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.5" Height="24" Width="46"/>
+                <TextBox x:Name="txtSerieLivre" HorizontalAlignment="Left" Height="24" Margin="332,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" IsReadOnly="True" IsReadOnlyCaretVisible="True" Background="#FFD6F7F7"/>
+            </Grid>
+        </GroupBox>
+        <DataGrid AutoGenerateColumns="False" Cursor="Hand" AlternationCount="2" RowBackground="White" AlternatingRowBackground="#FFD0E8B9" IsReadOnly="True" SelectionMode="Single" x:Name="dataGridSeriesDisponiveis" AllowDrop="False" HeadersVisibility="All" CanUserResizeRows="False" SelectionUnit="FullRow" GridLinesVisibility="None" ClipboardCopyMode="ExcludeHeader" HorizontalScrollBarVisibility="Auto" UseLayoutRounding="True" Background="{x:Null}" IsTabStop="True" Height="106" VerticalAlignment="Top" SelectionChanged="dataGridSeriesDisponiveis_SelectionChanged" HorizontalAlignment="Left" Width="433" Margin="11,0,0,0">
+            <DataGrid.CellStyle>
+                <Style TargetType="{x:Type DataGridCell}">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#FF0086FF" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id Série" Width="105" Binding="{Binding SerieId}" CanUserResize="False" Visibility="Visible"/>
+                <DataGridTextColumn Header="Letra" Width="100" Binding="{Binding Letra}" CanUserResize="False"/>
+                <DataGridTextColumn Header="Inicial" Width="100" Binding="{Binding Inicial, StringFormat=\{0:00000\}}" CanUserResize="False"/>
+                <DataGridTextColumn Header="Final" Width="100" Binding="{Binding Final, StringFormat=\{0:00000\}}" CanUserResize="False"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>

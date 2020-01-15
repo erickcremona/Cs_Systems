@@ -1,0 +1,214 @@
+﻿<Window x:Class="Cs_Gerencial.Windows.Principal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Sistema Gerencial" MinWidth="1019" MinHeight="700" Height="504" Width="982" Loaded="Window_Loaded" Closed="Window_Closed" Icon="/Cs_Gerencial;component/Gerencial.ico" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFFFD5A3" Offset="0"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Grid>
+        <StatusBar Height="28" VerticalAlignment="Bottom" Background="#FF4F4F4F" >
+            <Label Name="lblNomeUsuario" Content="Nome Usuário" Width="906" Height="28" Background="#FF4F4F4F" Foreground="#FFF1BF77" />
+        </StatusBar>
+        <Menu Height="22" VerticalAlignment="Top" Background="#FF4F4F4F">
+
+            <MenuItem Name="MenuItemCadastro" Header="Cadastro" Foreground="#FFF1BF77">
+                <MenuItem Name="MenuSubItemUsuario" Header="Usuários" Foreground="#FFF1BF77" Background="#FF5F5F5F" Click="MenuSubItemUsuario_Click">
+                    <MenuItem.Icon>
+                        <Image Width="20" Height="20" Source="/Cs_Gerencial;component/Imagens/1424996563_Community Help.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="MenuSubItemServentia" Header="Serventia"  Foreground="#FFF1BF77" Background="#FF5F5F5F" Click="MenuSubItemServentia_Click">
+                    <MenuItem.Icon>
+                        <Image Width="20" Height="20" Source="/Cs_Gerencial;component/Imagens/Serventia.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="MenuSubItemImprimirIndisponibilidade" Header="Indisponibilidade" Foreground="#FFF1BF77" Background="#FF5F5F5F" Click="MenuSubItemImprimirIndisponibilidade_Click">
+                    <MenuItem.Icon>
+                        <Image Width="20" Height="20" Source="/Cs_Gerencial;component/Imagens/Indisponibilidades.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Name="MenuItemRelatorios" Header="Relatórios" Foreground="#FFF1BF77">
+                <MenuItem Name="MenuSubItemImprimirLivroAuxiliar" Header="Livro Auxiliar" Foreground="#FFF1BF77" Background="#FF5F5F5F">
+                    <MenuItem.Icon>
+                        <Image Width="20" Height="20" Source="/Cs_Gerencial;component/Imagens/ImprimirLivroAuxiliar.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="MenuSubItemImprimirSelosReservados" Header="Selos Reservados" Foreground="#FFF1BF77" Background="#FF5F5F5F">
+                    <MenuItem.Icon>
+                        <Image Width="20" Height="20" Source="/Cs_Gerencial;component/Imagens/ImprimirSelosReservados.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="MenuSubItemImprimirSelosUtilizados" Header="Selos Utilizados" Foreground="#FFF1BF77" Background="#FF5F5F5F">
+                    <MenuItem.Icon>
+                        <Image Width="20" Height="20" Source="/Cs_Gerencial;component/Imagens/ImprimirSelosUtilizados.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="MenuSubItemImprimirSelos" Header="Relação de Selos" Foreground="#FFF1BF77" Background="#FF5F5F5F">
+                    <MenuItem.Icon>
+                        <Image Width="20" Height="20" Source="/Cs_Gerencial;component/Imagens/ImprimirRelacaoSelos.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Name="MenuItemParametros" Header="Parâmetros" Foreground="#FFF1BF77">
+                <MenuItem Name="MenuSubItemSenha" Header="Senha Master" Foreground="#FFF1BF77" Background="#FF5F5F5F" Click="MenuSubItemSenha_Click">
+                    <MenuItem.Icon>
+                        <Image Width="20" Height="20" Source="/Cs_Gerencial;component/Imagens/cadeado.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="MenuSubItemConfigDiretorios" Header="Config. Diretórios" Foreground="#FFF1BF77" Background="#FF5F5F5F" Click="MenuSubItemConfigDiretorios_Click">
+                    <MenuItem.Icon>
+                        <Image Width="20" Height="20" Source="/Cs_Gerencial;component/Imagens/Localizar Diretorio.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <ToolBarPanel Height="51" Margin="0,28,0,0" VerticalAlignment="Top" Orientation="Horizontal">
+            <ToolBarPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFC278" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </ToolBarPanel.Background>
+            <StackPanel Height="51" VerticalAlignment="Top" Width="6"/>
+            <Button Name="btnSeloEletronico" Padding="0" BorderThickness="0" Cursor="Hand" Width="70" ToolTip="Selo Eletrônico" Height="51" VerticalAlignment="Top" Click="btnSeloEletronico_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="53" Width="65">
+                            <TextBlock.Background>
+                                <ImageBrush ImageSource="/Cs_Gerencial;component/Imagens/SeloEletronico.png"/>
+                            </TextBlock.Background>
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Style.Triggers>
+                                        <Trigger Property ="IsMouseOver" Value="True">
+                                            <Setter Property= "Background" Value="Transparent"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <StackPanel Height="51" VerticalAlignment="Top" Width="5"/>
+            <Button Name="btnLancamentos" Padding="0" BorderThickness="0" Cursor="Hand" Width="70" ToolTip="Lançamentos" Height="51" VerticalAlignment="Top" Click="btnLancamentos_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="50" Width="62">
+                            <TextBlock.Background>
+                                <ImageBrush ImageSource="/Cs_Gerencial;component/Imagens/LivroAuxiliar.png"/>
+                            </TextBlock.Background>
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Style.Triggers>
+                                        <Trigger Property ="IsMouseOver" Value="True">
+                                            <Setter Property= "Background" Value="Transparent"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <StackPanel Height="51" VerticalAlignment="Top" Width="5"/>
+            <Button Name="btnFornecedores" Padding="0" BorderThickness="0" Cursor="Hand" Width="70" ToolTip="Fornecedores" Height="51" VerticalAlignment="Top" Click="btnFornecedores_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="41" Width="49">
+                            <TextBlock.Background>
+                                <ImageBrush ImageSource="/Cs_Gerencial;component/Imagens/Fornecedores.png"/>
+                            </TextBlock.Background>
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Style.Triggers>
+                                        <Trigger Property ="IsMouseOver" Value="True">
+                                            <Setter Property= "Background" Value="Transparent"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <StackPanel Height="51" VerticalAlignment="Top" Width="5"/>
+            <Button Name="btnBancos" Padding="0" BorderThickness="0" Cursor="Hand" Width="70" ToolTip="Bancos" Height="51" VerticalAlignment="Top" Click="btnBancos_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="47" Width="58">
+                            <TextBlock.Background>
+                                <ImageBrush ImageSource="/Cs_Gerencial;component/Imagens/bancos.png"/>
+                            </TextBlock.Background>
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Style.Triggers>
+                                        <Trigger Property ="IsMouseOver" Value="True">
+                                            <Setter Property= "Background" Value="Transparent"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <StackPanel Height="51" VerticalAlignment="Top" Width="5"/>
+            <Button Name="btnPlanos" Padding="0" BorderThickness="0" Cursor="Hand" Width="70" ToolTip="Planos de Contas" Height="51" VerticalAlignment="Top" Click="btnPlanos_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="40" Width="42">
+                            <TextBlock.Background>
+                                <ImageBrush ImageSource="/Cs_Gerencial;component/Imagens/PlanosDeContas.png"/>
+                            </TextBlock.Background>
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Style.Triggers>
+                                        <Trigger Property ="IsMouseOver" Value="True">
+                                            <Setter Property= "Background" Value="Transparent"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <StackPanel Height="51" VerticalAlignment="Top" Width="23"/>
+        </ToolBarPanel>
+        <Label Content="Versão - 1.0.0" Margin="0,28,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="92"/>
+        <Viewbox Margin="340,249,340,281" Name="viewbox1">
+            <Image Height="196" Name="image1" Stretch="Fill" Width="215" Source="/Cs_Gerencial;component/Gerencial.ico" />
+        </Viewbox>
+        <Label Name="lblNomeCartorio" Content="" Margin="0,0,0,28" VerticalAlignment="Bottom" FontSize="20" FontFamily="Castellar" FontWeight="Bold" Foreground="#FF383838"/>
+        <Label Content="    Selo&#xD;&#xA;Eletrônico" HorizontalAlignment="Left" Margin="9,79,0,0" VerticalAlignment="Top" Width="63"/>
+        <Label Content="   Cadastro&#xA;Lançamentos" HorizontalAlignment="Left" Margin="77,79,0,0" VerticalAlignment="Top" Width="80"/>
+        <Label Content=" Cadastro&#xA;Fornecedor" HorizontalAlignment="Left" Margin="157,79,0,0" VerticalAlignment="Top" Width="71"/>
+        <Label Content="  Cadastro&#xA;    Bancos" HorizontalAlignment="Left" Margin="228,79,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="  Cadastro&#xA;   Planos" HorizontalAlignment="Left" Margin="308,79,0,0" VerticalAlignment="Top" Width="63"/>
+    </Grid>
+
+</Window>
+
+    

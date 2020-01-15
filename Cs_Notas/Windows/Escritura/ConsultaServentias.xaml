@@ -1,0 +1,35 @@
+﻿<Window x:Class="Cs_Notas.Windows.Escritura.ConsultaServentias"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Consultar Serventias" Height="546.875" Width="589"  WindowState="Normal" ShowInTaskbar="False" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Loaded="Window_Loaded"  Icon="/Cs_Notas;component/Imagens/Notas.ico" PreviewKeyDown="Window_PreviewKeyDown">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF81F1F1" Offset="0"/>
+                <GradientStop Color="#FFBCC0C3" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DataGrid AutoGenerateColumns="False" Cursor="Hand" AlternationCount="2" RowBackground="White" AlternatingRowBackground="#FF8DE1FF" IsReadOnly="True" SelectionMode="Single" x:Name="dataGridServentias" AllowDrop="False" HeadersVisibility="All" CanUserResizeRows="False" SelectionUnit="FullRow" GridLinesVisibility="None" ClipboardCopyMode="ExcludeHeader" HorizontalScrollBarVisibility="Auto" UseLayoutRounding="True" Background="{x:Null}" IsTabStop="True"  Margin="7,54,10,10" >
+            <DataGrid.RowStyle>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <EventSetter Event="Control.MouseDoubleClick" Handler="dataGridServentias_MouseDoubleClick" />
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.CellStyle>
+                <Style TargetType="{x:Type DataGridCell}">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#FF0086FF" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Código" Width="100" Binding="{Binding Codigo}" CanUserResize="False"/>
+                <DataGridTextColumn Header="Descrição" Width="430" Binding="{Binding Descricao}" CanUserResize="False"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox Name="txtConsultaServentia" Height="23" Margin="7,26,10,0" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="txtConsultaServentia_TextChanged"/>
+        <Label Content="Consultar Serventia:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="261"/>
+    </Grid>
+</Window>

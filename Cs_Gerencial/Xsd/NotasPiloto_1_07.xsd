@@ -1,0 +1,1446 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:simpleType name="DataFormatoBrasil">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="10"/>
+			<xsd:pattern value="(((0[1-9]|[1,2][0-9])/02)|((0[1-9]|[1,2][0-9]|30)/(0[4,6,9]|11))|((0[1-9]|[1,2][0-9]|3[0,1])/(0[1,3,5,7,8]|1[0,2])))/[1,2][0-9]{3}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="DataHora">
+	<xsd:restriction base="xsd:string">
+		<xsd:length value="19"/>
+		<xsd:pattern value="((0[1-9])|([12][0-9])|(3[01]))/((0[1-9])|(1[012]))/((000[1-9])|(00[1-9][0-9])|(0[1-9][0-9]{2})|([1-9][0-9]{3})) (([01][0-9])|(2[0-3]))(:[0-5][0-9]){2}(\.[0-9]+)?" /> 
+	</xsd:restriction>
+</xsd:simpleType>
+	
+	<xsd:simpleType name="FormatoSeloOriginal">
+		<xsd:restriction base="xsd:string">
+		<xsd:minLength value="8"/>
+		<xsd:maxLength value="9"/>
+			<xsd:pattern value="^[A-Z]{3,4}[0-9]{5}$"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="FormatoSelo">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="9"/>
+			<xsd:pattern value="^[A-Z]{4}[0-9]{5}$"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="FormatoAleatorio">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="3"/>
+			<xsd:pattern value="^[A-Z]{3}$"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="CodigoServico">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="4"/>
+			<xsd:pattern value="^[0-9]{1,4}$"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!-- Define o tipo complexo  -->
+	
+	<xsd:complexType name="Ato" abstract="true">
+	<xsd:attribute name="DataPratica" use="required">
+		<xsd:simpleType>
+		<xsd:restriction base="DataFormatoBrasil"/>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="Selo" use="required">
+		<xsd:simpleType>
+		<xsd:restriction base="FormatoSelo"/>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="Aleatorio" use="required">
+		<xsd:simpleType>
+		<xsd:restriction base="FormatoAleatorio"/>
+		</xsd:simpleType>
+	</xsd:attribute>					
+	<xsd:attribute name="Livro">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="2"/>
+				<xsd:maxLength value="25"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="FolhaInicial">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="2"/>
+				<xsd:maxLength value="25"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="FolhaFinal">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="2"/>
+				<xsd:maxLength value="25"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="NumeroAto">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="2"/>
+				<xsd:maxLength value="25"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="LocalPratica">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="S"/>
+				<xsd:enumeration value="F"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="Transmissao" abstract="true">
+		<xsd:attribute name="DataPratica" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="DataFormatoBrasil"/>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="CCT" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="FormatoSelo"/>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	
+	<xsd:complexType name="ElementoJustificativaAtoNaoPraticado">
+		<xsd:attribute name="Data" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="DataFormatoBrasil"/>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	
+	<!--TIPOS DE ATOS-->
+
+	<xsd:complexType name="AtoEscritura">
+	<xsd:complexContent> 
+		<xsd:extension base="Ato">
+			<xsd:sequence> 
+				<xsd:element name="DadosProcuracao" type="tpDadosProcuracao" minOccurs="0" maxOccurs="1"/>
+				<xsd:element name="Objetos" type="tpObjetos" minOccurs="0" maxOccurs="1"/>
+				<xsd:element name="Participantes" type="tpParticipantes" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="AtosVinculados" type="tpAtosVinculados" minOccurs="0" maxOccurs="1"/>
+				<xsd:element name="Emolumentos" type="tpEmolumentos" minOccurs="1" maxOccurs="1"/>
+			</xsd:sequence>
+			<xsd:attribute name="TipoAto" use="required">   
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="NLE"/>
+						<xsd:enumeration value="NCE"/>						
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="TipoEscritura" use="required">   
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:minLength value="1"/>
+						<xsd:maxLength value="3"/>
+						<xsd:pattern value="^[0-9]{1,3}$"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+					<xsd:attribute name="Descricao">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+							<xsd:minLength value="2"/>
+							<xsd:maxLength value="250"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="IndAlvaraJudicial" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="S"/>
+						<xsd:enumeration value="N"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="IndPorProcuracao" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="S"/>
+						<xsd:enumeration value="N"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="IndValorDeclarado" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="S"/>
+						<xsd:enumeration value="N"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="ValorDeclarado">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:decimal">
+						<xsd:fractionDigits value="2"/>
+						<xsd:minInclusive value="0"/>
+						<xsd:totalDigits value="12"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+					<xsd:attribute name="Moeda">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="Cr$"/>
+						<xsd:enumeration value="NCr$"/>
+						<xsd:enumeration value="Cz$"/>
+						<xsd:enumeration value="NCz$"/>
+						<xsd:enumeration value="CR$"/>
+						<xsd:enumeration value="R$"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+				</xsd:attribute>	    			
+		</xsd:extension>
+	</xsd:complexContent> 
+	</xsd:complexType>
+	
+	<xsd:complexType name="AtoProcuracao">
+	<xsd:complexContent> 
+		<xsd:extension base="Ato">
+			<xsd:sequence>
+				<xsd:element name="ProcuracaoOriginal" type="tpProcuracaoOriginal" minOccurs="0" maxOccurs="1"/>
+				<xsd:element name="Participantes" type="tpParticipantes" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="AtosVinculados" type="tpAtosVinculados" minOccurs="0" maxOccurs="1"/>
+				<xsd:element name="Emolumentos" type="tpEmolumentos" minOccurs="1" maxOccurs="1"/>
+			</xsd:sequence> 
+			<xsd:attribute name="TipoAto" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="NLP"/>
+								<xsd:enumeration value="NCP"/>
+								<xsd:enumeration value="NSP"/>
+								<xsd:enumeration value="NRP"/>				        				        
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="FinalidadeProcuracao">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="1"/>
+						<xsd:enumeration value="2"/>
+						<xsd:enumeration value="3"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="TipoLivro" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="P"/>
+							<xsd:enumeration value="E"/>
+							<xsd:enumeration value="M"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="DataVigencia">
+				<xsd:simpleType>
+					<xsd:restriction base="DataFormatoBrasil"/>
+				</xsd:simpleType>
+			</xsd:attribute>			
+		</xsd:extension>
+	</xsd:complexContent> 
+	</xsd:complexType>
+	
+	<xsd:complexType name="AtoTestamento">
+	<xsd:complexContent> 
+		<xsd:extension base="Ato">
+			<xsd:sequence>
+				<xsd:element name="TestamentoOriginal" type="tpTestamentoOriginal" minOccurs="0" maxOccurs="1"/>
+				<xsd:element name="Testador" type="tpPessoaFisica" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="AtosVinculados" type="tpAtosVinculados" minOccurs="0" maxOccurs="1"/>
+				<xsd:element name="Emolumentos" type="tpEmolumentos" minOccurs="1" maxOccurs="1"/>
+			</xsd:sequence> 
+			<xsd:attribute name="TipoAto" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="NRTP"/>
+								<xsd:enumeration value="NRTC"/>
+						<xsd:enumeration value="NCTP"/>
+								<xsd:enumeration value="NCTC"/>				        				        
+						<xsd:enumeration value="NTR"/>
+						<xsd:enumeration value="NCTR"/>
+				 </xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>	  	    			
+		</xsd:extension>
+	</xsd:complexContent> 
+	</xsd:complexType>
+	
+	<xsd:complexType name="AtoFirma">
+	<xsd:complexContent> 
+		<xsd:extension base="Ato">
+			<xsd:sequence>
+				<xsd:element name="PessoaFirma" type="tpPessoaFisica" minOccurs="1" maxOccurs="unbounded"/>
+				<xsd:element name="AtosVinculados" type="tpAtosVinculados" minOccurs="0" maxOccurs="1"/>
+				<xsd:element name="Emolumentos" type="tpEmolumentos" minOccurs="1" maxOccurs="1"/>
+			</xsd:sequence> 
+			<xsd:attribute name="TipoAto" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="NAF"/>
+								<xsd:enumeration value="NRFS"/>
+								<xsd:enumeration value="NRFA"/>
+								<xsd:enumeration value="NRFC"/>				        				        
+								<xsd:enumeration value="NRFP"/>
+						</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>	  	    			
+		</xsd:extension>
+	</xsd:complexContent> 
+	</xsd:complexType>
+	
+	<xsd:complexType name="AtoAutenticacao">
+	<xsd:complexContent> 
+		<xsd:extension base="Ato" >
+		<xsd:sequence>
+			<xsd:element name="Emolumentos" type="tpEmolumentos" minOccurs="1" maxOccurs="1"/>
+		</xsd:sequence>
+		</xsd:extension>
+	</xsd:complexContent> 
+	</xsd:complexType>
+	
+	<xsd:complexType name="AtoCertidaoGenerica">
+	<xsd:complexContent> 
+		<xsd:extension base="Ato">
+			<xsd:sequence>
+				<xsd:element name="Participantes" type="tpParticipantes" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="AtosVinculados" type="tpAtosVinculados" minOccurs="0" maxOccurs="1"/>
+				<xsd:element name="Emolumentos" type="tpEmolumentos" minOccurs="1" maxOccurs="1"/>
+			</xsd:sequence> 
+			<xsd:attribute name="TipoCertidao" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="G1"/>
+							<xsd:enumeration value="G2"/>
+							<xsd:enumeration value="G3"/>
+							<xsd:enumeration value="G4"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="IndNegativa" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						 <xsd:enumeration value="S"/>
+						 <xsd:enumeration value="N"/>							        				        						
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+		</xsd:extension>
+	</xsd:complexContent> 
+	</xsd:complexType>  
+	
+	<xsd:complexType name="AtoMaterializacaoDocEletronico">
+	<xsd:complexContent> 
+		<xsd:extension base="Ato">
+			<xsd:sequence>				
+							<xsd:element name="Emolumentos" type="tpEmolumentos" minOccurs="1" maxOccurs="1"/>
+			</xsd:sequence>
+			<xsd:attribute name="OrigemDoc" use="required">   
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="W"/>
+						<xsd:enumeration value="A"/>						
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="QtdTotalFolhas" use="required">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:minLength value="1"/>
+								<xsd:maxLength value="6"/>
+								<xsd:pattern value="^[0-9]{1,6}$"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+						</xsd:attribute>
+			<xsd:attribute name="NumeroFolha" use="required">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:minLength value="1"/>
+								<xsd:maxLength value="6"/>
+								<xsd:pattern value="^[0-9]{1,6}$"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+						</xsd:attribute>
+			<xsd:attribute name="DataImpressao" use="required">
+						<xsd:simpleType>
+						<xsd:restriction base="DataHora"/>
+						</xsd:simpleType>
+				</xsd:attribute>
+			<xsd:attribute name="URL">   
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:minLength value="2"/>
+						<xsd:maxLength value="1000"/>						
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>		    
+			<xsd:attribute name="NomeArquivo">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+							<xsd:minLength value="2"/>
+						<xsd:maxLength value="100"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+					<xsd:attribute name="FormatoArquivo">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+							<xsd:minLength value="2"/>
+						<xsd:maxLength value="4"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+			<xsd:attribute name="DataArquivo">
+						<xsd:simpleType>
+						<xsd:restriction base="DataHora"/>
+						</xsd:simpleType>
+				</xsd:attribute>
+			<xsd:attribute name="TamanhoArquivo">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+							<xsd:minLength value="1"/>
+						<xsd:maxLength value="10"/>
+						<xsd:pattern value="^[0-9]{1,10}$"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>				    			
+		</xsd:extension>
+	</xsd:complexContent> 
+	</xsd:complexType>
+	
+	<xsd:complexType name="AtoVisto">
+	<xsd:complexContent> 
+		<xsd:extension base="Ato">
+			<xsd:sequence>
+				<xsd:element name="Participantes" type="tpParticipantes" minOccurs="1" maxOccurs="1"/>
+				<xsd:element name="AtosVinculados" type="tpAtosVinculados" minOccurs="0" maxOccurs="1"/>
+				<xsd:element name="Emolumentos" type="tpEmolumentos" minOccurs="1" maxOccurs="1"/>
+			</xsd:sequence>
+			<xsd:attribute name="Revalidada" use="required">
+					<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="S"/>
+							<xsd:enumeration value="N"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+		</xsd:extension>
+	</xsd:complexContent> 
+	</xsd:complexType>   
+
+	<xsd:complexType name="tpFolhaAdicionalComplemento">
+		<xsd:complexContent>
+			<xsd:extension base="Transmissao">
+				<xsd:sequence>
+					<xsd:element name="AtosVinculados" type="tpAtosVinculados" minOccurs="1" maxOccurs="1"/>
+					<xsd:element name="Emolumentos" type="tpEmolumentos" minOccurs="1" maxOccurs="1"/>
+				</xsd:sequence>
+				<xsd:attribute name="QtdPaginasExcedentes" use="required">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:minLength value="1"/>
+							<xsd:maxLength value="6"/>
+							<xsd:pattern value="^[0-9]{1,6}$"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:extension>
+	 </xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="tpInformacaoVerbal">
+		<xsd:complexContent>
+			<xsd:extension base="Transmissao">
+				<xsd:sequence>
+					<xsd:element name="Emolumentos" type="tpEmolumentos" minOccurs="1" maxOccurs="1"/>
+				</xsd:sequence>
+				<xsd:attribute name="NumeroAto" use="required">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:minLength value="2"/>
+							<xsd:maxLength value="25"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+				<xsd:attribute name="Nome" use="required">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:minLength value="2"/>
+							<xsd:maxLength value="200"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="AtoComplementoEmolumentos">
+		<xsd:complexContent>
+			<xsd:extension base="Transmissao">
+				<xsd:sequence>
+					<xsd:element name="AtosVinculados" type="tpAtosVinculados" minOccurs="1" maxOccurs="1"/>
+					<xsd:element name="Emolumentos" type="tpEmolumentos" minOccurs="1" maxOccurs="1"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	
+	<xsd:complexType name="AtoAlteracaoEmolumentos">
+				<xsd:sequence>
+					 <xsd:element name="Emolumentos" type="tpEmolumentos" minOccurs="1" maxOccurs="1"/>         
+				</xsd:sequence>
+		<xsd:attribute name="Selo" use="required">
+				<xsd:simpleType>
+				<xsd:restriction base="FormatoSelo"/>
+				</xsd:simpleType>
+			</xsd:attribute>	
+	</xsd:complexType>
+	
+	<!--Elementos-->
+
+	<xsd:complexType name="tpProcuracaoOriginal">
+		<xsd:attribute name="LivroProcOriginal" >
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2"/>
+					<xsd:maxLength value="25"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+			<xsd:attribute name="FolhaInicialProcOriginal" >
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:minLength value="2"/>
+						<xsd:maxLength value="25"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+		<xsd:attribute name="FolhaFinalProcOriginal" >
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2"/>
+					<xsd:maxLength value="25"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="NumeroAtoProcOriginal" >
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2"/>
+					<xsd:maxLength value="25"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="IndLavradoRio" >
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="S"/>
+					<xsd:enumeration value="N"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="ServicoProcOriginal">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2"/>
+					<xsd:maxLength value="250"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="EstadoProcOriginal">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:length fixed="true" value="2"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="DataProcOriginal">
+			<xsd:simpleType>
+				<xsd:restriction base="DataFormatoBrasil"/>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="TipoLivroProcOriginal" >
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="P"/>
+					<xsd:enumeration value="E"/>
+					<xsd:enumeration value="M"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="IndOutorgadoAusente" >
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="S"/>
+					<xsd:enumeration value="N"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="NumeroNotificacao" >
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2"/>
+					<xsd:maxLength value="25"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+
+
+	<xsd:complexType name="tpTestamentoOriginal">
+		<xsd:attribute name="LivroTestOriginal" >
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2"/>
+					<xsd:maxLength value="25"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="NumeroAtoTestOriginal" >
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2"/>
+					<xsd:maxLength value="25"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="IndLavradoRio" >
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="S"/>
+					<xsd:enumeration value="N"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="ServicoTestOriginal">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2"/>
+					<xsd:maxLength value="250"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="EstadoTestOriginal">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:length fixed="true" value="2"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="DataTestOriginal">
+			<xsd:simpleType>
+				<xsd:restriction base="DataFormatoBrasil"/>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="tpDadosProcuracao">
+		<xsd:attribute name="IndLavradoRio" >
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="S"/>
+					<xsd:enumeration value="N"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="CodServicoProcuracao">
+			<xsd:simpleType>
+				<xsd:restriction base="CodigoServico"/>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="SeloProcuracao" >
+			<xsd:simpleType>
+				<xsd:restriction base="FormatoSeloOriginal"/>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="AleatorioProcuracao" >
+			<xsd:simpleType>
+				<xsd:restriction base="FormatoAleatorio"/>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="ServicoProcuracao">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2"/>
+					<xsd:maxLength value="250"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="EstadoProcuracao">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:length fixed="true" value="2"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="tpParticipantes">
+		<xsd:sequence>
+			<xsd:element name="PessoaFisica" type="tpPessoaFisica" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="PessoaJuridica" type="tpPessoaJuridica" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tpPessoaFisica">
+		<xsd:sequence>
+			<xsd:element name="Filiacao" type="tpFiliacao" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence>
+		<xsd:attribute name="Tipo" >
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="1"/>
+					<xsd:maxLength value="3"/>
+					<xsd:pattern value="^[0-9]{1,3}$"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="Nome" >
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2" />
+					<xsd:maxLength value="250" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="Sexo">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="F"/>
+					<xsd:enumeration value="M"/>
+					<xsd:enumeration value="I"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="DataNascimento">
+			<xsd:simpleType>
+				<xsd:restriction base="DataFormatoBrasil"/>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="NumeroIdentidade">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2" />
+					<xsd:maxLength value="25" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="OrgaoEmissor">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2" />
+					<xsd:maxLength value="70" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="CPF">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="11"/>
+					<xsd:maxLength value="14"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	<xsd:attribute name="JustificativaAusenciaCPF" >
+				<xsd:simpleType>
+					 <xsd:restriction base="xsd:string">
+							 <xsd:enumeration value="1"/>
+							 <xsd:enumeration value="2"/>
+					 <xsd:enumeration value="3"/>
+					 </xsd:restriction>
+				</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="NacionalidadeONU">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="1"/>
+							<xsd:maxLength value="3"/>
+							<xsd:pattern value="^[0-9]{1,3}$"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="EstadoCivil">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="1"/>
+					<xsd:enumeration value="2"/>
+					<xsd:enumeration value="3"/>
+					<xsd:enumeration value="4"/>
+					<xsd:enumeration value="5"/>
+					<xsd:enumeration value="6"/>
+					<xsd:enumeration value="7"/>
+					<xsd:enumeration value="8"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="NumeroPreTeste">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2" />
+					<xsd:maxLength value="25" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="NumeroConsultaBIB">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2" />
+					<xsd:maxLength value="25" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="NumeroConsultaLei11441_07">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2" />
+					<xsd:maxLength value="25" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="tpPessoaJuridica">
+		<xsd:attribute name="Tipo" >
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="1"/>
+					<xsd:maxLength value="3"/>
+					<xsd:pattern value="^[0-9]{1,3}$"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="Nome" >
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2" />
+					<xsd:maxLength value="250" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="CNPJ">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="14"/>
+					<xsd:maxLength value="18"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	<xsd:attribute name="JustificativaAusenciaCNPJ" >
+				<xsd:simpleType>
+					 <xsd:restriction base="xsd:string">
+							 <xsd:enumeration value="1"/>
+							 <xsd:enumeration value="2"/>		       
+					 </xsd:restriction>
+				</xsd:simpleType>
+		</xsd:attribute>
+	<xsd:attribute name="NacionalidadeONU">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="1"/>
+							<xsd:maxLength value="3"/>
+							<xsd:pattern value="^[0-9]{1,3}$"/>
+					</xsd:restriction>
+		</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="NumeroConsultaBIB">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2" />
+					<xsd:maxLength value="25" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	
+	<xsd:complexType name="tpFiliacao">
+		<xsd:sequence>
+			<xsd:element name="Genitor" type="tpGenitor" minOccurs="1" maxOccurs="2"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tpGenitor">
+		<xsd:attribute name="TipoFiliacao">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="M"/>
+					<xsd:enumeration value="P"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="Nome">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2" />
+					<xsd:maxLength value="250" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="Sexo">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="F"/>
+					<xsd:enumeration value="M"/>
+					<xsd:enumeration value="I"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="Imovel" abstract="true">
+		<xsd:attribute name="ServicoRI">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2"/>
+					<xsd:maxLength value="500"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	<xsd:attribute name="NumeroMatricula">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2"/>
+					<xsd:maxLength value="25"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="NumeroInscricao" >
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2"/>
+					<xsd:maxLength value="25"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="TipoRecolhimento" use="required" >
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="N"/>
+					<xsd:enumeration value="I"/>
+					<xsd:enumeration value="F"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="Tipo" >
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="T"/>
+					<xsd:enumeration value="E"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="CodigoMunicipio">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="1"/>
+					<xsd:maxLength value="5"/>
+					<xsd:pattern value="^[0-9]{1,5}$"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="Municipio">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2" />
+					<xsd:maxLength value="250" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="UF">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:length fixed="true" value="2"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	<xsd:attribute name="TipoImposto" >
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="ITBI"/>
+					<xsd:enumeration value="ITD"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="ImpostoTransmissao">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2" />
+					<xsd:maxLength value="25" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="CPFCNPJAdquirente">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="11"/>
+					<xsd:maxLength value="18"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="CPFCNPJCedente">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="11"/>
+					<xsd:maxLength value="18"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="MaiorPorcao">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2" />
+					<xsd:maxLength value="25" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="ParteTransferida">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2" />
+					<xsd:maxLength value="25" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="ValorBem">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:decimal">
+					<xsd:fractionDigits value="2"/>
+					<xsd:minInclusive value="0"/>
+					<xsd:totalDigits value="12"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="tpObjetos">
+		<xsd:sequence>
+			<xsd:element name="ImovelRural" type="tpImovelRural" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="ImovelUrbano" type="tpImovelUrbano" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="Objeto" type="tpObjeto" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:complexType name="tpImovelRural">
+		<xsd:complexContent>
+			<xsd:extension base="Imovel">
+				<xsd:attribute name="NumeroINCRA">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:minLength value="2" />
+							<xsd:maxLength value="25" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+				<xsd:attribute name="Local">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:minLength value="2" />
+							<xsd:maxLength value="250" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+				<xsd:attribute name="Area">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:decimal">
+							<xsd:fractionDigits value="2"/>
+							<xsd:minInclusive value="0"/>
+							<xsd:totalDigits value="20"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+				<xsd:attribute name="UnidadeMedida" >
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="1"/>
+							<xsd:enumeration value="2"/>
+							<xsd:enumeration value="3"/>
+							<xsd:enumeration value="4"/>
+							<xsd:enumeration value="5"/>
+							<xsd:enumeration value="6"/>
+							<xsd:enumeration value="7"/>
+							<xsd:enumeration value="8"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+				<xsd:attribute name="Denominacao">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:minLength value="2" />
+							<xsd:maxLength value="250" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+				<xsd:attribute name="NumeroInscricaoSRF">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:minLength value="2" />
+							<xsd:maxLength value="25" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="tpImovelUrbano">
+		<xsd:complexContent>
+			<xsd:extension base="Imovel">
+				<xsd:attribute name="Logradouro">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:minLength value="2" />
+							<xsd:maxLength value="250" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+				<xsd:attribute name="Bairro">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:minLength value="2" />
+							<xsd:maxLength value="250" />
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="tpObjeto">
+		<xsd:attribute name="Descricao" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="2" />
+					<xsd:maxLength value="250" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="Valor" >
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:decimal">
+					<xsd:fractionDigits value="2"/>
+					<xsd:minInclusive value="0"/>
+					<xsd:totalDigits value="12"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="tpAtosVinculados">
+		<xsd:sequence>
+			<xsd:element name="AtoVinculado" minOccurs="1" maxOccurs="unbounded">
+				<xsd:complexType>
+					<xsd:attribute name="TipoVinculo" use="required">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="H"/>
+								<xsd:enumeration value="C"/>
+								<xsd:enumeration value="T"/>
+								<xsd:enumeration value="U"/>
+								<xsd:enumeration value="A"/>
+								<xsd:enumeration value="E"/>
+								<xsd:enumeration value="F"/>
+				<xsd:enumeration value="J"/>
+								<xsd:enumeration value="M"/>
+				<xsd:enumeration value="Y"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:attribute>
+					<xsd:attribute name="CodigoServico">
+						<xsd:simpleType>
+							<xsd:restriction base="CodigoServico"/>
+						</xsd:simpleType>
+					</xsd:attribute>
+					<xsd:attribute name="Selo">
+						<xsd:simpleType>
+							<xsd:restriction base="FormatoSeloOriginal"/>
+						</xsd:simpleType>
+					</xsd:attribute>
+					<xsd:attribute name="Aleatorio">
+						<xsd:simpleType>
+							<xsd:restriction base="FormatoAleatorio"/>
+						</xsd:simpleType>
+					</xsd:attribute>
+					<xsd:attribute name="TipoSelo">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:enumeration value="F"/>
+								<xsd:enumeration value="E"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:attribute>
+					<xsd:attribute name="CCT" >
+						<xsd:simpleType>
+							<xsd:restriction base="FormatoSelo"/>
+						</xsd:simpleType>
+					</xsd:attribute>
+					<xsd:attribute name="DataPratica">
+						<xsd:simpleType>
+							<xsd:restriction base="DataFormatoBrasil"/>
+						</xsd:simpleType>
+					</xsd:attribute>
+					<xsd:attribute name="NomeServico">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:minLength value="2" />
+								<xsd:maxLength value="100" />
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:attribute>
+					<xsd:attribute name="EstadoServico">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+								<xsd:length fixed="true" value="2"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:attribute>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+				
+	<xsd:complexType name="tpEmolumentos">
+	<xsd:sequence> 
+		<xsd:element name="ItemEmolumento" minOccurs="0" maxOccurs="100">
+			<xsd:complexType>
+				<xsd:attribute name="Ano" >
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:gYear"/>
+					</xsd:simpleType>
+				</xsd:attribute>
+				<xsd:attribute name="Tabela" use="required">  
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:minLength value="1"/>
+									<xsd:maxLength value="8"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:attribute>
+				<xsd:attribute name="Item" use="required"> 
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:minLength value="1"/>
+									<xsd:maxLength value="20"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+				</xsd:attribute>
+				<xsd:attribute name="SubItem"> 
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+									<xsd:maxLength value="20"/>
+							</xsd:restriction>
+						</xsd:simpleType>
+						</xsd:attribute>
+						<xsd:attribute name="Quantidade" use="required">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+								<xsd:minLength value="1"/>
+								<xsd:maxLength value="4"/>
+										<xsd:pattern value="^[0-9]{1,4}$"/>
+						</xsd:restriction>
+							</xsd:simpleType>
+				</xsd:attribute>
+						<xsd:attribute name="Complemento">
+						<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+											<xsd:minLength value="2"/>
+										<xsd:maxLength value="200"/>
+								</xsd:restriction>
+						</xsd:simpleType>
+				</xsd:attribute>
+						<xsd:attribute name="Excecao">
+						<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+								<xsd:minLength value="2"/>
+								<xsd:maxLength value="200"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:complexType> 
+		</xsd:element>
+	</xsd:sequence> 
+	<xsd:attribute name="TipoCobranca" use="required">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="JG"/>
+					<xsd:enumeration value="CC"/>
+					<xsd:enumeration value="SC"/>
+					<xsd:enumeration value="NH"/>
+				<xsd:enumeration value="AC"/>
+				<xsd:enumeration value="PA"/>  
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="ValorTotalEmolumentos">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:decimal">
+				<xsd:fractionDigits value="2"/>
+				<xsd:minInclusive value="0"/>
+				<xsd:totalDigits value="12"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="FETJ">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:decimal">
+				<xsd:fractionDigits value="2"/>
+				<xsd:minInclusive value="0"/>
+				<xsd:totalDigits value="12"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="FUNDPERJ">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:decimal">
+				<xsd:fractionDigits value="2"/>
+						<xsd:minInclusive value="0"/>
+						<xsd:totalDigits value="12"/>
+				</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="FUNPERJ">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:decimal">
+				<xsd:fractionDigits value="2"/>
+						<xsd:minInclusive value="0"/>
+						<xsd:totalDigits value="12"/>
+			</xsd:restriction>
+				</xsd:simpleType>
+	</xsd:attribute>
+		<xsd:attribute name="FUNARPEN">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:decimal">
+				<xsd:fractionDigits value="2"/>
+						<xsd:minInclusive value="0"/>
+						<xsd:totalDigits value="12"/>
+				</xsd:restriction>
+				</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="RESSAG">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:decimal">
+				<xsd:fractionDigits value="2"/>
+				<xsd:minInclusive value="0"/>
+				<xsd:totalDigits value="12"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+		<xsd:attribute name="ValorMutua">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:decimal">
+					<xsd:fractionDigits value="2"/>
+					<xsd:minInclusive value="0"/>
+					<xsd:totalDigits value="12"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="ValorAcoterj">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:decimal">
+					<xsd:fractionDigits value="2"/>
+					<xsd:minInclusive value="0"/>
+					<xsd:totalDigits value="12"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="ValorDistribuidor">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:decimal">
+					<xsd:fractionDigits value="2"/>
+					<xsd:minInclusive value="0"/>
+					<xsd:totalDigits value="12"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>   
+
+	<xsd:complexType name="RemessaAtos">
+	<xsd:sequence maxOccurs="unbounded">  
+		<xsd:element name="JustificativaAtoNaoPraticado" type="ElementoJustificativaAtoNaoPraticado" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element name="Escritura" type="AtoEscritura" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element name="Procuracao" type="AtoProcuracao" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element name="Testamento" type="AtoTestamento" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element name="Firma" type="AtoFirma" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element name="Autenticacao" type="AtoAutenticacao" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element name="CertidaoGenerica" type="AtoCertidaoGenerica" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element name="MaterializacaoDocEletronico" type="AtoMaterializacaoDocEletronico" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element name="Visto" type="AtoVisto" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element name="FolhaAdicionalComplemento" type="tpFolhaAdicionalComplemento" minOccurs="0" maxOccurs="unbounded"/>
+		<xsd:element name="InformacaoVerbal" type="tpInformacaoVerbal" minOccurs="0" maxOccurs="unbounded"/>
+				<xsd:element name="ComplementoEmolumentos" type="AtoComplementoEmolumentos" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="AlteracaoEmolumentos" type="AtoAlteracaoEmolumentos" minOccurs="0" maxOccurs="unbounded"/>
+	</xsd:sequence> 
+	<xsd:attribute name="Id" use="required">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="25"/>
+				<xsd:pattern value="^[0-9]{1,25}$"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="CodServico" use="required">   
+		<xsd:simpleType>
+			<xsd:restriction base="CodigoServico"/>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="TipoOperacao" use="required">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="I"/>
+				<xsd:enumeration value="A"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="Software">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:minLength value="2"/>
+				<xsd:maxLength value="100"/>       
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="Ambiente" use="required">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="HML"/>
+				<xsd:enumeration value="PRD"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>	
+	</xsd:complexType>    
+		
+	<!-- Estrutura que o documento precisa estar em conformidade.
+			 Ela inicia com o elemento Notas que aninha outros elementos. -->
+			 
+	<xsd:element name="Notas">
+	<xsd:complexType>
+		<xsd:sequence> 
+			<xsd:element name="Remessa" type="RemessaAtos" minOccurs="1" maxOccurs="1"/>
+			<xsd:element name="AssinaturaRemessa" minOccurs="0" maxOccurs="1"/>
+		</xsd:sequence> 
+		<xsd:attribute name="VersaoLayout" use="required">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:minLength value="1"/>
+					<xsd:maxLength value="20"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>		
+		</xsd:complexType>
+	</xsd:element>
+	
+</xsd:schema>

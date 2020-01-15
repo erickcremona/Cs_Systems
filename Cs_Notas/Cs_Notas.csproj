@@ -1,0 +1,663 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7A1DB887-4447-4CC0-A64D-AFA75FA49750}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cs_Notas</RootNamespace>
+    <AssemblyName>Cs_Notas</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Notas.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Word, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.9\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="SimpleInjector, Version=3.2.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.3.2.0\lib\net45\SimpleInjector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFTextBoxAutoComplete, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPFTextBoxAutoComplete.1.0.2\lib\net40\WPFTextBoxAutoComplete.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BootStrap.cs" />
+    <Compile Include="WindowsAgurde\AguardeAtualizarCustas.xaml.cs">
+      <DependentUpon>AguardeAtualizarCustas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsAgurde\AguardeExcluirEscritura.xaml.cs">
+      <DependentUpon>AguardeExcluirEscritura.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsAgurde\AguardeExcluirProcuracao.xaml.cs">
+      <DependentUpon>AguardeExcluirProcuracao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsAgurde\AguardeExcluirTestamento.xaml.cs">
+      <DependentUpon>AguardeExcluirTestamento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsAgurde\AguardeImportarBaseDados.xaml.cs">
+      <DependentUpon>AguardeImportarBaseDados.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsAgurde\AguardeSalvandoEscritura.xaml.cs">
+      <DependentUpon>AguardeSalvandoEscritura.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsAgurde\AguardeSalvandoTestamento.xaml.cs">
+      <DependentUpon>AguardeSalvandoTestamento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowsAgurde\AgurardeSalvandoProcuracao.xaml.cs">
+      <DependentUpon>AgurardeSalvandoProcuracao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\CadastroUsuario.xaml.cs">
+      <DependentUpon>CadastroUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Escritura\ConsultarAtos.xaml.cs">
+      <DependentUpon>ConsultarAtos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Escritura\AdicionarItensCustas.xaml.cs">
+      <DependentUpon>AdicionarItensCustas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Escritura\AlterarItemCustasEscritura.xaml.cs">
+      <DependentUpon>AlterarItemCustasEscritura.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Escritura\Complemento.xaml.cs">
+      <DependentUpon>Complemento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Escritura\ConsultaNomesExistentes.xaml.cs">
+      <DependentUpon>ConsultaNomesExistentes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Escritura\ConsultaServentias.xaml.cs">
+      <DependentUpon>ConsultaServentias.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Escritura\DigitarAtoConjunto.xaml.cs">
+      <DependentUpon>DigitarAtoConjunto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Escritura\DigitarDadosParticipante.xaml.cs">
+      <DependentUpon>DigitarDadosParticipante.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Escritura\DigitarEscritura.xaml.cs">
+      <DependentUpon>DigitarEscritura.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Escritura\ImovelDoi.xaml.cs">
+      <DependentUpon>ImovelDoi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Escritura\ImovelEscritura.xaml.cs">
+      <DependentUpon>ImovelEscritura.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Escritura\IniciarPrimeiraDigitacaoEscritura.xaml.cs">
+      <DependentUpon>IniciarPrimeiraDigitacaoEscritura.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Escritura\Minuta.xaml.cs">
+      <DependentUpon>Minuta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Escritura\MovelOutrosEscritura.xaml.cs">
+      <DependentUpon>MovelOutrosEscritura.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Escritura\OrigemEscritura.xaml.cs">
+      <DependentUpon>OrigemEscritura.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Escritura\TipoBemEscritura.xaml.cs">
+      <DependentUpon>TipoBemEscritura.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Principal.xaml.cs">
+      <DependentUpon>Principal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Procuracao\AtosConjuntosProcuracao.xaml.cs">
+      <DependentUpon>AtosConjuntosProcuracao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Procuracao\ConsultaAtosProcuracao.xaml.cs">
+      <DependentUpon>ConsultaAtosProcuracao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Procuracao\DigitarProcuracao.xaml.cs">
+      <DependentUpon>DigitarProcuracao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Procuracao\IniciarPrimeiraDigitacaoProcuracao.xaml.cs">
+      <DependentUpon>IniciarPrimeiraDigitacaoProcuracao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Procuracao\ParticipantesProcuracao.xaml.cs">
+      <DependentUpon>ParticipantesProcuracao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ReservarSelos.xaml.cs">
+      <DependentUpon>ReservarSelos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SelosReservados.xaml.cs">
+      <DependentUpon>SelosReservados.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SerieSeloAtual.xaml.cs">
+      <DependentUpon>SerieSeloAtual.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Testamento\ConsultaAtosTestamento.xaml.cs">
+      <DependentUpon>ConsultaAtosTestamento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Testamento\DadosRevogados.xaml.cs">
+      <DependentUpon>DadosRevogados.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Testamento\DigitarTestamento.xaml.cs">
+      <DependentUpon>DigitarTestamento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Testamento\Testemunhas.xaml.cs">
+      <DependentUpon>Testemunhas.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cs_Sistemas\CrossCutting\CrossCutting.csproj">
+      <Project>{55afceee-fe18-40c1-8d1c-eec0488f5916}</Project>
+      <Name>CrossCutting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cs_Gerencial.Aplicacao\Cs_Gerencial.Aplicacao.csproj">
+      <Project>{ec15f70c-959a-4ed6-80b6-fe4397840b80}</Project>
+      <Name>Cs_Gerencial.Aplicacao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cs_Gerencial.Dominio\Cs_Gerencial.Dominio.csproj">
+      <Project>{78b0b9b9-f686-410f-a6cb-9ac972f6c71b}</Project>
+      <Name>Cs_Gerencial.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cs_Gerencial.Infra.Data\Cs_Gerencial.Infra.Data.csproj">
+      <Project>{dd8b0738-2c6a-4ea9-88e8-050893de6854}</Project>
+      <Name>Cs_Gerencial.Infra.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cs_Notas.Aplicacao\Cs_Notas.Aplicacao.csproj">
+      <Project>{42f319a9-05cb-49cd-b650-0014c9824c67}</Project>
+      <Name>Cs_Notas.Aplicacao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cs_Notas.Dominio\Cs_Notas.Dominio.csproj">
+      <Project>{40c4ec0a-2eff-40a9-ba15-c8728697640a}</Project>
+      <Name>Cs_Notas.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cs_Notas.Infra.Data\Cs_Notas.Infra.Data.csproj">
+      <Project>{02925d63-a63a-4d4b-a967-f7d58dc37c86}</Project>
+      <Name>Cs_Notas.Infra.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Notas.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Entrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\1424996563_Community Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\cadeado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowsAgurde\AguardeAtualizarCustas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowsAgurde\AguardeExcluirEscritura.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowsAgurde\AguardeExcluirProcuracao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowsAgurde\AguardeExcluirTestamento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowsAgurde\AguardeImportarBaseDados.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowsAgurde\AguardeSalvandoEscritura.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowsAgurde\AguardeSalvandoTestamento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowsAgurde\AgurardeSalvandoProcuracao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CadastroUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Escritura\ConsultarAtos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Escritura\AdicionarItensCustas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Escritura\AlterarItemCustasEscritura.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Escritura\Complemento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Escritura\ConsultaNomesExistentes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Escritura\ConsultaServentias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Escritura\DigitarAtoConjunto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Escritura\DigitarDadosParticipante.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Escritura\DigitarEscritura.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Escritura\ImovelDoi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Escritura\ImovelEscritura.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Escritura\IniciarPrimeiraDigitacaoEscritura.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Escritura\Minuta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Escritura\MovelOutrosEscritura.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Escritura\OrigemEscritura.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Escritura\TipoBemEscritura.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Principal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Procuracao\AtosConjuntosProcuracao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Procuracao\ConsultaAtosProcuracao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Procuracao\DigitarProcuracao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Procuracao\IniciarPrimeiraDigitacaoProcuracao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Procuracao\ParticipantesProcuracao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ReservarSelos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SelosReservados.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SerieSeloAtual.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Testamento\ConsultaAtosTestamento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Testamento\DadosRevogados.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Testamento\DigitarTestamento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Testamento\Testemunhas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Serventia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Indisponibilidades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\ImprimirLivroAuxiliar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\ImprimirSelosReservados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\ImprimirSelosUtilizados.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\ImprimirRelacaoSelos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Localizar Diretorio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\SeloEletronico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\LivroAuxiliar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\bancos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\PlanosDeContas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Notas.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\AdicionarUsuarioPequeno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\UsuarioAlterarPequeno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\UsuarioExcluirPequeno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\AdicionarUsuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\SalvarUsuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\ExcluirUsuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\AlterarUsuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\AlterarSerieSelo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Certidao.png" />
+    <Resource Include="Imagens\Escritura.png" />
+    <Resource Include="Imagens\Procuracao.png" />
+    <Resource Include="Imagens\Testamento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Cancelar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\alterarUsuarioPequeno.png" />
+    <Resource Include="Imagens\deleteUsuarioPequeno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\ImovelAdd.png" />
+    <Resource Include="Imagens\ImovelAlterar.png" />
+    <Resource Include="Imagens\ImovelExcluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\usuarioAzul_add-user.png" />
+    <Resource Include="Imagens\usuarioAzul_delete-user.png" />
+    <Resource Include="Imagens\usuarioAzul_edit-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\DocumentoAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\AddAtoConjunto.png" />
+    <Resource Include="Imagens\AlterarAtoConjunto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\oie_transparent %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\ExcluirAtoConjunto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Cancelar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Salvar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Notas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\cpf_Correto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\DOI.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\censec.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\cpf_EmBranco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\check_23832.png" />
+    <Resource Include="Imagens\check_24016.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\LupaPequena.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\11989_128x128.png" />
+    <Resource Include="Imagens\181_128x128.png" />
+    <Resource Include="Imagens\7148_128x128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\190_128x128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Dinheiro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Calculadora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Lupa grande.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\CriarArquivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\AnexarArquivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\file-delete.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\DeletarArquivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\CadUsuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\AdicionarArquivo.png" />
+    <Resource Include="Imagens\ApagarArquivo.png" />
+    <Resource Include="Imagens\EditarArquivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Minuta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\EditarAto.png" />
+    <Resource Include="Imagens\ExcluirAto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Copiar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Origem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\CertidaoMenu.png" />
+    <Resource Include="Imagens\EscrituraMenu.png" />
+    <Resource Include="Imagens\ProcuracaoMenu.png" />
+    <Resource Include="Imagens\TestamentoMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Complemento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Selar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\RemoverSelos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Testemunhas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imagens\Revogados.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

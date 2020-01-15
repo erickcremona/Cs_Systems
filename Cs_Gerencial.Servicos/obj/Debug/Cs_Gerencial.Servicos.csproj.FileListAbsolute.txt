@@ -1,0 +1,4 @@
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Servicos\bin\Debug\Cs_Gerencial.Servicos.dll
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Servicos\bin\Debug\Cs_Gerencial.Servicos.pdb
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Servicos\obj\Debug\Cs_Gerencial.Servicos.dll
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Servicos\obj\Debug\Cs_Gerencial.Servicos.pdb

@@ -1,0 +1,340 @@
+﻿<Window x:Class="Cs_Notas.Windows.Testamento.DadosRevogados"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Revogados" Height="412.175" Width="554" ShowInTaskbar="False" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Loaded="Window_Loaded" Icon="/Cs_Notas;component/Imagens/Notas.ico" WindowStyle="None">
+    <Window.Resources>
+        <Style TargetType="ComboBox" x:Key="Flat_ComboBox">
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="MinWidth" Value="30"/>
+            <Setter Property="UIElement.SnapsToDevicePixels" Value="True"/>
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.CanContentScroll" Value="True"/>
+            <Setter Property="TextElement.Foreground" Value="Black"/>
+            <Setter Property="FrameworkElement.FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Background" Value="White" />
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="LightSkyBlue" />
+                </Trigger>
+            </Style.Triggers>
+
+        </Style>
+
+
+        <ControlTemplate x:Key="ComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="20" />
+                </Grid.ColumnDefinitions>
+                <Border
+  x:Name="Border" 
+  Grid.ColumnSpan="2"
+  CornerRadius="2"
+  Background="#FF72A8A3"
+  BorderBrush="#404040"
+  BorderThickness="1" />
+                <Border 
+  Grid.Column="0"
+  CornerRadius="2,0,0,2" 
+  Margin="1" 
+  Background="#FFFFFF" 
+  BorderBrush="#404040"
+  BorderThickness="0,0,1,0" />
+                <Path 
+  x:Name="Arrow"
+  Grid.Column="1"     
+  Fill="#404040"
+  HorizontalAlignment="Center"
+  VerticalAlignment="Center"
+  Data="M 0 0 L 4 4 L 8 0 Z"/>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="ToggleButton.IsMouseOver" Value="true">
+                    <Setter TargetName="Border" Property="Background" Value="#808080" />
+                </Trigger>
+                <Trigger Property="ToggleButton.IsChecked" Value="true">
+                    <Setter TargetName="Border" Property="Background" Value="#E0E0E0" />
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter TargetName="Border" Property="Background" Value="#EEEEEE" />
+                    <Setter TargetName="Border" Property="BorderBrush" Value="#AAAAAA" />
+                    <Setter Property="Foreground" Value="#888888"/>
+                    <Setter TargetName="Arrow" Property="Fill" Value="#888888" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="ComboBoxTextBox" TargetType="{x:Type TextBox}">
+            <Border x:Name="PART_ContentHost" Focusable="False" Background="{TemplateBinding Background}" />
+        </ControlTemplate>
+
+        <Style x:Key="{x:Type ComboBox}" TargetType="{x:Type ComboBox}">
+            <Setter Property="SnapsToDevicePixels" Value="true"/>
+            <Setter Property="OverridesDefaultStyle" Value="true"/>
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+            <Setter Property="MinWidth" Value="30"/>
+            <Setter Property="MinHeight" Value="20"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ComboBox}">
+                        <Grid>
+                            <ToggleButton 
+        Name="ToggleButton" 
+        Template="{StaticResource ComboBoxToggleButton}" 
+        Grid.Column="2" 
+        Focusable="false"
+        IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}"
+        ClickMode="Press">
+                            </ToggleButton>
+                            <ContentPresenter
+        Name="ContentSite"
+        IsHitTestVisible="False" 
+        Content="{TemplateBinding SelectionBoxItem}"
+        ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+        ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+        Margin="3,3,23,3"
+        VerticalAlignment="Center"
+        HorizontalAlignment="Left" />
+                            <TextBox x:Name="PART_EditableTextBox"
+        Style="{x:Null}" 
+        Template="{StaticResource ComboBoxTextBox}" 
+        HorizontalAlignment="Left" 
+        VerticalAlignment="Center" 
+        Margin="3,3,23,3"
+        Focusable="True" 
+        Background="Transparent"
+        Visibility="Hidden"
+        IsReadOnly="{TemplateBinding IsReadOnly}"/>
+                            <Popup 
+        Name="Popup"
+        Placement="Bottom"
+        IsOpen="{TemplateBinding IsDropDownOpen}"
+        AllowsTransparency="True" 
+        Focusable="False"
+        PopupAnimation="Slide">
+                                <Grid 
+          Name="DropDown"
+          SnapsToDevicePixels="True"                
+          MinWidth="{TemplateBinding ActualWidth}"
+          MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                    <Border 
+            x:Name="DropDownBorder"
+            Background="#FFFFFF"
+            BorderThickness="1"
+            BorderBrush="#888888"/>
+                                    <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True">
+                                        <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
+                                    </ScrollViewer>
+                                </Grid>
+                            </Popup>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="HasItems" Value="false">
+                                <Setter TargetName="DropDownBorder" Property="MinHeight" Value="95"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="#888888"/>
+                            </Trigger>
+                            <Trigger Property="IsGrouping" Value="true">
+                                <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                            </Trigger>
+                            <Trigger SourceName="Popup" Property="Popup.AllowsTransparency" Value="true">
+                                <Setter TargetName="DropDownBorder" Property="CornerRadius" Value="4"/>
+                                <Setter TargetName="DropDownBorder" Property="Margin" Value="0,2,0,0"/>
+                            </Trigger>
+                            <Trigger Property="IsEditable"
+           Value="true">
+                                <Setter Property="IsTabStop" Value="false"/>
+                                <Setter TargetName="PART_EditableTextBox" Property="Visibility" Value="Visible"/>
+                                <Setter TargetName="ContentSite" Property="Visibility" Value="Hidden"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+            </Style.Triggers>
+        </Style>
+
+        <!-- SimpleStyles: ComboBoxItem -->
+        <Style x:Key="{x:Type ComboBoxItem}" TargetType="{x:Type ComboBoxItem}">
+            <Setter Property="SnapsToDevicePixels" Value="true"/>
+            <Setter Property="OverridesDefaultStyle" Value="true"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                        <Border 
+      Name="Border"
+      Padding="2"
+      SnapsToDevicePixels="true">
+                            <ContentPresenter />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsHighlighted" Value="true">
+                                <Setter TargetName="Border" Property="Background" Value="#DDDDDD"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="#888888"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF81F1F1" Offset="0"/>
+                <GradientStop Color="#FFBCC0C3" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid Height="31" VerticalAlignment="Top" Background="#FF47B8B2">
+            <Label Content="Revogados" HorizontalAlignment="Left" VerticalAlignment="Top" Width="351" Height="31" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
+            <Image HorizontalAlignment="Left" Height="31" Margin="523,0,0,0" VerticalAlignment="Top" Width="31" Source="/Cs_Notas;component/Imagens/Delete.png" Cursor="Hand" MouseLeftButtonUp="Image_MouseLeftButtonUp"/>
+        </Grid>
+        <GroupBox Header="Revogados" Margin="10,0,10,86" Foreground="Black" Height="152" VerticalAlignment="Bottom">
+            <Grid Margin="10,0,-2,-1">
+                <DataGrid AutoGenerateColumns="False" Cursor="Hand" AlternationCount="2" RowBackground="White" AlternatingRowBackground="#FF8DE1FF" IsReadOnly="True" x:Name="dataGridRevogados" AllowDrop="False" CanUserResizeRows="False" CanUserSortColumns="False" SelectionUnit="FullRow" GridLinesVisibility="None" ClipboardCopyMode="None" HorizontalScrollBarVisibility="Auto" UseLayoutRounding="False" Background="{x:Null}" IsTabStop="True"  Margin="-11,1,0,0" PreviewKeyDown="dataGridRevogados_PreviewKeyDown" SelectionChanged="dataGridRevogados_SelectionChanged" SelectionMode="Single" HeadersVisibility="Column">
+                    <DataGrid.RowStyle>
+                        <Style TargetType="{x:Type DataGridRow}">
+                            <EventSetter Event="Control.MouseDoubleClick" Handler="dataGridRevogados_MouseDoubleClick"/>
+                        </Style>
+                    </DataGrid.RowStyle>
+                    <DataGrid.CellStyle>
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="#FF0086FF" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.CellStyle>
+                    <DataGrid.ContextMenu>
+                        <ContextMenu Selector.IsSelected="True" ForceCursor="True" Name="menu" >
+                            <MenuItem Header="Excluir" Name="MenuItemExcluir" Click="MenuItemExcluir_Click">
+
+                            </MenuItem>
+
+                            <MenuItem Header="Alterar" Name="MenuItemAlterar" Click="MenuItemAlterar_Click">
+
+                            </MenuItem>
+                        </ContextMenu>
+                    </DataGrid.ContextMenu>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Id" Width="70" Binding="{Binding RevogadosId}" CanUserResize="False" Visibility="Hidden"/>
+                        <DataGridTextColumn Header="Data" Width="70" Binding="{Binding Data, StringFormat=dd/MM/yyyy}" CanUserResize="False"/>
+                        <DataGridTextColumn Header="Livro" Width="100" Binding="{Binding Livro}" CanUserResize="False"/>
+                        <DataGridTextColumn Header="Ato" Width="70" Binding="{Binding Ato}" CanUserResize="False"/>
+                        <DataGridTextColumn Header="Selo" Width="100" Binding="{Binding Selo}" CanUserResize="False"/>
+                        <DataGridTextColumn Header="Serventia" Width="180" Binding="{Binding Serventia}" CanUserResize="False"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </GroupBox>
+        <Button x:Name="btnAdicionarParte" TabIndex="31" Padding="0" BorderThickness="0" Cursor="Hand" ToolTip="Adicionar Testemunha" Margin="10,331,0,0" HorizontalAlignment="Left" Width="51" Click="btnAdicionarParte_Click" Height="51" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="48" Width="46">
+                        <TextBlock.Background>
+                            <ImageBrush ImageSource="/Cs_Notas;component/Imagens/AdicionarUsuario.png"/>
+                        </TextBlock.Background>
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Style.Triggers>
+                                    <Trigger Property ="IsMouseOver" Value="True">
+                                        <Setter Property= "Background" Value="Transparent"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </DataTemplate>
+            </Button.ContentTemplate>
+        </Button>
+        <Label Content="Novo" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="10,382,0,0" VerticalAlignment="Top" Width="51" Height="30" RenderTransformOrigin="0.482,0.4"/>
+        <Button x:Name="btnCancelar" TabIndex="30" Padding="0" BorderThickness="0" Cursor="Hand" ToolTip="Cancelar" Margin="101,331,0,0" HorizontalAlignment="Left" Width="51" Click="btnCancelar_Click" Height="51" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="44" Width="48">
+                        <TextBlock.Background>
+                            <ImageBrush ImageSource="/Cs_Notas;component/Imagens/Cancelar.png"/>
+                        </TextBlock.Background>
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Style.Triggers>
+                                    <Trigger Property ="IsMouseOver" Value="True">
+                                        <Setter Property= "Background" Value="Transparent"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </DataTemplate>
+            </Button.ContentTemplate>
+        </Button>
+        <Label Content="Cancelar" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="91,382,0,0" VerticalAlignment="Top" Width="75" Height="30"/>
+        <Button x:Name="btnSalvar" TabIndex="13" Padding="0" BorderThickness="0" Cursor="Hand" ToolTip="Salvar Testemunha" Margin="493,331,0,0" HorizontalAlignment="Left" Width="51" Click="btnSalvar_Click" Height="51" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="46" Width="48">
+                        <TextBlock.Background>
+                            <ImageBrush ImageSource="/Cs_Notas;component/Imagens/SalvarUsuario.png"/>
+                        </TextBlock.Background>
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Style.Triggers>
+                                    <Trigger Property ="IsMouseOver" Value="True">
+                                        <Setter Property= "Background" Value="Transparent"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </DataTemplate>
+            </Button.ContentTemplate>
+        </Button>
+        <Label Content="Salvar" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="493,382,0,0" VerticalAlignment="Top" Width="51" Height="30"/>
+        <Label Content="Data:" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="100"/>
+        <DatePicker x:Name="dtDataAto" TabIndex="1" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" Width="100" Height="23" PreviewKeyDown="dtDataAto_PreviewKeyDown"/>
+        <TextBox x:Name="txtLivro" TabIndex="2" MaxLength="18" HorizontalAlignment="Left" Height="23" Margin="127,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Background="White" FontSize="14" PreviewKeyDown="txtLivro_PreviewKeyDown"/>
+        <Label Content="Livro:" HorizontalAlignment="Left" Margin="127,45,0,0" VerticalAlignment="Top" Width="52"/>
+        <TextBox x:Name="txtAto" TabIndex="3" MaxLength="5" HorizontalAlignment="Left" Height="23" Margin="192,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" Background="White" FontSize="14" PreviewKeyDown="txtAto_PreviewKeyDown"/>
+        <Label Content="Ato:" HorizontalAlignment="Left" Margin="192,45,0,0" VerticalAlignment="Top" Width="52"/>
+        <TextBox  x:Name="txtSelo" MaxLength="9" CharacterCasing="Upper" TabIndex="4" HorizontalAlignment="Left" Height="23" Margin="280,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="87" Background="White" UndoLimit="98" FontSize="13" PreviewKeyDown="txtSelo_PreviewKeyDown"/>
+        <Label Content="Selo:" HorizontalAlignment="Left" Margin="280,45,0,0" VerticalAlignment="Top" Width="52" RenderTransformOrigin="0.481,0.423"/>
+        <TextBox x:Name="txtAleatorio" MaxLength="3" CharacterCasing="Upper" TabIndex="5" HorizontalAlignment="Left" Height="23" Margin="372,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="50" Background="White" FontSize="13" PreviewKeyDown="txtAleatorio_PreviewKeyDown"/>
+        <TextBox TextWrapping="Wrap" TabIndex="12" MaxLength="60" CharacterCasing="Upper" x:Name="txtServentia" Margin="125,125,10,0" FontSize="14" Height="23" VerticalAlignment="Top" PreviewKeyDown="txtServentia_PreviewKeyDown"/>
+        <Label Content="Serventia:" HorizontalAlignment="Left" Margin="127,99,0,0" VerticalAlignment="Top" Width="69"/>
+        <GroupBox Header="Selo Eletrônico?" x:Name="gbEletronico" TabIndex="6" HorizontalAlignment="Left" Height="46" Margin="433,49,0,0" VerticalAlignment="Top" Width="111" PreviewKeyDown="gbEletronico_PreviewKeyDown">
+            <Grid Margin="0,0,-2,-2">
+                <RadioButton Content="Sim" TabIndex="7" x:Name="rbSimEletronico" HorizontalAlignment="Left" Height="19" Margin="5,3,0,0" VerticalAlignment="Top" Width="46" />
+                <RadioButton Content="Não" TabIndex="8" x:Name="rbNaoEletronico" HorizontalAlignment="Left" Height="19" Margin="56,3,0,0" VerticalAlignment="Top" Width="45" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Lavrado Rio?" x:Name="gbLavrado" TabIndex="9" HorizontalAlignment="Left" Height="46" Margin="10,103,0,0" VerticalAlignment="Top" Width="100" PreviewKeyDown="gbLavrado_PreviewKeyDown">
+            <Grid Margin="0,0,-2,-2">
+                <RadioButton Content="Sim" TabIndex="10" x:Name="rbSimLavrado" HorizontalAlignment="Left" Height="19" Margin="0,3,0,0" VerticalAlignment="Top" Width="41"/>
+                <RadioButton Content="Não" TabIndex="11" x:Name="rbNaoLavrado" HorizontalAlignment="Left" Height="19" Margin="46,3,-10,0" VerticalAlignment="Top" Width="45"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

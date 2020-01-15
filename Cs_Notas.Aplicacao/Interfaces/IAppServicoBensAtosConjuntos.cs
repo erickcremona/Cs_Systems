@@ -1,0 +1,14 @@
+﻿using Cs_Notas.Dominio.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Cs_Notas.Aplicacao.Interfaces
+{
+    public interface IAppServicoBensAtosConjuntos: IAppServicoBase<BensAtosConjuntos>
+    {
+        List<BensAtosConjuntos> ObterBensAtoConjuntosPorIdAto(int idAto);
+    }
+}

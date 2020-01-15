@@ -1,0 +1,68 @@
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\CrossCutting\bin\Debug\CrossCutting.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\CrossCutting\bin\Debug\CrossCutting.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\CrossCutting\obj\Debug\CrossCutting.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\CrossCutting\obj\Debug\CrossCutting.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\CrossCutting\obj\Debug\CrossCutting.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\CrossCutting\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\CrossCutting\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\CrossCutting\bin\Debug\CrossCutting.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\CrossCutting\bin\Debug\CrossCutting.pdb
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\CrossCutting\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\CrossCutting\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\CrossCutting\obj\Debug\CrossCutting.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\CrossCutting\obj\Debug\CrossCutting.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\CrossCutting\obj\Debug\CrossCutting.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\CrossCutting.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\CrossCutting.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\CrossCutting\bin\Debug\CrossCutting.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\CrossCutting\bin\Debug\CrossCutting.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\CrossCutting\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\CrossCutting\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\CrossCutting.dll
+C:\Users\erick\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\CrossCutting.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\erick\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.csprojResolveAssemblyReference.cache
+C:\Users\erick\Desktop\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.dll
+C:\Users\erick\Desktop\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\xunit.execution.desktop.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\xunit.execution.desktop.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\CrossCutting.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\CrossCutting.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.csprojResolveAssemblyReference.cache
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.pdb
+C:\Users\ERICK\Documents\Cs_Sistemas\CrossCutting\bin\Debug\xunit.execution.desktop.dll
+C:\Users\ERICK\Documents\Cs_Sistemas\CrossCutting\bin\Debug\CrossCutting.dll
+C:\Users\ERICK\Documents\Cs_Sistemas\CrossCutting\bin\Debug\CrossCutting.pdb
+C:\Users\ERICK\Documents\Cs_Sistemas\CrossCutting\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\ERICK\Documents\Cs_Sistemas\CrossCutting\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\ERICK\Documents\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.csprojResolveAssemblyReference.cache
+C:\Users\ERICK\Documents\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.dll
+C:\Users\ERICK\Documents\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\xunit.execution.desktop.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\CrossCutting.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\CrossCutting.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.csprojResolveAssemblyReference.cache
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\xunit.execution.desktop.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\CrossCutting.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\CrossCutting.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\CrossCutting\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.csprojResolveAssemblyReference.cache
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\CrossCutting\obj\Debug\CrossCutting.pdb

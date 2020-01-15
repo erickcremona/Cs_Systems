@@ -1,0 +1,137 @@
+﻿<Window x:Class="Cs_Gerencial.Windows.DetalhesDoSelo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       Title="Informações Detalhadas do Selo" Height="612.5" Width="598" ResizeMode="NoResize" WindowState="Normal" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" Icon="/Cs_Gerencial;component/Imagens/Gerencial.ico" Background="#FFFFF5E9" Loaded="Window_Loaded">
+    <Grid>
+        <Rectangle Fill="#FFC5DED4" Height="204" Margin="10,88,10,0" Stroke="Black" VerticalAlignment="Top"/>
+        <Rectangle Fill="#FFD5D5E8" Height="221" Margin="10,297,10,0" Stroke="Black" VerticalAlignment="Top"/>
+        <Label Content="" Name="lblSelo" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Top" Width="201" FontSize="14" Foreground="Red" FontWeight="Bold"/>
+        <Label Content="" Name="lblStatus" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" Width="185" FontWeight="Bold"/>
+        <Label Content="" Name="lblSistema" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" Width="195" FontWeight="Bold"/>
+        <Label Content="Data Reserva: " HorizontalAlignment="Left" Margin="211,5,0,0" VerticalAlignment="Top" Width="83"/>
+        <Label Content="" x:Name="lblDataReserva" HorizontalAlignment="Left" Margin="294,5,0,0" VerticalAlignment="Top" Width="84"/>
+        <Label Content=" Reservado Por: " HorizontalAlignment="Left" Margin="200,31,0,0" VerticalAlignment="Top" Width="94"/>
+        <Label Content="" x:Name="lblReservadoPor" HorizontalAlignment="Left" Margin="294,31,0,0" VerticalAlignment="Top" Width="284" RenderTransformOrigin="0.488,0.462"/>
+        <Label Content="Id do Ato: " HorizontalAlignment="Left" Margin="230,57,0,0" VerticalAlignment="Top" Width="64"/>
+        <Label Content="" x:Name="lblIdAto" HorizontalAlignment="Left" Margin="294,57,0,0" VerticalAlignment="Top" Width="84"/>
+        <Label Content="Natureza:" HorizontalAlignment="Left" Margin="25,88,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox Name="txtNatureza" MaxLength="100" CharacterCasing="Upper" TabIndex="0" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="25,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" PreviewKeyDown="txtNatureza_PreviewKeyDown"/>
+        <Label Content="Livro:" HorizontalAlignment="Left" Margin="25,180,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox Name="txtLivro" MaxLength="25" CharacterCasing="Upper" TabIndex="4" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="25,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtLivro_PreviewKeyDown"/>
+        <Label Content="Fls. Inicial:" HorizontalAlignment="Left" Margin="167,180,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox Name="txtFlsInicial" MaxLength="9" CharacterCasing="Upper" TabIndex="5" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="167,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtFlsInicial_PreviewKeyDown"/>
+        <Label Content="Fls. Final:" HorizontalAlignment="Left" Margin="313,180,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox Name="txtFlsFinal" MaxLength="9" CharacterCasing="Upper" TabIndex="6" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="313,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtFlsFinal_PreviewKeyDown"/>
+        <Label Content="Nº Ato:" HorizontalAlignment="Left" Margin="455,180,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox Name="txtNumeroAto" MaxLength="9" CharacterCasing="Upper" TabIndex="7" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="455,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtNumeroAto_PreviewKeyDown"/>
+        <Label Content="Escrevente:" HorizontalAlignment="Left" Margin="25,133,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox Name="txtEscrevente" MaxLength="100" CharacterCasing="Upper" TabIndex="2" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="25,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="390" PreviewKeyDown="txtEscrevente_PreviewKeyDown"/>
+        <Label Content="Protocolo:" HorizontalAlignment="Left" Margin="25,232,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox Name="txtProtocolo" MaxLength="9" CharacterCasing="Upper" TabIndex="8" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="25,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtProtocolo_PreviewKeyDown"/>
+        <Label Content="Recibo:" HorizontalAlignment="Left" Margin="167,232,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox Name="txtRecibo" MaxLength="9" CharacterCasing="Upper" TabIndex="9" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="167,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtRecibo_PreviewKeyDown"/>
+        <Label Content="Código:" HorizontalAlignment="Left" Margin="313,232,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox Name="txtCodigo" MaxLength="4" CharacterCasing="Upper" TabIndex="10" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="313,258,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtCodigo_PreviewKeyDown"/>
+        <DatePicker Name="datePickerDataPratica" IsEnabled="False" TabIndex="1" Margin="455,113,26,0" VerticalAlignment="Top" PreviewKeyDown="datePickerDataPratica_PreviewKeyDown"/>
+        <Label Content="Data Prática" HorizontalAlignment="Left" Margin="455,88,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cmbAtribuicao" TabIndex="11" HorizontalAlignment="Left" Margin="455,258,0,0" VerticalAlignment="Top" Width="102" IsEnabled="False" PreviewKeyDown="cmbAtribuicao_PreviewKeyDown" Foreground="#FF040404" SelectionChanged="cmbAtribuicao_SelectionChanged">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FFF4F4F5" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+        </ComboBox>
+        <Label Content="Atribuição:" HorizontalAlignment="Left" Margin="455,232,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.462,0.538"/>
+        <Label Content="Fetj:" HorizontalAlignment="Left" Margin="25,354,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox x:Name="txtFetj" CharacterCasing="Upper" TabIndex="16" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="25,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtFetj_PreviewKeyDown" GotFocus="txtFetj_GotFocus" LostFocus="txtFetj_LostFocus"/>
+        <Label Content="Fundperj:" HorizontalAlignment="Left" Margin="167,354,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox x:Name="txtFundperj" CharacterCasing="Upper" TabIndex="17" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="167,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtFundperj_PreviewKeyDown" GotFocus="txtFundperj_GotFocus" LostFocus="txtFundperj_LostFocus"/>
+        <Label Content="Funperj:" HorizontalAlignment="Left" Margin="313,354,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox x:Name="txtFunperj" CharacterCasing="Upper" TabIndex="18" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="313,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtFunperj_PreviewKeyDown" GotFocus="txtFunperj_GotFocus" LostFocus="txtFunperj_LostFocus"/>
+        <Label Content="Funarpen:" HorizontalAlignment="Left" Margin="455,354,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox x:Name="txtFunarpen" CharacterCasing="Upper" TabIndex="19" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="455,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtFunarpen_PreviewKeyDown" GotFocus="txtFunarpen_GotFocus" LostFocus="txtFunarpen_LostFocus"/>
+        <Label Content="Pmcmv:" HorizontalAlignment="Left" Margin="25,404,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox x:Name="txtPmcmv" CharacterCasing="Upper" TabIndex="20" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="25,430,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtPmcmv_PreviewKeyDown" GotFocus="txtPmcmv_GotFocus" LostFocus="txtPmcmv_LostFocus"/>
+        <Label Content="Iss:" HorizontalAlignment="Left" Margin="167,404,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox x:Name="txtIss" CharacterCasing="Upper" TabIndex="21" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="167,430,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtIss_PreviewKeyDown" GotFocus="txtIss_GotFocus" LostFocus="txtIss_LostFocus"/>
+        <Label Content="Mútua:" HorizontalAlignment="Left" Margin="313,404,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox x:Name="txtMutua" CharacterCasing="Upper" TabIndex="22" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="313,430,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtMutua_PreviewKeyDown" GotFocus="txtMutua_GotFocus" LostFocus="txtMutua_LostFocus"/>
+        <Label Content="Acoterj:" HorizontalAlignment="Left" Margin="455,404,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox x:Name="txtAcoterj" CharacterCasing="Upper" TabIndex="23" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="455,430,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtAcoterj_PreviewKeyDown" GotFocus="txtAcoterj_GotFocus" LostFocus="txtAcoterj_LostFocus"/>
+        <Label Content="Distribuicão:" HorizontalAlignment="Left" Margin="25,455,0,0" VerticalAlignment="Top" Width="92" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox x:Name="txtDistribuicao" CharacterCasing="Upper" TabIndex="24" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="25,481,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtDistribuicao_PreviewKeyDown" GotFocus="txtDistribuicao_GotFocus" LostFocus="txtDistribuicao_LostFocus"/>
+        <Label Content="Indisponibilidade:" HorizontalAlignment="Left" Margin="167,455,0,0" VerticalAlignment="Top" Width="112" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox x:Name="txtIndisponibilidade" CharacterCasing="Upper" TabIndex="25" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="167,481,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtIndisponibilidade_PreviewKeyDown" GotFocus="txtIndisponibilidade_GotFocus" LostFocus="txtIndisponibilidade_LostFocus"/>
+        <Label Content="Tarifa Bancária:" HorizontalAlignment="Left" Margin="313,455,0,0" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox x:Name="txtTarifa" CharacterCasing="Upper" TabIndex="26" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="313,481,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtTarifa_PreviewKeyDown" GotFocus="txtTarifa_GotFocus" LostFocus="txtTarifa_LostFocus"/>
+        <Label Content="Total:" HorizontalAlignment="Left" Margin="455,455,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox x:Name="txtTotal" CharacterCasing="Upper" TabIndex="27" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="455,481,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtTotal_PreviewKeyDown" GotFocus="txtTotal_GotFocus" LostFocus="txtTotal_LostFocus"/>
+        <Label Content="Tipo Cobrança:" HorizontalAlignment="Left" Margin="25,305,0,0" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.462,0.538"/>
+        <ComboBox x:Name="txtTipoCobranca" IsEnabled="False" TabIndex="12" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="25,331,0,0"  VerticalAlignment="Top" Width="102" PreviewKeyDown="txtTipoCobranca_PreviewKeyDown" Foreground="Black">
+            <ComboBoxItem Content="JG"/>
+            <ComboBoxItem Content="CC"/>
+            <ComboBoxItem Content="SC"/>
+            <ComboBoxItem Content="NH"/>
+            <ComboBoxItem Content="FL"/>
+            <ComboBoxItem Content="CV"/>
+            <ComboBoxItem Content="PL"/>
+            <ComboBoxItem Content="PC"/>
+            <ComboBoxItem Content="AS"/>
+            <ComboBoxItem Content="PS"/>
+            <ComboBoxItem Content="NC"/>
+            <ComboBoxItem Content="NL"/>
+            <ComboBoxItem Content="NS"/>
+            <ComboBoxItem Content="PZ"/>
+            <ComboBoxItem Content="CD"/>
+            <ComboBoxItem Content="PP"/>
+            <ComboBoxItem Content="PA"/>
+
+        </ComboBox>
+        <Label Content="Emolumentos:" HorizontalAlignment="Left" Margin="455,305,0,0" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox x:Name="txtEmolumentos" CharacterCasing="Upper" TabIndex="15" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="455,331,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtEmolumentos_PreviewKeyDown" GotFocus="txtEmolumentos_GotFocus" LostFocus="txtEmolumentos_LostFocus"/>
+        <ComboBox x:Name="cmbConvenio" TabIndex="13" HorizontalAlignment="Left" Margin="167,331,0,0" VerticalAlignment="Top" Width="102" IsEnabled="False" PreviewKeyDown="cmbConvenio_PreviewKeyDown" Foreground="Black">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                    <GradientStop Color="#FFF4F4F5" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem Content="SIM"/>
+            <ComboBoxItem Content="NÃO"/>
+        </ComboBox>
+        <Label Content="Convênio:" HorizontalAlignment="Left" Margin="167,305,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.462,0.538"/>
+        <Label Name="lblPronot_Apont" Content="Prenot./Apont.:" HorizontalAlignment="Left" Margin="313,305,0,0" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox x:Name="txtPrenot_Apont" CharacterCasing="Upper" TabIndex="14" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="313,331,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" RenderTransformOrigin="0.49,0.565" PreviewKeyDown="txtPrenot_Apont_PreviewKeyDown" GotFocus="txtPrenot_Apont_GotFocus" LostFocus="txtPrenot_Apont_LostFocus"/>
+        <Button x:Name="btnSalvar" Padding="0" BorderThickness="0" Cursor="Hand" RenderTransformOrigin="0.614,3.118" IsEnabled="True" Click="btnSalvar_Click" Height="41" VerticalAlignment="Top" Margin="507,523,10,0">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <TextBlock Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="33" Width="52">
+                        <TextBlock.Background>
+                            <ImageBrush ImageSource="/Cs_Gerencial;component/Imagens/Check.png"/>
+                        </TextBlock.Background>
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Style.Triggers>
+                                    <Trigger Property ="IsMouseOver" Value="True">
+                                        <Setter Property= "Background" Value="Transparent"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </DataTemplate>
+            </Button.ContentTemplate>
+        </Button>
+        <Label Content="Matrícula:" HorizontalAlignment="Left" Margin="455,133,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.462,0.538"/>
+        <TextBox x:Name="txtMatricula" MaxLength="10" CharacterCasing="Upper" TabIndex="3" IsReadOnly="True" HorizontalAlignment="Left" Height="23" Margin="455,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="102" PreviewKeyDown="txtLivro_PreviewKeyDown"/>
+
+    </Grid>
+</Window>

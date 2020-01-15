@@ -1,0 +1,12 @@
+C:\Users\ERICK\Desktop\Cs_Sistemas\Cs_ControleInterno.Dominio\bin\Debug\Cs_ControleInterno.Dominio.dll
+C:\Users\ERICK\Desktop\Cs_Sistemas\Cs_ControleInterno.Dominio\bin\Debug\Cs_ControleInterno.Dominio.pdb
+C:\Users\ERICK\Desktop\Cs_Sistemas\Cs_ControleInterno.Dominio\obj\Debug\Cs_ControleInterno.Dominio.dll
+C:\Users\ERICK\Desktop\Cs_Sistemas\Cs_ControleInterno.Dominio\obj\Debug\Cs_ControleInterno.Dominio.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_ControleInterno.Dominio\bin\Debug\Cs_ControleInterno.Dominio.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_ControleInterno.Dominio\bin\Debug\Cs_ControleInterno.Dominio.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_ControleInterno.Dominio\obj\Debug\Cs_ControleInterno.Dominio.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_ControleInterno.Dominio\obj\Debug\Cs_ControleInterno.Dominio.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_ControleInterno.Dominio\bin\Debug\Cs_ControleInterno.Dominio.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_ControleInterno.Dominio\bin\Debug\Cs_ControleInterno.Dominio.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_ControleInterno.Dominio\obj\Debug\Cs_ControleInterno.Dominio.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_ControleInterno.Dominio\obj\Debug\Cs_ControleInterno.Dominio.pdb

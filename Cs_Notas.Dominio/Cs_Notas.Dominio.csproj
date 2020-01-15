@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40C4EC0A-2EFF-40A9-BA15-C8728697640A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cs_Notas.Dominio</RootNamespace>
+    <AssemblyName>Cs_Notas.Dominio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\BensAtosConjuntos.cs" />
+    <Compile Include="Entities\CadProcuracao.cs" />
+    <Compile Include="Entities\Cartorios.cs" />
+    <Compile Include="Entities\Censec.cs" />
+    <Compile Include="Entities\CertidaoProcuracao.cs" />
+    <Compile Include="Entities\CidadesIbge.cs" />
+    <Compile Include="Entities\Complementos.cs" />
+    <Compile Include="Entities\Configuracoes.cs" />
+    <Compile Include="Entities\AtoConjuntos.cs" />
+    <Compile Include="Entities\Escrituras.cs" />
+    <Compile Include="Entities\Imovel.cs" />
+    <Compile Include="Entities\ItensCustas.cs" />
+    <Compile Include="Entities\LogSistema.cs" />
+    <Compile Include="Entities\Naturezas.cs" />
+    <Compile Include="Entities\Nomes.cs" />
+    <Compile Include="Entities\ParteConjuntos.cs" />
+    <Compile Include="Entities\ProcuracaoEscritura.cs" />
+    <Compile Include="Entities\Regimes.cs" />
+    <Compile Include="Entities\Revogados.cs" />
+    <Compile Include="Entities\CadTestamento.cs" />
+    <Compile Include="Entities\TipoImovel.cs" />
+    <Compile Include="Entities\TransacaoDoi.cs" />
+    <Compile Include="Entities\Usuario.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioBase.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioBensAtosConjuntos.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioCadProcuracao.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioCensec.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioComplementos.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioConfiguracoes.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioAtoConjuntos.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioEscrituras.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioImovel.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioItensCustas.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioLogSistema.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioNaturezas.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioNomes.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioParteConjuntos.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioProcuracaoEscritura.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioRegimes.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioRevogados.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioTestamento.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioTipoImovel.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioTransacaoDoi.cs" />
+    <Compile Include="Interfaces\Repositorios\IRepositorioUsuario.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoBase.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoBensAtosConjuntos.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoCadProcuracao.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoCensec.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoComplementos.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoConfiguracoes.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoAtoConjuntos.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoEscrituras.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoImovel.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoItensCustas.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoLogSistema.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoNaturezas.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoNomes.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoParteConjuntos.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoProcuracao.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoProcuracaoEscritura.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoRegimes.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoRevogados.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoTestamento.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoTipoImovel.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoTransacaoDoi.cs" />
+    <Compile Include="Interfaces\Servicos\IServicoUsuario.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicos\ServicoBase.cs" />
+    <Compile Include="Servicos\ServicoBensAtosConjuntos.cs" />
+    <Compile Include="Servicos\ServicoCadProcuracao.cs" />
+    <Compile Include="Servicos\ServicoCensec.cs" />
+    <Compile Include="Servicos\ServicoComplementos.cs" />
+    <Compile Include="Servicos\ServicoConfiguracoes.cs" />
+    <Compile Include="Servicos\ServicoAtoConjuntos.cs" />
+    <Compile Include="Servicos\ServicoEscrituras.cs" />
+    <Compile Include="Servicos\ServicoImovel.cs" />
+    <Compile Include="Servicos\ServicoItensCustas.cs" />
+    <Compile Include="Servicos\ServicoLogSistema.cs" />
+    <Compile Include="Servicos\ServicoNaturezas.cs" />
+    <Compile Include="Servicos\ServicoNomes.cs" />
+    <Compile Include="Servicos\ServicoParteConjuntos.cs" />
+    <Compile Include="Servicos\ServicoProcuracaoEscritura.cs" />
+    <Compile Include="Servicos\ServicoRegimes.cs" />
+    <Compile Include="Servicos\ServicoRevogados.cs" />
+    <Compile Include="Servicos\ServicoTestamento.cs" />
+    <Compile Include="Servicos\ServicoTipoImovel.cs" />
+    <Compile Include="Servicos\ServicoTransacaoDoi.cs" />
+    <Compile Include="Servicos\ServicoUsuario.cs" />
+    <Compile Include="ValuesObject\AssinaPor.cs" />
+    <Compile Include="ValuesObject\Conjuge.cs" />
+    <Compile Include="ValuesObject\EstadoCivil.cs" />
+    <Compile Include="ValuesObject\JustificativaCpf.cs" />
+    <Compile Include="ValuesObject\LocalProcuracao.cs" />
+    <Compile Include="ValuesObject\Participante.cs" />
+    <Compile Include="ValuesObject\ResponsavelFilhosMenores.cs" />
+    <Compile Include="ValuesObject\SituacaoCpfCnpj.cs" />
+    <Compile Include="ValuesObject\TipoDoi.cs" />
+    <Compile Include="ValuesObject\TipoEndereco.cs" />
+    <Compile Include="ValuesObject\TipoLivroProcuracao.cs" />
+    <Compile Include="ValuesObject\TiposProcuracao.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

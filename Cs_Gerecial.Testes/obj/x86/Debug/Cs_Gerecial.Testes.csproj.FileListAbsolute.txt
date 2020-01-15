@@ -1,0 +1,356 @@
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\xunit.abstractions.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\xunit.execution.desktop.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\xunit.runner.utility.desktop.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\CrossCutting.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Aplicacao.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.exe
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Moq.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\EntityFramework.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\SimpleInjector.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\CrossCutting.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Aplicacao.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Moq.xml
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.xml
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.xml
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\EntityFramework.xml
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\SimpleInjector.xml
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Xsd\ordem.xsd
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Xsd\NotasPiloto_1_07.xsd
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\xunit.runner.utility.desktop.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\xunit.abstractions.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\xunit.execution.desktop.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Xsd\NotasPiloto_1_07.xsd
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Xsd\ordem.xsd
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.pdb
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\CrossCutting.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Aplicacao.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.exe
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Moq.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\EntityFramework.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\SimpleInjector.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\CrossCutting.pdb
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Aplicacao.pdb
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.pdb
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Moq.xml
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.pdb
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.xml
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.pdb
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.xml
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\SimpleInjector.xml
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.pdb
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.dll.config
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerecial.Testes\bin\x86\Debug\MySql.Data.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.runner.utility.desktop.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.abstractions.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.execution.desktop.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Xsd\NotasPiloto_1_07.xsd
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Xsd\ordem.xsd
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.dll.config
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\CrossCutting.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Aplicacao.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.exe
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Moq.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\EntityFramework.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\SimpleInjector.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\MySql.Data.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\CrossCutting.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Aplicacao.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Moq.xml
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.xml
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.xml
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\EntityFramework.xml
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\SimpleInjector.xml
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\xunit.runner.utility.desktop.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\xunit.abstractions.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\xunit.execution.desktop.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\Xsd\NotasPiloto_1_07.xsd
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\Xsd\ordem.xsd
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.dll.config
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\CrossCutting.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Aplicacao.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.exe
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\Moq.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\EntityFramework.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\SimpleInjector.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\MySql.Data.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\CrossCutting.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Aplicacao.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\Moq.xml
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.xml
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.xml
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\EntityFramework.xml
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\bin\x86\Debug\SimpleInjector.xml
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas - Cópia\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.runner.utility.desktop.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.abstractions.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.execution.desktop.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Xsd\NotasPiloto_1_07.xsd
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Xsd\ordem.xsd
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.dll.config
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\CrossCutting.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Aplicacao.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.exe
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Moq.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\EntityFramework.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\SimpleInjector.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\MySql.Data.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\CrossCutting.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Aplicacao.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Moq.xml
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.xml
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.xml
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\EntityFramework.xml
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\SimpleInjector.xml
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.runner.utility.desktop.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.abstractions.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.execution.desktop.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Xsd\NotasPiloto_1_07.xsd
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Xsd\ordem.xsd
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.dll.config
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\CrossCutting.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Aplicacao.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.exe
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Moq.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\EntityFramework.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\SimpleInjector.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\CrossCutting.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Aplicacao.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Moq.xml
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.xml
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.xml
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\EntityFramework.xml
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\SimpleInjector.xml
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.csprojResolveAssemblyReference.cache
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.execution.desktop.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.runner.utility.desktop.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.abstractions.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Xsd\NotasPiloto_1_07.xsd
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Xsd\ordem.xsd
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.dll.config
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\CrossCutting.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Aplicacao.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.exe
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Moq.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\EntityFramework.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\SimpleInjector.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\CrossCutting.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Aplicacao.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Moq.xml
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.xml
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.xml
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\EntityFramework.xml
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\SimpleInjector.xml
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.csprojResolveAssemblyReference.cache
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.execution.desktop.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.runner.utility.desktop.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.abstractions.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Xsd\NotasPiloto_1_07.xsd
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Xsd\ordem.xsd
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.dll.config
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\CrossCutting.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Aplicacao.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.exe
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Moq.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\EntityFramework.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\SimpleInjector.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\MySql.Data.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\CrossCutting.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Aplicacao.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Moq.xml
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.xml
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.xml
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\EntityFramework.xml
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\SimpleInjector.xml
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.csprojResolveAssemblyReference.cache
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.pdb
+C:\Users\ERICK\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\MySql.Data.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.execution.desktop.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.runner.utility.desktop.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.abstractions.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Xsd\NotasPiloto_1_07.xsd
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Xsd\ordem.xsd
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.dll.config
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\CrossCutting.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Aplicacao.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.exe
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Moq.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\EntityFramework.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\SimpleInjector.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\MySql.Data.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\CrossCutting.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Aplicacao.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Moq.xml
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.xml
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.xml
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\EntityFramework.xml
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\SimpleInjector.xml
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.csprojResolveAssemblyReference.cache
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.execution.desktop.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.runner.utility.desktop.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.abstractions.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Xsd\NotasPiloto_1_07.xsd
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Xsd\ordem.xsd
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.dll.config
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerecial.Testes.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\CrossCutting.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Aplicacao.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.exe
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Infra.Data.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Moq.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\EntityFramework.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\SimpleInjector.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\MySql.Data.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\CrossCutting.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Aplicacao.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.Infra.Data.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Cs_Gerencial.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\Moq.xml
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.assert.xml
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\xunit.core.xml
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\EntityFramework.xml
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\bin\x86\Debug\SimpleInjector.xml
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.csprojResolveAssemblyReference.cache
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerecial.Testes\obj\x86\Debug\Cs_Gerecial.Testes.pdb

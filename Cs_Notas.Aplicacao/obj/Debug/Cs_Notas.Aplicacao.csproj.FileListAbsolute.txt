@@ -1,0 +1,84 @@
+C:\Users\Erick Marcel\Desktop\Cs_Notas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Aplicacao.dll
+C:\Users\Erick Marcel\Desktop\Cs_Notas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Aplicacao.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Notas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.dll
+C:\Users\Erick Marcel\Desktop\Cs_Notas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Notas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Dominio.dll
+C:\Users\Erick Marcel\Desktop\Cs_Notas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Notas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Desktop\Cs_Notas\Cs_Notas.Aplicacao\bin\Debug\CrossCutting.dll
+C:\Users\Erick Marcel\Desktop\Cs_Notas\Cs_Notas.Aplicacao\bin\Debug\CrossCutting.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Aplicacao.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Aplicacao.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\CrossCutting.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Dominio.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\CrossCutting.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Aplicacao.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Aplicacao.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\CrossCutting.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Dominio.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\CrossCutting.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Dominio.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Aplicacao.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Aplicacao.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\CrossCutting.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Dominio.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\CrossCutting.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Dominio.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.csprojResolveAssemblyReference.cache
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Aplicacao.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Aplicacao.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\CrossCutting.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Dominio.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\CrossCutting.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Dominio.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.csprojResolveAssemblyReference.cache
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\xunit.execution.desktop.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Aplicacao.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Aplicacao.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\CrossCutting.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Dominio.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\CrossCutting.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Dominio.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.csprojResolveAssemblyReference.cache
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.pdb
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Aplicacao.dll
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Aplicacao.pdb
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\CrossCutting.dll
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Dominio.dll
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\CrossCutting.pdb
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Dominio.pdb
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.csprojResolveAssemblyReference.cache
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.dll
+C:\Users\ERICK\Documents\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\xunit.execution.desktop.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Aplicacao.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Aplicacao.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\CrossCutting.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Dominio.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\CrossCutting.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Dominio.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.csprojResolveAssemblyReference.cache
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Aplicacao.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Aplicacao.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\CrossCutting.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Dominio.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\CrossCutting.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\Cs_Notas.Dominio.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.csprojResolveAssemblyReference.cache
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\obj\Debug\Cs_Notas.Aplicacao.pdb
+C:\Users\Erick\Desktop\Cs_Sistemas\Cs_Notas.Aplicacao\bin\Debug\xunit.execution.desktop.dll

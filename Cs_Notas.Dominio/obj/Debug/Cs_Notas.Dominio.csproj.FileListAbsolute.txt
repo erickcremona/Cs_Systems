@@ -1,0 +1,39 @@
+C:\Users\Erick Marcel\Desktop\Cs_Notas\Cs_Notas.Dominio\bin\Debug\Cs_Notas.Dominio.dll
+C:\Users\Erick Marcel\Desktop\Cs_Notas\Cs_Notas.Dominio\bin\Debug\Cs_Notas.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Notas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.dll
+C:\Users\Erick Marcel\Desktop\Cs_Notas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Notas.Dominio\bin\Debug\Cs_Notas.Dominio.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Notas.Dominio\bin\Debug\Cs_Notas.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Notas.Dominio\bin\Debug\Cs_Notas.Dominio.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Notas.Dominio\bin\Debug\Cs_Notas.Dominio.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Notas.Dominio\bin\Debug\Cs_Notas.Dominio.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Notas.Dominio\bin\Debug\Cs_Notas.Dominio.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Notas.Dominio\bin\Debug\Cs_Notas.Dominio.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Notas.Dominio\bin\Debug\Cs_Notas.Dominio.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Notas.Dominio\bin\Debug\Cs_Notas.Dominio.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Notas.Dominio\bin\Debug\Cs_Notas.Dominio.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Notas.Dominio\bin\Debug\Cs_Notas.Dominio.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Notas.Dominio\bin\Debug\Cs_Notas.Dominio.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Notas.Dominio\bin\Debug\Cs_Notas.Dominio.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Notas.Dominio\bin\Debug\Cs_Notas.Dominio.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Notas.Dominio\obj\Debug\Cs_Notas.Dominio.pdb

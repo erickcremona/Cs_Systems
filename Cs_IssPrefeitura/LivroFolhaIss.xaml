@@ -1,0 +1,35 @@
+﻿<Window x:Class="Cs_IssPrefeitura.LivroFolhaIss"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Livro e Folha" Height="111" Width="286" WindowStyle="None" ResizeMode="NoResize" Background="#FF6BD6EE" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" Loaded="Window_Loaded" PreviewKeyDown="Window_PreviewKeyDown">
+    <Grid Background="#FFC6ECEE" Margin="6">
+        <TextBox Name="txtLivro" Text="0" HorizontalAlignment="Left" Height="23" Margin="10,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" PreviewKeyDown="txtLivro_PreviewKeyDown" GotFocus="txtLivro_GotFocus" LostFocus="txtLivro_LostFocus"/>
+        <Label Content="Livro:" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" Width="50"/>
+        <TextBox x:Name="txtFolha" Text="0" HorizontalAlignment="Left" Height="23" Margin="89,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" PreviewKeyDown="txtFolha_PreviewKeyDown" GotFocus="txtFolha_GotFocus" LostFocus="txtFolha_LostFocus"/>
+        <Label Content="Folha:" HorizontalAlignment="Left" Margin="89,12,0,0" VerticalAlignment="Top" Width="50"/>
+        <Button x:Name="btnOk" Padding="0" BorderThickness="0" Cursor="Hand" RenderTransformOrigin="-0.357,0.569" Margin="0,25,26,25" Click="btnOk_Click" HorizontalAlignment="Right" Width="75">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <TextBlock Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="40" Width="52">
+                        <TextBlock.Background>
+                            <ImageBrush ImageSource="Imagens/Sincronizar.png"/>
+                        </TextBlock.Background>
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Style.Triggers>
+                                    <Trigger Property ="IsMouseOver" Value="True">
+                                        <Setter Property= "Background" Value="Transparent"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </DataTemplate>
+            </Button.ContentTemplate>
+        </Button>
+
+    </Grid>
+</Window>

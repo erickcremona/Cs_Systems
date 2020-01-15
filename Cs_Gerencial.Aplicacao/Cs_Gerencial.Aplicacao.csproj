@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC15F70C-959A-4ED6-80B6-FE4397840B80}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cs_Gerencial.Aplicacao</RootNamespace>
+    <AssemblyName>Cs_Gerencial.Aplicacao</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\IAppServicoAdicional.cs" />
+    <Compile Include="Interfaces\IAppServicoAtribuicoes.cs" />
+    <Compile Include="Interfaces\IAppServicoNacionalidades.cs" />
+    <Compile Include="Interfaces\IAppServicoParametros.cs" />
+    <Compile Include="Interfaces\IAppServicoParticipantes.cs" />
+    <Compile Include="Interfaces\IAppServicoPessoas.cs" />
+    <Compile Include="Interfaces\IAppServicoSelos.cs" />
+    <Compile Include="Interfaces\IAppServicoServentiasOutras.cs" />
+    <Compile Include="Interfaces\IAppServicoBancos.cs" />
+    <Compile Include="Interfaces\IAppServicoBase.cs" />
+    <Compile Include="Interfaces\IAppServicoCompraSelo.cs" />
+    <Compile Include="Interfaces\IAppServicoConjuntos.cs" />
+    <Compile Include="Interfaces\IAppServicoContas.cs" />
+    <Compile Include="Interfaces\IAppServicoFornecedores.cs" />
+    <Compile Include="Interfaces\IAppServicoIndisponibilidades.cs" />
+    <Compile Include="Interfaces\IAppServicoLogSistema.cs" />
+    <Compile Include="Interfaces\IAppServicoMunicipios.cs" />
+    <Compile Include="Interfaces\IAppServicoMunicipiosCensec.cs" />
+    <Compile Include="Interfaces\IAppServicoNacionalidadesOnu.cs" />
+    <Compile Include="Interfaces\IAppServicoPlanos.cs" />
+    <Compile Include="Interfaces\IAppServicoSeries.cs" />
+    <Compile Include="Interfaces\IAppServicoServentia.cs" />
+    <Compile Include="Interfaces\IAppServicoTabelaCustas.cs" />
+    <Compile Include="Interfaces\IAppServicoUsuario.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicosApp\AppServicoAdicional.cs" />
+    <Compile Include="ServicosApp\AppServicoAtribuicoes.cs" />
+    <Compile Include="ServicosApp\AppServicoBancos.cs" />
+    <Compile Include="ServicosApp\AppServicoBase.cs" />
+    <Compile Include="ServicosApp\AppServicoCompraSelo.cs" />
+    <Compile Include="ServicosApp\AppServicoConjuntos.cs" />
+    <Compile Include="ServicosApp\AppServicoContas.cs" />
+    <Compile Include="ServicosApp\AppServicoFornecedores.cs" />
+    <Compile Include="ServicosApp\AppServicoIndisponibilidades.cs" />
+    <Compile Include="ServicosApp\AppServicoLogSistema.cs" />
+    <Compile Include="ServicosApp\AppServicoMunicipios.cs" />
+    <Compile Include="ServicosApp\AppServicoMunicipiosCensec.cs" />
+    <Compile Include="ServicosApp\AppServicoNacionalidades.cs" />
+    <Compile Include="ServicosApp\AppServicoNacionalidadesOnu.cs" />
+    <Compile Include="ServicosApp\AppServicoParametros.cs" />
+    <Compile Include="ServicosApp\AppServicoParticipantes.cs" />
+    <Compile Include="ServicosApp\AppServicoPessoas.cs" />
+    <Compile Include="ServicosApp\AppServicoPlanos.cs" />
+    <Compile Include="ServicosApp\AppServicoSelos.cs" />
+    <Compile Include="ServicosApp\AppServicoSeries.cs" />
+    <Compile Include="ServicosApp\AppServicoServentia.cs" />
+    <Compile Include="ServicosApp\AppServicoServentiasOutras.cs" />
+    <Compile Include="ServicosApp\AppServicoTabelaCustas.cs" />
+    <Compile Include="ServicosApp\AppServicoUsuario.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cs_Gerencial.Dominio\Cs_Gerencial.Dominio.csproj">
+      <Project>{78b0b9b9-f686-410f-a6cb-9ac972f6c71b}</Project>
+      <Name>Cs_Gerencial.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cs_Gerencial.Infra.Data\Cs_Gerencial.Infra.Data.csproj">
+      <Project>{dd8b0738-2c6a-4ea9-88e8-050893de6854}</Project>
+      <Name>Cs_Gerencial.Infra.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

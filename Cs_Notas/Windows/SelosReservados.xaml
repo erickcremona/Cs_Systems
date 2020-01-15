@@ -1,0 +1,38 @@
+﻿<Window x:Class="Cs_Notas.Windows.SelosReservados"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Selos Reservados" Loaded="Window_Loaded" Height="340" Width="684" ResizeMode="NoResize" Icon="/Cs_Notas;component/Imagens/Notas.ico" WindowStartupLocation="CenterOwner" ShowInTaskbar="False">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" AlternationCount="2" RowBackground="White" AlternatingRowBackground="#FF8DE1FF" IsReadOnly="True" SelectionMode="Single" x:Name="dataGridSelosReservados" AllowDrop="False" HeadersVisibility="All" CanUserResizeRows="False" SelectionUnit="FullRow" GridLinesVisibility="None" ClipboardCopyMode="ExcludeHeader" HorizontalScrollBarVisibility="Auto" UseLayoutRounding="True" Background="{x:Null}" IsTabStop="True"  Margin="0,71,0,0" SelectionChanged="dataGridSelosReservados_SelectionChanged">
+
+            <DataGrid.RowStyle>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <EventSetter Event="Control.MouseDoubleClick" Handler="dataGridSelosReservados_MouseDoubleClick"/>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.CellStyle>
+                <Style TargetType="{x:Type DataGridCell}">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#FF0086FF"/>
+                        </Trigger>                        
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Letra" Width="60" Binding="{Binding Letra}" CanUserResize="False" Visibility="Visible"/>
+                <DataGridTextColumn Header="Número" Width="60" Binding="{Binding Numero, StringFormat=\{0:00000\}}" CanUserResize="False"/>
+                <DataGridTextColumn Header="Aleatório" Width="60" Binding="{Binding Aleatorio}" CanUserResize="False"/>
+                <DataGridTextColumn Header="Data" Width="70" Binding="{Binding DataReservado, StringFormat=dd/MM/yyyy}" CanUserResize="False"/>
+                <DataGridTextColumn Header="Usuário" Width="160" Binding="{Binding UsuarioReservado}" CanUserResize="False" Visibility="Visible"/>
+                <DataGridTextColumn Header="Livro" Width="60" Binding="{Binding Livro}" CanUserResize="False" Visibility="Visible"/>
+                <DataGridTextColumn Header="Fls. Ini" Width="60" Binding="{Binding FolhaInicial }" CanUserResize="False" Visibility="Visible"/>
+                <DataGridTextColumn Header="Fls. Fim" Width="60" Binding="{Binding FolhaFinal }" CanUserResize="False" Visibility="Visible"/>
+                <DataGridTextColumn Header="Ato" Width="50" Binding="{Binding NumeroAto }" CanUserResize="False" Visibility="Visible"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Rectangle Fill="#FFB2ECFD" HorizontalAlignment="Left" Height="55" Margin="29,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="616"/>
+        <Label Content="SELOS RESERVADOS DE PROCURAÇÃO" Name="lblTexto" HorizontalAlignment="Left" Margin="107,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.538" Width="470" FontSize="24" Height="46" FontWeight="Bold" FontStyle="Italic" FontFamily="PMingLiU-ExtB"/>
+
+    </Grid>
+</Window>

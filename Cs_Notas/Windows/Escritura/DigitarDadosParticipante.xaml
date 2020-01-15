@@ -1,0 +1,402 @@
+﻿<Window x:Class="Cs_Notas.Windows.DigitarDadosParticipante"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:behaviors="clr-namespace:WPFTextBoxAutoComplete;assembly=WPFTextBoxAutoComplete"
+       Title="Participante" Height="661.175" Width="873" ShowInTaskbar="False" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Loaded="Window_Loaded" Icon="/Cs_Notas;component/Imagens/Notas.ico" PreviewKeyDown="Window_PreviewKeyDown" WindowStyle="None">
+    <Window.Resources>
+        <Style TargetType="ComboBox" x:Key="Flat_ComboBox">
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="MinWidth" Value="30"/>
+            <Setter Property="UIElement.SnapsToDevicePixels" Value="True"/>
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.CanContentScroll" Value="True"/>
+            <Setter Property="TextElement.Foreground" Value="Black"/>
+            <Setter Property="FrameworkElement.FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Background" Value="White" />
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="LightSkyBlue" />
+                </Trigger>
+            </Style.Triggers>
+
+        </Style>
+
+
+        <ControlTemplate x:Key="ComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="20" />
+                </Grid.ColumnDefinitions>
+                <Border
+  x:Name="Border" 
+  Grid.ColumnSpan="2"
+  CornerRadius="2"
+  Background="#FF72A8A3"
+  BorderBrush="#404040"
+  BorderThickness="1" />
+                <Border 
+  Grid.Column="0"
+  CornerRadius="2,0,0,2" 
+  Margin="1" 
+  Background="#FFFFFF" 
+  BorderBrush="#404040"
+  BorderThickness="0,0,1,0" />
+                <Path 
+  x:Name="Arrow"
+  Grid.Column="1"     
+  Fill="#404040"
+  HorizontalAlignment="Center"
+  VerticalAlignment="Center"
+  Data="M 0 0 L 4 4 L 8 0 Z"/>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="ToggleButton.IsMouseOver" Value="true">
+                    <Setter TargetName="Border" Property="Background" Value="#808080" />
+                </Trigger>
+                <Trigger Property="ToggleButton.IsChecked" Value="true">
+                    <Setter TargetName="Border" Property="Background" Value="#E0E0E0" />
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter TargetName="Border" Property="Background" Value="#EEEEEE" />
+                    <Setter TargetName="Border" Property="BorderBrush" Value="#AAAAAA" />
+                    <Setter Property="Foreground" Value="#888888"/>
+                    <Setter TargetName="Arrow" Property="Fill" Value="#888888" />
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="ComboBoxTextBox" TargetType="{x:Type TextBox}">
+            <Border x:Name="PART_ContentHost" Focusable="False" Background="{TemplateBinding Background}" />
+        </ControlTemplate>
+
+        <Style x:Key="{x:Type ComboBox}" TargetType="{x:Type ComboBox}">
+            <Setter Property="SnapsToDevicePixels" Value="true"/>
+            <Setter Property="OverridesDefaultStyle" Value="true"/>
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+            <Setter Property="MinWidth" Value="30"/>
+            <Setter Property="MinHeight" Value="20"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ComboBox}">
+                        <Grid>
+                            <ToggleButton 
+        Name="ToggleButton" 
+        Template="{StaticResource ComboBoxToggleButton}" 
+        Grid.Column="2" 
+        Focusable="false"
+        IsChecked="{Binding Path=IsDropDownOpen,Mode=TwoWay,RelativeSource={RelativeSource TemplatedParent}}"
+        ClickMode="Press">
+                            </ToggleButton>
+                            <ContentPresenter
+        Name="ContentSite"
+        IsHitTestVisible="False" 
+        Content="{TemplateBinding SelectionBoxItem}"
+        ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+        ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+        Margin="3,3,23,3"
+        VerticalAlignment="Center"
+        HorizontalAlignment="Left" />
+                            <TextBox x:Name="PART_EditableTextBox"
+        Style="{x:Null}" 
+        Template="{StaticResource ComboBoxTextBox}" 
+        HorizontalAlignment="Left" 
+        VerticalAlignment="Center" 
+        Margin="3,3,23,3"
+        Focusable="True" 
+        Background="Transparent"
+        Visibility="Hidden"
+        IsReadOnly="{TemplateBinding IsReadOnly}"/>
+                            <Popup 
+        Name="Popup"
+        Placement="Bottom"
+        IsOpen="{TemplateBinding IsDropDownOpen}"
+        AllowsTransparency="True" 
+        Focusable="False"
+        PopupAnimation="Slide">
+                                <Grid 
+          Name="DropDown"
+          SnapsToDevicePixels="True"                
+          MinWidth="{TemplateBinding ActualWidth}"
+          MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                    <Border 
+            x:Name="DropDownBorder"
+            Background="#FFFFFF"
+            BorderThickness="1"
+            BorderBrush="#888888"/>
+                                    <ScrollViewer Margin="4,6,4,6" SnapsToDevicePixels="True">
+                                        <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" />
+                                    </ScrollViewer>
+                                </Grid>
+                            </Popup>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="HasItems" Value="false">
+                                <Setter TargetName="DropDownBorder" Property="MinHeight" Value="95"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="#888888"/>
+                            </Trigger>
+                            <Trigger Property="IsGrouping" Value="true">
+                                <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                            </Trigger>
+                            <Trigger SourceName="Popup" Property="Popup.AllowsTransparency" Value="true">
+                                <Setter TargetName="DropDownBorder" Property="CornerRadius" Value="4"/>
+                                <Setter TargetName="DropDownBorder" Property="Margin" Value="0,2,0,0"/>
+                            </Trigger>
+                            <Trigger Property="IsEditable"
+           Value="true">
+                                <Setter Property="IsTabStop" Value="false"/>
+                                <Setter TargetName="PART_EditableTextBox" Property="Visibility" Value="Visible"/>
+                                <Setter TargetName="ContentSite" Property="Visibility" Value="Hidden"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+            </Style.Triggers>
+        </Style>
+
+        <!-- SimpleStyles: ComboBoxItem -->
+        <Style x:Key="{x:Type ComboBoxItem}" TargetType="{x:Type ComboBoxItem}">
+            <Setter Property="SnapsToDevicePixels" Value="true"/>
+            <Setter Property="OverridesDefaultStyle" Value="true"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                        <Border 
+      Name="Border"
+      Padding="2"
+      SnapsToDevicePixels="true">
+                            <ContentPresenter />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsHighlighted" Value="true">
+                                <Setter TargetName="Border" Property="Background" Value="#DDDDDD"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="#888888"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF81F1F1" Offset="0"/>
+                <GradientStop Color="#FFBCC0C3" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Rectangle HorizontalAlignment="Left" Height="559" Margin="11,42,0,0" Stroke="Black" VerticalAlignment="Top" Width="853"/>
+        <Button x:Name="btnSalvarParte" Padding="0" BorderThickness="0" Cursor="Hand" ToolTip="Salvar" Margin="779,606,0,0" HorizontalAlignment="Left" Width="84" Click="btnSalvarParte_Click" Height="47" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+            <Button.ContentTemplate>
+                <DataTemplate>
+                    <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="40" Width="57">
+                        <TextBlock.Background>
+                            <ImageBrush ImageSource="/Cs_Notas;component/Imagens/Salvar2.png"/>
+                        </TextBlock.Background>
+                        <TextBlock.Style>
+                            <Style TargetType="{x:Type TextBlock}">
+                                <Style.Triggers>
+                                    <Trigger Property ="IsMouseOver" Value="True">
+                                        <Setter Property= "Background" Value="Transparent"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </DataTemplate>
+            </Button.ContentTemplate>
+        </Button>
+        <Grid Height="31" VerticalAlignment="Top" Background="#FF47B8B2">
+            <Label Content="Digitar Dados do Participante" HorizontalAlignment="Left" VerticalAlignment="Top" Width="351" Height="31" FontSize="14" FontWeight="Bold" FontStyle="Italic"/>
+            <Image HorizontalAlignment="Left" Height="31" Margin="842,0,0,0" VerticalAlignment="Top" Width="31" Source="/Cs_Notas;component/Imagens/Delete.png" Cursor="Hand" MouseLeftButtonUp="Image_MouseLeftButtonUp"/>
+        </Grid>
+        <GroupBox Header="CPF/CNPJ" Name="groupBoxCpfCnpj" TabIndex="1" HorizontalAlignment="Left" Height="46" Margin="19,46,0,0" VerticalAlignment="Top" Width="169">
+            <Grid HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="159" Margin="0,-9,-2,-12">
+                <TextBox TextWrapping="Wrap" TabIndex="1" x:Name="txtCpfCnpj" MaxLength="14" Margin="0,10,5,12" FontSize="14" PreviewKeyDown="txtCpfCnpj_PreviewKeyDown" TextChanged="txtCpfCnpj_TextChanged" Background="Red" BorderBrush="Black" />
+                <Image Name="imgValidaCpfCnpj" Visibility="Hidden" HorizontalAlignment="Left" Height="23" Margin="132,10,0,0" VerticalAlignment="Top" Width="22" Source="/Cs_Notas;component/Imagens/cpf_Correto.png" Stretch="Fill"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Nome" Name="gbNomeParte" TabIndex="2" HorizontalAlignment="Left" Height="46" Margin="193,46,0,0" VerticalAlignment="Top" Width="366">
+            <TextBox TextWrapping="Wrap" TabIndex="2" CharacterCasing="Upper" MaxLength="100" Name="txtNomeParte" Margin="0,1,2,0" FontSize="14" TextChanged="txtNomeParte_TextChanged" PreviewKeyDown="txtNomeParte_PreviewKeyDown" BorderBrush="#FF0A0A0A"/>
+        </GroupBox>
+        <GroupBox Header="Tipo Pessoa" Name="gbTipoPessoa" TabIndex="3" HorizontalAlignment="Left" Height="46" Margin="564,46,0,0" VerticalAlignment="Top" Width="138">
+            <Grid Margin="0,0,-2,-2">
+                <RadioButton Content="Física" TabIndex="3" Name="rbFisica" HorizontalAlignment="Left" Height="19" Margin="5,3,0,0" VerticalAlignment="Top" Width="52" Checked="rbFisica_Checked" PreviewKeyDown="rbFisica_PreviewKeyDown"/>
+                <RadioButton Content="Jurídica" TabIndex="4" Name="rbJuridica" HorizontalAlignment="Left" Height="19" Margin="62,3,0,0" VerticalAlignment="Top" Width="62" Checked="rbJuridica_Checked" PreviewKeyDown="rbJuridica_PreviewKeyDown"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Sexo" Name="gbSexo" TabIndex="5" HorizontalAlignment="Left" Height="46" Margin="707,46,0,0" VerticalAlignment="Top" Width="144">
+            <Grid Margin="0,0,-2,-2">
+                <RadioButton Content="Masc." TabIndex="5" Name="rbMasculino" HorizontalAlignment="Left" Height="19" Margin="10,3,0,0" VerticalAlignment="Top" Width="56" Checked="rbMasculino_Checked" PreviewKeyDown="rbMasculino_PreviewKeyDown"/>
+                <RadioButton Content="Fem." TabIndex="6" Name="rbFeminino" HorizontalAlignment="Left" Height="19" Margin="78,3,0,0" VerticalAlignment="Top" Width="51" Checked="rbFeminino_Checked" PreviewKeyDown="rbFeminino_PreviewKeyDown"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Endereço" TabIndex="7" HorizontalAlignment="Left" Height="46" Margin="19,93,0,0" VerticalAlignment="Top" Width="366">
+            <TextBox TextWrapping="Wrap" TabIndex="7" MaxLength="100" CharacterCasing="Upper" x:Name="txtEndereco" Margin="0,1,-2,0" FontSize="14" PreviewKeyDown="txtEndereco_PreviewKeyDown" BorderBrush="Black"/>
+        </GroupBox>
+        <GroupBox Header="Bairro" TabIndex="8" HorizontalAlignment="Left" Height="46" Margin="390,93,0,0" VerticalAlignment="Top" Width="169">
+            <TextBox TextWrapping="Wrap" TabIndex="8" MaxLength="100" CharacterCasing="Upper" x:Name="txtBairro" Margin="0,1,2,0" FontSize="14" PreviewKeyDown="txtBairro_PreviewKeyDown" BorderBrush="Black"/>
+        </GroupBox>
+        <GroupBox Header="Município" TabIndex="10" HorizontalAlignment="Left" Height="46" Margin="635,93,0,0" VerticalAlignment="Top" Width="216">
+            <ComboBox Name="cmbMunicipio" TabIndex="10" Margin="0,0,2,-1" SelectionChanged="cmbMunicipio_SelectionChanged" PreviewKeyDown="cmbMunicipio_PreviewKeyDown"/>
+        </GroupBox>
+        <GroupBox Header="UF" TabIndex="9" HorizontalAlignment="Left" Height="46" Margin="564,93,0,0" VerticalAlignment="Top" Width="66">
+            <ComboBox x:Name="cmbUfParte" TabIndex="9" Margin="1,1,3,0" SelectionChanged="cmbUfParte_SelectionChanged" PreviewKeyDown="cmbUfParte_PreviewKeyDown"/>
+        </GroupBox>
+        <GroupBox Header="Identidade" Name="gbIdentidade" TabIndex="12" HorizontalAlignment="Left" Height="46" Margin="193,140,0,0" VerticalAlignment="Top" Width="192">
+            <TextBox TextWrapping="Wrap" TabIndex="12" MaxLength="25" CharacterCasing="Upper" x:Name="txtIdentidade" Margin="0,1,2,0" FontSize="14" TextChanged="txtIdentidade_TextChanged" PreviewKeyDown="txtIdentidade_PreviewKeyDown" BorderBrush="Black"/>
+        </GroupBox>
+        <GroupBox Header="Data Emissão" Name="gbDtOrgaoEmissor" TabIndex="14" HorizontalAlignment="Left" Height="46" Margin="564,140,0,0" VerticalAlignment="Top" Width="109">
+            <DatePicker TabIndex="14" Name="dpDataEmissaoIdentidade" Margin="0,0,0,-1" PreviewKeyDown="dpDataEmissaoIdentidade_PreviewKeyDown" Height="25" VerticalAlignment="Bottom" SelectedDateChanged="dpDataEmissaoIdentidade_SelectedDateChanged"/>
+        </GroupBox>
+        <GroupBox Header="Qualificação" Name="gbQualificacao" TabIndex="11" HorizontalAlignment="Left" Height="46" Margin="19,140,0,0" VerticalAlignment="Top" Width="169">
+            <ComboBox Name="cmbQualificacao" TabIndex="11" Margin="0,0,0,-1"  SelectionChanged="cmbQualificacao_SelectionChanged" PreviewKeyDown="cmbQualificacao_PreviewKeyDown" />
+        </GroupBox>
+        <GroupBox Header="Orgão Emissor" Name="gbOrgaoEmissor" TabIndex="13" HorizontalAlignment="Left" Height="46" Margin="390,140,0,0" VerticalAlignment="Top" Width="169">
+            <ComboBox x:Name="cmbOrgaoEmissor" TabIndex="13" IsEditable="True" SelectionChanged="cmbOrgaoEmissor_SelectionChanged" GotFocus="cmbOrgaoEmissor_GotFocus" LostFocus="cmbOrgaoEmissor_LostFocus" PreviewKeyDown="cmbOrgaoEmissor_PreviewKeyDown" Height="22"/>
+        </GroupBox>
+        <GroupBox Header="Profissão" TabIndex="14" HorizontalAlignment="Left" Height="46" Margin="678,140,0,0" VerticalAlignment="Top" Width="173">
+            <ComboBox x:Name="cmbProfissao" TabIndex="14" IsEditable="True" Margin="2,0,2,-1"  GotFocus="cmbProfissao_GotFocus" LostFocus="cmbProfissao_LostFocus" PreviewKeyDown="cmbProfissao_PreviewKeyDown"/>
+        </GroupBox>
+        <GroupBox Header="Estado Civil" Name="gbEstadoCivil" IsEnabled="false" TabIndex="15" HorizontalAlignment="Left" Height="46" Margin="19,188,0,0" VerticalAlignment="Top" Width="169">
+            <ComboBox Name="cmbEstadoCivil" TabIndex="15"  Margin="0,0,0,-1" SelectionChanged="cmbEstadoCivil_SelectionChanged" PreviewKeyDown="cmbEstadoCivil_PreviewKeyDown"/>
+        </GroupBox>
+        <GroupBox Header="Regime" Name="gbRegime" TabIndex="16" HorizontalAlignment="Left" Height="46" Margin="193,188,0,0" VerticalAlignment="Top" Width="192">
+            <ComboBox Name="cmbRegime" TabIndex="16" IsEnabled="false"  Margin="0,0,0,-1" PreviewKeyDown="cmbRegime_PreviewKeyDown" SelectionChanged="cmbRegime_SelectionChanged"/>
+        </GroupBox>
+        <GroupBox Header="Cônjuge" Name="gbNomeConjuge" TabIndex="17" HorizontalAlignment="Left" Height="46" Margin="390,188,0,0" VerticalAlignment="Top" Width="216">
+            <TextBox TextWrapping="Wrap" TabIndex="17" MaxLength="100" IsEnabled="false" CharacterCasing="Upper" x:Name="txtNomeConjuge" Margin="0,1,2,0" FontSize="14" PreviewKeyDown="txtNomeConjuge_PreviewKeyDown" TextChanged="txtNomeConjuge_TextChanged" BorderBrush="Black"/>
+        </GroupBox>
+        <GroupBox Header="Data Casamento" Name="gbDtCasamento" TabIndex="18" HorizontalAlignment="Left" Height="46" Margin="611,188,0,0" VerticalAlignment="Top" Width="113">
+            <DatePicker Name="dpDataCasamento" TabIndex="18" IsEnabled="false" Margin="0,0,0,-1" PreviewKeyDown="dpDataCasamento_PreviewKeyDown"/>
+        </GroupBox>
+        <GroupBox Header="Nacionalidade" TabIndex="20" HorizontalAlignment="Left" Height="46" Margin="19,236,0,0" VerticalAlignment="Top" Width="169">
+            <ComboBox Name="cmbNacionalidade" TabIndex="20" Margin="0,0,0,-1" PreviewKeyDown="cmbNacionalidade_PreviewKeyDown"/>
+        </GroupBox>
+        <GroupBox Header="Nacionalidade ONU" TabIndex="21" HorizontalAlignment="Left" Height="46" Margin="193,236,0,0" VerticalAlignment="Top" Width="192">
+            <ComboBox Name="cmbNacionalidadeOnu" TabIndex="21" Margin="0,0,0,-1" SelectionChanged="cmbNacionalidadeOnu_SelectionChanged" PreviewKeyDown="cmbNacionalidadeOnu_PreviewKeyDown"/>
+        </GroupBox>
+        <GroupBox Header="Pai" TabIndex="22" HorizontalAlignment="Left" Height="46" Margin="390,236,0,0" VerticalAlignment="Top" Width="216">
+            <TextBox TextWrapping="Wrap" TabIndex="22" MaxLength="100" CharacterCasing="Upper" x:Name="txtNomePai" Margin="0,1,2,0" FontSize="14" PreviewKeyDown="txtNomePai_PreviewKeyDown" BorderBrush="Black"/>
+        </GroupBox>
+        <GroupBox Header="Mãe" TabIndex="23" HorizontalAlignment="Left" Height="46" Margin="611,236,0,0" VerticalAlignment="Top" Width="240">
+            <TextBox TextWrapping="Wrap" TabIndex="23" MaxLength="100" CharacterCasing="Upper" x:Name="txtNomeMae" Margin="0,1,2,0" FontSize="14" PreviewKeyDown="txtNomeMae_PreviewKeyDown" BorderBrush="Black"/>
+        </GroupBox>
+        <GroupBox Header="Data Nascimento" Name="gbDtNascimento" TabIndex="19" HorizontalAlignment="Left" Height="46" Margin="729,188,0,0" VerticalAlignment="Top" Width="122">
+            <DatePicker Name="dpDataNascimento" TabIndex="19" Margin="0,0,0,-1" PreviewKeyDown="dpDataNascimento_PreviewKeyDown" SelectedDateChanged="dpDataNascimento_SelectedDateChanged"/>
+        </GroupBox>
+        <GroupBox TabIndex="24" Header="Hash" HorizontalAlignment="Left" Height="46" Margin="19,284,0,0" VerticalAlignment="Top" Width="366">
+            <TextBox TabIndex="24" TextWrapping="Wrap" x:Name="txtNumeroHash" Margin="0,1,2,0" FontSize="14" PreviewKeyDown="txtNumeroHash_PreviewKeyDown" BorderBrush="Black"/>
+        </GroupBox>
+        <GroupBox Header="Número Consulta BIB" TabIndex="25" HorizontalAlignment="Left" Height="46" Margin="390,284,0,0" VerticalAlignment="Top" Width="216">
+            <TextBox TextWrapping="Wrap" MaxLength="16" TabIndex="25" x:Name="txtNumeroBib" Margin="0,1,2,0" FontSize="14" PreviewKeyDown="txtNumeroBib_PreviewKeyDown" BorderBrush="Black"/>
+        </GroupBox>
+        <GroupBox Header="Número Consulta CRE" TabIndex="26" HorizontalAlignment="Left" Height="46" Margin="611,284,0,0" VerticalAlignment="Top" Width="240">
+            <TextBox  TabIndex="26" TextWrapping="Wrap" x:Name="txtNumeroCre" MaxLength="16" Margin="0,1,2,0" FontSize="14" PreviewKeyDown="txtNumeroCre_PreviewKeyDown" BorderBrush="Black"/>
+        </GroupBox>
+        <GroupBox Header="DOI"  TabIndex="30" Height="66" Margin="19,330,22,0" VerticalAlignment="Top">
+            <Grid Name="gridDoi" IsEnabled="False" Margin="0,0,-2,0">
+                <ComboBox TabIndex="31" Name="cmbTipoDoi" Margin="0,18,665,1"  PreviewKeyDown="cmbTipoDoi_PreviewKeyDown" SelectionChanged="cmbTipoDoi_SelectionChanged"/>
+                <Label Content="Tipo" Name="lblTipoDoi" HorizontalAlignment="Left" Margin="0,-6,0,0" VerticalAlignment="Top"/>
+                <ComboBox TabIndex="32" Name="cmbSituacaoCadastro" Margin="167,18,470,1"  PreviewKeyDown="cmbSituacaoCadastro_PreviewKeyDown" SelectionChanged="cmbSituacaoCadastro_SelectionChanged"/>
+                <Label Content="Situação do CPF/CNPJ" Name="lblSituacaoCpfCnpj" HorizontalAlignment="Left" Margin="167,-6,0,0" VerticalAlignment="Top"/>
+                <TextBox TabIndex="33" Name="txtParticipacao" HorizontalAlignment="Left" Height="25" Margin="368,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="74" FontSize="14" PreviewKeyDown="txtParticipacao_PreviewKeyDown" LostFocus="txtParticipacao_LostFocus" BorderBrush="Black" TextChanged="txtParticipacao_TextChanged"/>
+                <Label Content="Participação" Name="lblParticipacao" HorizontalAlignment="Left" Margin="368,-6,0,0" VerticalAlignment="Top"/>
+                <ComboBox TabIndex="34" Name="cmbRepresentado" Margin="457,18,243,1" SelectionChanged="cmbRepresentado_SelectionChanged" PreviewKeyDown="cmbRepresentado_PreviewKeyDown">
+                    <ComboBoxItem Content="Sim"/>
+                    <ComboBoxItem Content="Não"/>
+                </ComboBox>
+                <Label Content="Representado" HorizontalAlignment="Left" Margin="457,-6,0,0" VerticalAlignment="Top" Width="83"/>
+                <TextBox TabIndex="35" IsEnabled="False" TextWrapping="Wrap" x:Name="txtCpfProcurador" Margin="593,18,123,1" FontSize="14" TextChanged="txtCpfProcurador_TextChanged" PreviewKeyDown="txtCpfProcurador_PreviewKeyDown" BorderBrush="Black"/>
+                <Label Content="CPF Procurador" Name="lblCpfProcurador" HorizontalAlignment="Left" Margin="593,-6,0,0" VerticalAlignment="Top" Width="93"/>
+                <Image HorizontalAlignment="Left" Height="43" Margin="740,1,0,0" VerticalAlignment="Top" Width="78" Source="/Cs_Notas;component/Imagens/DOI.gif" RenderTransformOrigin="0.5,0.523"/>
+                <Image Name="imgCpfCorreto" Visibility="Hidden" HorizontalAlignment="Left" Height="25" Margin="704,18,0,0" VerticalAlignment="Top" Width="31" Source="/Cs_Notas;component/Imagens/cpf_Correto.png"/>
+                <Image x:Name="imgCpfIncorreto" Visibility="Hidden" HorizontalAlignment="Left" Height="21" Margin="704,22,0,0" VerticalAlignment="Top" Width="20" Source="/Cs_Notas;component/Imagens/cpf_EmBranco.png"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox TabIndex="40" Header="CENSEC - CESDI" Height="79" Margin="19,396,22,0" VerticalAlignment="Top">
+            <Grid Name="gridCensec" IsEnabled="False" Margin="0,0,-2,0">
+                <ComboBox TabIndex="41" Name="cmbQualidadeCensec"  Margin="1,24,676,0" SelectionChanged="cmbQualidadeCensec_SelectionChanged"  PreviewKeyDown="cmbQualidadeCensec_PreviewKeyDown" Height="25" VerticalAlignment="Top"/>
+                <Label Content="Qualidade" Name="lblQualidade" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,0,0,0"/>
+                <TextBox TabIndex="42" Name="txtQtdFilhosMaiores" MaxLength="2" HorizontalAlignment="Left" Height="25" Margin="151,24,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" FontSize="14" PreviewKeyDown="txtQtdFilhosMaiores_PreviewKeyDown" TextChanged="txtQtdFilhosMaiores_TextChanged" BorderBrush="Black"/>
+                <Label Content="Filhos Maiores" Name="lblQtdFilhosMaiores" HorizontalAlignment="Left" Margin="151,0,0,0" VerticalAlignment="Top" Width="86"/>
+                <ComboBox TabIndex="44" Name="cmbConjuge" Margin="310,24,359,0" PreviewKeyDown="cmbConjuge_PreviewKeyDown" SelectionChanged="cmbConjuge_SelectionChanged" Height="25" VerticalAlignment="Top"/>
+                <Label Content="Cônjuge" Name="lblConjuge" HorizontalAlignment="Left" Margin="310,0,0,0" VerticalAlignment="Top" Width="194"/>
+                <ComboBox TabIndex="46" Name="cmbUfNascimento" Margin="595,24,164,0" PreviewKeyDown="cmbUfNascimento_PreviewKeyDown" SelectionChanged="cmbUfNascimento_SelectionChanged" Height="25" VerticalAlignment="Top"/>
+                <Label Content="UF Nasc." Name="lblUfNascimento"  HorizontalAlignment="Left" Margin="595,0,0,0" VerticalAlignment="Top"/>
+                <ComboBox TabIndex="45" Name="cmbMunicipioResidencia"  Margin="468,24,232,0" PreviewKeyDown="cmbMunicipioResidencia_PreviewKeyDown" SelectionChanged="cmbMunicipioResidencia_SelectionChanged" Height="25" VerticalAlignment="Top"/>
+                <Label Content="Município Residência" Name="lblMunicipioResidencia" HorizontalAlignment="Left" Margin="468,0,0,0" VerticalAlignment="Top"/>
+                <ComboBox TabIndex="46" Name="cmbPaisResidencia" Margin="663,24,6,0" PreviewKeyDown="cmbPaisResidencia_PreviewKeyDown" SelectionChanged="cmbPaisResidencia_SelectionChanged" Height="25" VerticalAlignment="Top"/>
+                <Label Content="País Residência" Name="lblPaisResidencia" HorizontalAlignment="Left" Margin="663,0,0,0" VerticalAlignment="Top"/>
+                <ComboBox TabIndex="43" x:Name="cmbUfOAB"  Margin="242,24,517,0" PreviewKeyDown="cmbUfOAB_PreviewKeyDown" SelectionChanged="cmbUfOAB_SelectionChanged" Height="25" VerticalAlignment="Top"/>
+                <Label Content="UF OAB" Name="lblUfOab" HorizontalAlignment="Left" Margin="242,0,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox TabIndex="50" Header="Ocultar" HorizontalAlignment="Left" Height="116" Margin="645,475,0,0" VerticalAlignment="Top" Width="206">
+            <Grid Margin="4,0,-2,1">
+                <CheckBox TabIndex="51" Content="Oculta no XML" x:Name="ckbOcultarXml" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,3,0,0"/>
+                <CheckBox TabIndex="52" Content="Ocultar na Escritura" x:Name="ckbOcultarEscritura" HorizontalAlignment="Left" Margin="0,23,0,0" VerticalAlignment="Top" PreviewKeyDown="ckbOcultarEscritura_PreviewKeyDown"/>
+                <CheckBox TabIndex="53" Content="Ocultar na Distribuição" x:Name="ckbOcultarDistribuicao" Margin="0,43,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150" PreviewKeyDown="ckbOcultarDistribuicao_PreviewKeyDown"/>
+                <CheckBox TabIndex="54" Content="A Rogo" x:Name="ckbARogo" Margin="0,63,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="78" PreviewKeyDown="ckbARogo_PreviewKeyDown"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Selecione os Atos para adicionar este participante. Duplo clique para marcar ou desmarcar o ato" HorizontalAlignment="Left" Margin="19,475,0,0" VerticalAlignment="Top" Height="116" Width="611">
+            <DataGrid AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" x:Name="dataGridAtoConjunto" RowDetailsVisibilityMode="VisibleWhenSelected" AllowDrop="false" HeadersVisibility="All" CanUserResizeRows="False" SelectionUnit="FullRow" GridLinesVisibility="All" ClipboardCopyMode="ExcludeHeader" HorizontalScrollBarVisibility="Auto" UseLayoutRounding="True" Background="{x:Null}" IsTabStop="True" Margin="-1,0,-2,-2" IsReadOnly="True" SelectionMode="Single" BorderBrush="#FF466787" >
+                <DataGrid.RowStyle>
+                    <Style TargetType="{x:Type DataGridRow}">
+                        <EventSetter Event="Control.MouseDoubleClick" Handler="dataGridAtoConjunto_MouseDoubleClick" />
+                    </Style>                   
+                </DataGrid.RowStyle>
+                <DataGrid.ContextMenu>                    
+                    <ContextMenu Selector.IsSelected="True" ForceCursor="True" Name="menu">
+                        <MenuItem Header="Marcar todos" Name="MenuItemMarcarTodos" Click="MenuItemMarcarTodos_Click">
+                            <MenuItem.Icon>
+                                <Image Source="/Cs_Notas;component/Imagens/check_23832.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Desmarcar todos" Name="MenuItemDesmarcarTodos" Click="MenuItemDesmarcarTodos_Click">
+                            <MenuItem.Icon>
+                                <Image Source="/Cs_Notas;component/Imagens/check_24016.png" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
+                <DataGrid.CellStyle>
+                    <Style TargetType="{x:Type DataGridCell}">
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#FF0086FF" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.CellStyle>                
+                <DataGrid.Columns >
+                    <DataGridTextColumn Header="Id Série" Width="70" Binding="{Binding ConjuntoId}" CanUserResize="False" Visibility="Hidden" IsReadOnly="True"/>
+                    <DataGridCheckBoxColumn Header="#" Width="20" Binding="{Binding IsChecked}" CanUserResize="False"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Data" Width="70" Binding="{Binding Data, StringFormat=dd/MM/yyyy}" CanUserResize="False"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Selo" Width="80" Binding="{Binding Selo, StringFormat=\{0:00000\}}" CanUserResize="False"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Aleatório" Width="60" Binding="{Binding Aleatorio}" CanUserResize="False"  IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Descrição" Width="360" Binding="{Binding TipoAto}" CanUserResize="False"  IsReadOnly="True"/>
+                </DataGrid.Columns>
+               
+            </DataGrid>
+        </GroupBox>
+    </Grid>
+</Window>

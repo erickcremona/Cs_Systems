@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+<xs:complexType name="PESSOAS">
+	<xs:sequence>
+		<xs:element name="INDIVIDUO" maxOccurs="unbounded" minOccurs="1">
+
+			<xs:complexType>
+				<xs:sequence>
+
+					<xs:element name="NOME">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="250" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+
+					<xs:element name="CPFCNPJ">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:maxLength value="35" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+
+					<xs:element name="IMOVEIS" minOccurs="0" maxOccurs="1">
+
+						<xs:complexType>
+							<xs:sequence>
+
+								<xs:element name="MATRICULA" minOccurs="0" maxOccurs="unbounded">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:maxLength value="250" />
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+
+							</xs:sequence>
+						</xs:complexType>
+
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+
+		</xs:element>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:element name="PEDIDO">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="REGISTRO" maxOccurs="unbounded" minOccurs="1">
+
+				<xs:complexType>
+					<xs:sequence>
+
+						<xs:element name="CANCELAMENTODEINDISPONIBILIDADE" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:length value="27" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+
+						<xs:element name="CANCELAMENTO_TIPO" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+									<xs:minInclusive value="1"/>
+									<xs:maxInclusive value="3"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+
+						<xs:element name="CANCELAMENTO_DATA" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<!-- expressão regular para o formato "DD/MM/AAAA hh:mm:ss" -->
+									<xs:pattern value="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/20[0-9]{2} ([01][0-9]|2[0-3])(:([0-5][0-9])){2}" />
+									<xs:length value="19" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+
+						<xs:element name="PROTOCOLOINDISPONIBILIDADE">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:length value="27" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+
+						<xs:element name="DATAPEDIDO">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<!-- expressão regular para o formato "DD/MM/AAAA hh:mm:ss" -->
+									<xs:pattern value="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[012])/20[0-9]{2} ([01][0-9]|2[0-3])(:([0-5][0-9])){2}" />
+									<xs:length value="19" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+
+						<xs:element name="NUMERODOPROCESSO">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="250" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+
+						<xs:element name="TELEFONE">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="15" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+
+						<xs:element name="NOMEINSTITUICAO">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="250" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+
+						<xs:element name="FORUMVARA">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="250" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+
+						<xs:element name="USUARIO">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="250" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+
+						<xs:element name="EMAIL">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:maxLength value="250" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+
+						<xs:element name="INDISPONIBILIDADE" type="PESSOAS" minOccurs="0" maxOccurs="1" />
+						<xs:element name="CANCELAMENTO" type="PESSOAS" minOccurs="0" maxOccurs="1" />
+
+						<xs:element name="HASHVISUALIZACAO" minOccurs="0" maxOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:length value="49" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+
+					</xs:sequence>
+				</xs:complexType>
+
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+</xs:schema>

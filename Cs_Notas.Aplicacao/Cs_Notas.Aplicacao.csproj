@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{42F319A9-05CB-49CD-B650-0014C9824C67}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cs_Notas.Aplicacao</RootNamespace>
+    <AssemblyName>Cs_Notas.Aplicacao</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\IAppServicoBensAtosConjuntos.cs" />
+    <Compile Include="Interfaces\IAppServicoCadProcuracao.cs" />
+    <Compile Include="Interfaces\IAppServicoCensec.cs" />
+    <Compile Include="Interfaces\IAppServicoComplementos.cs" />
+    <Compile Include="Interfaces\IAppServicoConfiguracoes.cs" />
+    <Compile Include="Interfaces\IAppServicoAtoConjuntos.cs" />
+    <Compile Include="Interfaces\IAppServicoEscrituras.cs" />
+    <Compile Include="Interfaces\IAppServicoImovel.cs" />
+    <Compile Include="Interfaces\IAppServicoItensCustas.cs" />
+    <Compile Include="Interfaces\IAppServicoLogSistema.cs" />
+    <Compile Include="Interfaces\IAppServicoBase.cs" />
+    <Compile Include="Interfaces\IAppServicoNaturezas.cs" />
+    <Compile Include="Interfaces\IAppServicoNomes.cs" />
+    <Compile Include="Interfaces\IAppServicoParteConjuntos.cs" />
+    <Compile Include="Interfaces\IAppServicoProcuracaoEscritura.cs" />
+    <Compile Include="Interfaces\IAppServicoRegimes.cs" />
+    <Compile Include="Interfaces\IAppServicoRevogados.cs" />
+    <Compile Include="Interfaces\IAppServicoTestamento.cs" />
+    <Compile Include="Interfaces\IAppServicoTipoImovel.cs" />
+    <Compile Include="Interfaces\IAppServicoTransacaoDoi.cs" />
+    <Compile Include="Interfaces\IAppServicoUsuario.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicosApp\AppServicoBensAtosConjuntos.cs" />
+    <Compile Include="ServicosApp\AppServicoCadProcuracao.cs" />
+    <Compile Include="ServicosApp\AppServicoCensec.cs" />
+    <Compile Include="ServicosApp\AppServicoComplementos.cs" />
+    <Compile Include="ServicosApp\AppServicoConfiguracoes.cs" />
+    <Compile Include="ServicosApp\AppServicoAtoConjuntos.cs" />
+    <Compile Include="ServicosApp\AppServicoEscrituras.cs" />
+    <Compile Include="ServicosApp\AppServicoImovel.cs" />
+    <Compile Include="ServicosApp\AppServicoItensCustas.cs" />
+    <Compile Include="ServicosApp\AppServicoLogSistema.cs" />
+    <Compile Include="ServicosApp\AppServicoBase.cs" />
+    <Compile Include="ServicosApp\AppServicoNaturezas.cs" />
+    <Compile Include="ServicosApp\AppServicoNomes.cs" />
+    <Compile Include="ServicosApp\AppServicoParteConjuntos.cs" />
+    <Compile Include="ServicosApp\AppServicoProcuracaoEscritura.cs" />
+    <Compile Include="ServicosApp\AppServicoRegimes.cs" />
+    <Compile Include="ServicosApp\AppServicoRevogados.cs" />
+    <Compile Include="ServicosApp\AppServicoTestamento.cs" />
+    <Compile Include="ServicosApp\AppServicoTipoImovel.cs" />
+    <Compile Include="ServicosApp\AppServicoTransacaoDoi.cs" />
+    <Compile Include="ServicosApp\AppServicoUsuario.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\Cs_Sistemas\CrossCutting\CrossCutting.csproj">
+      <Project>{55afceee-fe18-40c1-8d1c-eec0488f5916}</Project>
+      <Name>CrossCutting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cs_Notas.Dominio\Cs_Notas.Dominio.csproj">
+      <Project>{40c4ec0a-2eff-40a9-ba15-c8728697640a}</Project>
+      <Name>Cs_Notas.Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

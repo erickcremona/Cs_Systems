@@ -1,0 +1,98 @@
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Documents\Visual Studio 2013\Projects\Cs_Gerencial\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial.Old\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Gerencial\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Desktop\CS Solution\Cs_Gerencial\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick Marcel\Documents\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.execution.desktop.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.abstractions.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.assert.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.core.dll
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.abstractions.xml
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.assert.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.assert.xml
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.core.pdb
+C:\Users\erick\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.core.xml
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.execution.desktop.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.abstractions.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.assert.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.core.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.abstractions.xml
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.assert.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.assert.xml
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.core.pdb
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.core.xml
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\GEORGIA\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.execution.desktop.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.abstractions.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.assert.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.core.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.abstractions.xml
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.assert.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.assert.xml
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.core.pdb
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.core.xml
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\SERVIDOR\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.execution.desktop.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.abstractions.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.assert.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.core.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.abstractions.xml
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.assert.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.assert.xml
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.core.pdb
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.core.xml
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Rodrigo_Cizinho\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.execution.desktop.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\Cs_Gerencial.Dominio.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.abstractions.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.assert.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.core.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.abstractions.xml
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.assert.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.assert.xml
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.core.pdb
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\bin\Debug\xunit.core.xml
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.csprojResolveAssemblyReference.cache
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.dll
+C:\Users\Erick-PC\Desktop\Cs_Sistemas\Cs_Gerencial.Dominio\obj\Debug\Cs_Gerencial.Dominio.pdb

@@ -1,0 +1,184 @@
+﻿<Window x:Class="Cs_IssPrefeitura.Principal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+       Title="Sistema ISS" MinWidth="1019" MinHeight="700" Height="504" Width="982" Loaded="Window_Loaded" Closed="Window_Closed" Icon="Logo Iss.ico" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFF3F350" Offset="0"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Grid>
+        <StatusBar Height="28" VerticalAlignment="Bottom" Background="#FF4F4F4F" >
+            <Label x:Name="lblNomeUsuario" Content="Nome Usuário" Width="906" Height="28" Background="#FF4F4F4F" Foreground="#FFF1BF77" />
+        </StatusBar>
+        <ToolBarPanel Height="69" Margin="0,22,0,0" VerticalAlignment="Top" Orientation="Horizontal" Background="#FFAAA75D">
+            <StackPanel Height="51" VerticalAlignment="Top" Width="20"/>
+            <Button x:Name="btnConsultarAtos" Padding="0" BorderThickness="0" Cursor="Hand" Width="70" ToolTip="Consultar Atos já Importados" Height="51" VerticalAlignment="Top" Click="btnConsultarAtos_Click">
+
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="39" Width="46">
+                            <TextBlock.Background>
+                                <ImageBrush ImageSource="Imagens/ConsultarAtos64x64.png"/>
+                            </TextBlock.Background>
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Style.Triggers>
+                                        <Trigger Property ="IsMouseOver" Value="True">
+                                            <Setter Property= "Background" Value="Transparent"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <StackPanel Height="51" VerticalAlignment="Top" Width="20"/>
+            <Button x:Name="btnImportarAtos" Padding="0" BorderThickness="0" Cursor="Hand" Width="70" ToolTip="Importar Atos" Height="51" VerticalAlignment="Top" Click="btnImportarAtos_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="39" Width="46">
+                            <TextBlock.Background>
+                                <ImageBrush ImageSource="Imagens/ImportarAtos_64x64.png"/>
+                            </TextBlock.Background>
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Style.Triggers>
+                                        <Trigger Property ="IsMouseOver" Value="True">
+                                            <Setter Property= "Background" Value="Transparent"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <StackPanel Height="51" VerticalAlignment="Top" Width="20"/>
+            <Button x:Name="btnFechamentoMes" Padding="0" BorderThickness="0" Cursor="Hand" Width="70" ToolTip="Apuração ISS" Height="51" VerticalAlignment="Top" Click="btnFechamentoMes_Click" >
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="41" Width="45">
+                            <TextBlock.Background>
+                                <ImageBrush ImageSource="Imagens/FechamentoMes_64x64.png"/>
+                            </TextBlock.Background>
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Style.Triggers>
+                                        <Trigger Property ="IsMouseOver" Value="True">
+                                            <Setter Property= "Background" Value="Transparent"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <StackPanel Height="51" VerticalAlignment="Top" Width="20"/>
+            <Button x:Name="btnParametros" Padding="0" BorderThickness="0" Cursor="Hand" Width="70" ToolTip="Parâmetros do Sistema" Height="51" VerticalAlignment="Top" Click="btnParametros_Click">
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="39" Width="46">
+                            <TextBlock.Background>
+                                <ImageBrush ImageSource="Imagens/Parametros64x64.png"/>
+                            </TextBlock.Background>
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Style.Triggers>
+                                        <Trigger Property ="IsMouseOver" Value="True">
+                                            <Setter Property= "Background" Value="Transparent"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            <StackPanel Height="51" VerticalAlignment="Top" Width="20"/>
+            <Button x:Name="btnCadastroUsuario" Padding="0" BorderThickness="0" Cursor="Hand" Width="70" ToolTip="Cadastro de Usuários" Height="51" VerticalAlignment="Top" Click="btnCadastroUsuario_Click" >
+                <Button.Background>
+                    <ImageBrush/>
+                </Button.Background>
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="39" Width="46">
+                            <TextBlock.Background>
+                                <ImageBrush ImageSource="Imagens/Usuarios.png"/>
+                            </TextBlock.Background>
+                            <TextBlock.Style>
+                                <Style TargetType="{x:Type TextBlock}">
+                                    <Style.Triggers>
+                                        <Trigger Property ="IsMouseOver" Value="True">
+                                            <Setter Property= "Background" Value="Transparent"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+        </ToolBarPanel>
+        <Menu Height="22" VerticalAlignment="Top" Background="#FF4F4F4F">
+            <MenuItem Header="Arquivo" Foreground="AliceBlue">
+                <MenuItem x:Name="MenuItemConsultaAtos" Header="Consultar Atos" Background="#FF4F4F4F" Foreground="AliceBlue" MouseEnter="MenuItemConsultaAtos_MouseEnter" MouseLeave="MenuItemConsultaAtos_MouseLeave" Click="btnConsultarAtos_Click">
+                    <MenuItem.Icon>
+                        <Image  Width="20" Height="20" Source="Imagens/ConsultarAtos64x64.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="MenuItemImportarAtos" Header="Importar MAS" Background="#FF4F4F4F" Foreground="AliceBlue" MouseEnter="MenuItemImportarAtos_MouseEnter" MouseLeave="MenuItemImportarAtos_MouseLeave" Click="btnImportarAtos_Click">
+                    <MenuItem.Icon>
+                        <Image  Width="20" Height="20" Source="Imagens/ImportarAtos_64x64.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="MenuItemFechamentoMes" Header="Fechamento Mês" Background="#FF4F4F4F" Foreground="AliceBlue" MouseEnter="MenuItemFechamentoMes_MouseEnter" MouseLeave="MenuItemFechamentoMes_MouseLeave" Click="btnFechamentoMes_Click">
+                    <MenuItem.Icon>
+                        <Image  Width="20" Height="20" Source="Imagens/FechamentoMes_64x64.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="MenuItemParamentros" Header="Parâmetros" Background="#FF4F4F4F" Foreground="AliceBlue" MouseEnter="MenuItemParamentros_MouseEnter" MouseLeave="MenuItemParamentros_MouseLeave" Click="btnParametros_Click">
+                    <MenuItem.Icon>
+                        <Image  Width="20" Height="20" Source="Imagens/Parametros64x64.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem x:Name="MenuItemCadUsuarios" Header="Cadastro Usuários" Background="#FF4F4F4F" Foreground="AliceBlue" MouseEnter="MenuItemCadUsuarios_MouseEnter" MouseLeave="MenuItemCadUsuarios_MouseLeave" Click="btnCadastroUsuario_Click">
+                    <MenuItem.Icon>
+                        <Image  Width="20" Height="20" Source="Imagens/Usuarios.png"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+
+            <!--<MenuItem Header="Imprimir" Foreground="AliceBlue"/>-->
+        </Menu>
+        <Viewbox Margin="300,213,340,281" x:Name="viewbox1">
+            <Image Height="196" x:Name="image1" Stretch="Fill" Width="215" Source="Imagens/Iss.png" />
+        </Viewbox>
+        <Label x:Name="lblNomeCartorio" Content="" Margin="0,0,0,28" VerticalAlignment="Bottom" FontSize="20" FontFamily="Castellar" FontWeight="Bold" Foreground="#FF383838"/>
+        <Label Content="Versão - 1.19.04.2" HorizontalAlignment="Right" Margin="0,96,0,0" HorizontalContentAlignment="Right" VerticalAlignment="Top" Width="176"/>
+        <Label Content="Atutalizado em 16/04/2019" HorizontalAlignment="Right" HorizontalContentAlignment="Right" VerticalAlignment="Top" Width="176" Margin="0,122,0,0"/>
+        <Label Content="Consulta Atos" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" Height="26" Width="104"/>
+        <Label Content="Importar Atos" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="97,70,0,0" VerticalAlignment="Top" Height="26" Width="92"/>
+        <Label Content="Apuração ISS" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="189,70,0,0" VerticalAlignment="Top" Height="26" Width="92"/>
+        <Label Content="Parâmetros" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="281,70,0,0" VerticalAlignment="Top" Height="26" Width="84"/>
+        <Label Content="Cad. Usuários" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="370,70,0,0" VerticalAlignment="Top" Height="26" Width="90"/>
+
+    </Grid>
+</Window>

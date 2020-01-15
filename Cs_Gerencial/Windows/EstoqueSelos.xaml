@@ -1,0 +1,579 @@
+﻿<Window x:Class="Cs_Gerencial.Windows.EstoqueSelos"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Estoque de Selos Eletrônicos" Height="627" Width="879" Icon="/Cs_Gerencial;component/Imagens/Gerencial.ico" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterOwner" Loaded="Window_Loaded">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Selos Disponíveis" Name="tabItemSelosDisponiveis">
+                <Grid Background="#FFE5E5E5" Margin="0,1,0,-1">
+                    <Rectangle Fill="#FFF4F4F5" Height="155" Stroke="Black" VerticalAlignment="Top" Margin="4,10,0,0" HorizontalAlignment="Left" Width="847"/>
+                    <DataGrid AutoGenerateColumns="False" Cursor="Hand" AlternationCount="2" RowBackground="White" AlternatingRowBackground="#FF8DE1FF" IsReadOnly="True" SelectionMode="Single" x:Name="dataGridSeriesDisponiveis" AllowDrop="False" HeadersVisibility="All" CanUserResizeRows="False" SelectionUnit="FullRow" GridLinesVisibility="None" ClipboardCopyMode="ExcludeHeader" HorizontalScrollBarVisibility="Auto" UseLayoutRounding="True" Background="{x:Null}" IsTabStop="True"  Margin="7,12,512,0" Height="151" VerticalAlignment="Top" SelectionChanged="dataGridSeriesDisponiveis_SelectionChanged">
+                        <DataGrid.CellStyle>
+                            <Style TargetType="{x:Type DataGridCell}">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="#FF0086FF" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.CellStyle>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id Série" Width="70" Binding="{Binding SerieId}" CanUserResize="False" Visibility="Visible"/>
+                            <DataGridTextColumn Header="Letra" Width="70" Binding="{Binding Letra}" CanUserResize="False"/>
+                            <DataGridTextColumn Header="Inicial" Width="90" Binding="{Binding Inicial, StringFormat=\{0:00000\}}" CanUserResize="False"/>
+                            <DataGridTextColumn Header="Final" Width="90" Binding="{Binding Final, StringFormat=\{0:00000\}}" CanUserResize="False"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <DataGrid AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Name="dataGridSelosDisponiveis" RowDetailsVisibilityMode="VisibleWhenSelected" AllowDrop="false" HeadersVisibility="All" CanUserResizeRows="False" SelectionUnit="FullRow" GridLinesVisibility="All" ClipboardCopyMode="ExcludeHeader" HorizontalScrollBarVisibility="Auto" UseLayoutRounding="True" Background="{x:Null}" IsTabStop="True"  Margin="4,274,0,10" IsReadOnly="True" SelectionMode="Single" BorderBrush="#FF466787" HorizontalAlignment="Left" Width="847" SelectionChanged="dataGridSelosDisponiveis_SelectionChanged">
+                        <DataGrid.RowStyle>
+                            <Style TargetType="{x:Type DataGridRow}">
+                                <EventSetter Event="MouseDoubleClick" Handler="dataGridSelosDisponiveis_MouseDoubleClick" />
+                            </Style>
+                        </DataGrid.RowStyle>
+                        <DataGrid.CellStyle>
+                            <Style TargetType="{x:Type DataGridCell}">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="#FF0086FF" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.CellStyle>
+                        <DataGrid.Columns >
+                            <DataGridTemplateColumn CanUserResize="False" >
+                                <DataGridTemplateColumn.Header>
+                                    <CheckBox Name="checkTodosDisponiveis" Checked="checkTodosDisponiveis_Checked" Unchecked="checkTodosDisponiveis_Unchecked" Cursor="Hand"/>
+                                </DataGridTemplateColumn.Header>
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <CheckBox x:Name="checkedUmDisponivel" Checked="checkedUmDisponivel_Checked" Unchecked="checkedUmDisponivel_Unchecked" HorizontalAlignment="Center" Cursor="Hand" VerticalAlignment="Center" IsChecked="{Binding Check, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn Header="Id Série" Width="70" Binding="{Binding SeloId}" CanUserResize="False" Visibility="Hidden" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Número" Width="83" Binding="{Binding Numero, StringFormat=\{0:00000\}}" CanUserResize="False"  IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Aleatório" Width="83" Binding="{Binding Aleatorio}" CanUserResize="False"  IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Status" Width="150" Binding="{Binding Status}" CanUserResize="False"  IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Sistema" Width="150" Binding="{Binding Sistema}" CanUserResize="False"  IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Natureza" Width="332" Binding="{Binding Natureza}" CanUserResize="False"  IsReadOnly="True"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <GroupBox Header="Série Disponível Selecionada" Height="129" Margin="361,22,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="483">
+                        <Grid Margin="0,0,-2,-2">
+                            <Label Content="Letra:" HorizontalAlignment="Left" Margin="1,13,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.5" Height="33" Width="54" FontSize="18"/>
+                            <TextBox Name="txtSerieLetra" HorizontalAlignment="Left" Height="33" Margin="60,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" FontSize="18" IsReadOnly="True" IsReadOnlyCaretVisible="True" Background="#FFD6F7F7"/>
+                            <Label Content="Inicial:" HorizontalAlignment="Left" Margin="157,13,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.5" Height="33" Width="59" FontSize="18"/>
+                            <TextBox Name="txtSerieInicial" HorizontalAlignment="Left" Height="33" Margin="218,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" FontSize="18" IsReadOnly="True" IsReadOnlyCaretVisible="True" Background="#FFD6F7F7"/>
+                            <Label Content="Final:" HorizontalAlignment="Left" Margin="314,13,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.5" Height="33" Width="53" FontSize="18"/>
+                            <TextBox Name="txtSerieFinal" HorizontalAlignment="Left" Height="33" Margin="372,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" FontSize="18" IsReadOnly="True" IsReadOnlyCaretVisible="True" Background="#FFD6F7F7"/>
+                            <Label Content="Qtd:" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.5" Height="33" Width="45" FontSize="18"/>
+                            <TextBox Name="txtSerieQtd" HorizontalAlignment="Left" Height="33" Margin="60,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" FontSize="18" IsReadOnly="True" IsReadOnlyCaretVisible="True" Background="#FFD6F7F7"/>
+                            <Label Content="Utiliz.:" HorizontalAlignment="Left" Margin="157,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.5" Height="33" Width="59" FontSize="18"/>
+                            <TextBox Name="txtSerieUtilizado" HorizontalAlignment="Left" Height="33" Margin="218,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" FontSize="18" IsReadOnly="True" IsReadOnlyCaretVisible="True" Background="#FFD6F7F7"/>
+                            <Label Content="Livre:" HorizontalAlignment="Left" Margin="314,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.5" Height="33" Width="53" FontSize="18"/>
+                            <TextBox Name="txtSerieLivre" HorizontalAlignment="Left" Height="33" Margin="372,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" FontSize="18" IsReadOnly="True" IsReadOnlyCaretVisible="True" Background="#FFD6F7F7"/>
+                        </Grid>
+                    </GroupBox>
+                    <Rectangle Fill="#FFB0B0B0" HorizontalAlignment="Left" Height="56" Margin="4,192,0,0" Stroke="Black" VerticalAlignment="Top" Width="188"/>
+                    <Label Content="Consultar Selo:" HorizontalAlignment="Left" Margin="1,169,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.763,0.077"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="16,216,0,0" TextWrapping="Wrap" CharacterCasing="Upper" MaxLength="4" Name="txtConsultaSerieDisponivel" VerticalAlignment="Top" Width="80" PreviewKeyDown="DigitarSomenteLetras" TextChanged="txtConsultaSerieDisponivel_TextChanged"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="101,216,0,0" TextWrapping="Wrap" Name="txtConsultaNumeroDisponivel" MaxLength="5" VerticalAlignment="Top" Width="80" PreviewKeyDown="DigitarSomenteNumeros" TextChanged="txtConsultaNumeroDisponivel_TextChanged" IsEnabled="False"/>
+                    <Label Content="Série:" HorizontalAlignment="Left" Margin="13,192,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.763,0.077"/>
+                    <Label Content="Número:" HorizontalAlignment="Left" Margin="96,192,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.763,0.077"/>
+                    <Label Content=" Atualizar Dados" HorizontalAlignment="Left" Margin="407,248,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.763,0.077" Width="101"/>
+                    <Label Content="  Baixar Manual" HorizontalAlignment="Left" Margin="563,248,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.763,0.077" Width="101"/>
+                    <Label Content="    Liberar Selo" HorizontalAlignment="Left" Margin="719,248,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.763,0.077" Width="97"/>
+                    <StackPanel HorizontalAlignment="Left" Height="76" Margin="353,179,0,0" VerticalAlignment="Top" Width="498" Orientation="Horizontal">
+                        <StackPanel HorizontalAlignment="Left" Height="71" VerticalAlignment="Top" Width="54"/>
+                        <Button x:Name="btnAtualizarDisponiveis" Padding="0" BorderThickness="0" Cursor="Hand" ToolTip="Atualizar Dados" RenderTransformOrigin="0.614,3.118" IsEnabled="True" Click="btnAtualizar_Click" Height="71" VerticalAlignment="Top" HorizontalAlignment="Left" Width="101">
+                            <Button.Background>
+                                <ImageBrush/>
+                            </Button.Background>
+                            <Button.ContentTemplate>
+                                <DataTemplate>
+                                    <TextBlock Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="52" Width="69">
+                                        <TextBlock.Background>
+                                            <ImageBrush ImageSource="/Cs_Gerencial;component/Imagens/Sincronizar.png"/>
+                                        </TextBlock.Background>
+                                        <TextBlock.Style>
+                                            <Style TargetType="{x:Type TextBlock}">
+                                                <Style.Triggers>
+                                                    <Trigger Property ="IsMouseOver" Value="True">
+                                                        <Setter Property= "Background" Value="Transparent"/>
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </Button.ContentTemplate>
+                        </Button>
+                        <StackPanel HorizontalAlignment="Left" Height="71" VerticalAlignment="Top" Width="54"/>
+                        <Button x:Name="btnBaixarManualDisponiveis" Padding="0" BorderThickness="0" Cursor="Hand" ToolTip="Baixar manualmente selo(s) marcado(s)" RenderTransformOrigin="0.614,3.118" IsEnabled="True" Click="btnBaixarManualDisponiveis_Click" Height="71" VerticalAlignment="Top" HorizontalAlignment="Left" Width="101">
+                            <Button.Background>
+                                <ImageBrush/>
+                            </Button.Background>
+                            <Button.ContentTemplate>
+                                <DataTemplate>
+                                    <TextBlock Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="55" Width="76">
+                                        <TextBlock.Background>
+                                            <ImageBrush ImageSource="/Cs_Gerencial;component/Imagens/Baixar Manual.png"/>
+                                        </TextBlock.Background>
+                                        <TextBlock.Style>
+                                            <Style TargetType="{x:Type TextBlock}">
+                                                <Style.Triggers>
+                                                    <Trigger Property ="IsMouseOver" Value="True">
+                                                        <Setter Property= "Background" Value="Transparent"/>
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </Button.ContentTemplate>
+                        </Button>
+                        <StackPanel HorizontalAlignment="Left" Height="71" VerticalAlignment="Top" Width="54"/>
+                        <Button x:Name="btnLiberarSeloDisponiveis" Padding="0" BorderThickness="0" Cursor="Hand" ToolTip="Liberar selo(s) marcado(s)" RenderTransformOrigin="0.614,3.118" IsEnabled="True" Click="btnLiberarSeloDisponiveis_Click" Height="71" VerticalAlignment="Top" HorizontalAlignment="Left" Width="101">
+                            <Button.Background>
+                                <ImageBrush/>
+                            </Button.Background>
+                            <Button.ContentTemplate>
+                                <DataTemplate>
+                                    <TextBlock Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="55" Width="76">
+                                        <TextBlock.Background>
+                                            <ImageBrush ImageSource="/Cs_Gerencial;component/Imagens/Liberar Selo.png"/>
+                                        </TextBlock.Background>
+                                        <TextBlock.Style>
+                                            <Style TargetType="{x:Type TextBlock}">
+                                                <Style.Triggers>
+                                                    <Trigger Property ="IsMouseOver" Value="True">
+                                                        <Setter Property= "Background" Value="Transparent"/>
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </Button.ContentTemplate>
+                        </Button>
+                    </StackPanel>
+                    <Label Name="lblQtdMarcados" Content="Qtd Selos Marcados: 0" HorizontalAlignment="Left" Margin="1,248,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.763,0.077" Width="350" Foreground="#FFFF1010" FontWeight="Bold"/>
+                </Grid>
+
+
+            </TabItem>
+            <TabItem Header="Selos Encerrados" Name="tabItemSelosEncerrados">
+
+                <Grid Background="#FFE5E5E5" Margin="0,1,0,-1">
+                    <Rectangle Fill="#FFF4F4F5" Height="155" Stroke="Black" VerticalAlignment="Top" Margin="4,10,0,0" HorizontalAlignment="Left" Width="847"/>
+                    <DataGrid AutoGenerateColumns="False" Cursor="Hand" AlternationCount="2" RowBackground="White" AlternatingRowBackground="#FF8DE1FF" IsReadOnly="True" SelectionMode="Single" x:Name="dataGridSeriesIndisponiveis" AllowDrop="False" HeadersVisibility="All" CanUserResizeRows="False" SelectionUnit="FullRow" GridLinesVisibility="None" ClipboardCopyMode="ExcludeHeader" HorizontalScrollBarVisibility="Auto" UseLayoutRounding="True" Background="{x:Null}" IsTabStop="True"  Margin="7,12,512,0" Height="151" VerticalAlignment="Top" SelectionChanged="dataGridSeriesIndisponiveis_SelectionChanged">
+                        <DataGrid.CellStyle>
+                            <Style TargetType="{x:Type DataGridCell}">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="#FF0086FF" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.CellStyle>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id Série" Width="70" Binding="{Binding SerieId}" CanUserResize="False" Visibility="Visible"/>
+                            <DataGridTextColumn Header="Letra" Width="70" Binding="{Binding Letra}" CanUserResize="False"/>
+                            <DataGridTextColumn Header="Inicial" Width="90" Binding="{Binding Inicial, StringFormat=\{0:00000\}}" CanUserResize="False"/>
+                            <DataGridTextColumn Header="Final" Width="90" Binding="{Binding Final, StringFormat=\{0:00000\}}" CanUserResize="False"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <DataGrid AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" x:Name="dataGridSelosIndisponiveis" RowDetailsVisibilityMode="VisibleWhenSelected" AllowDrop="false" HeadersVisibility="All" CanUserResizeRows="False" SelectionUnit="FullRow" GridLinesVisibility="All" ClipboardCopyMode="ExcludeHeader" HorizontalScrollBarVisibility="Auto" UseLayoutRounding="True" Background="{x:Null}" IsTabStop="True"  Margin="4,274,0,10" IsReadOnly="True" SelectionMode="Single" BorderBrush="#FF466787" HorizontalAlignment="Left" Width="847" SelectionChanged="dataGridSelosIndisponiveis_SelectionChanged">
+                        <DataGrid.RowStyle>
+                            <Style TargetType="{x:Type DataGridRow}">
+                                <EventSetter Event="MouseDoubleClick" Handler="dataGridSelosIndisponiveis_MouseDoubleClick"/>
+                            </Style>
+                        </DataGrid.RowStyle>
+                        <DataGrid.CellStyle>
+                            <Style TargetType="{x:Type DataGridCell}">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="#FF0086FF" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.CellStyle>
+                        <DataGrid.Columns >
+                            <DataGridTemplateColumn CanUserResize="False" >
+                                <DataGridTemplateColumn.Header>
+                                    <CheckBox x:Name="checkTodosIndisponiveis" Checked="checkTodosIndisponiveis_Checked" Unchecked="checkTodosIndisponiveis_Unchecked" Cursor="Hand"/>
+                                </DataGridTemplateColumn.Header>
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <CheckBox x:Name="checkedUmIndisponiveis" Checked="checkedUmIndisponiveis_Checked" Unchecked="checkedUmIndisponiveis_Unchecked" HorizontalAlignment="Center" Cursor="Hand" VerticalAlignment="Center" IsChecked="{Binding Check, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn Header="Id Série" Width="70" Binding="{Binding SeloId}" CanUserResize="False" Visibility="Hidden" IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Número" Width="83" Binding="{Binding Numero, StringFormat=\{0:00000\}}" CanUserResize="False"  IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Aleatório" Width="83" Binding="{Binding Aleatorio}" CanUserResize="False"  IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Status" Width="150" Binding="{Binding Status}" CanUserResize="False"  IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Sistema" Width="150" Binding="{Binding Sistema}" CanUserResize="False"  IsReadOnly="True"/>
+                            <DataGridTextColumn Header="Natureza" Width="332" Binding="{Binding Natureza}" CanUserResize="False"  IsReadOnly="True"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <GroupBox Header="Série Indisponível Selecionada" Height="129" Margin="361,22,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="483">
+                        <Grid Margin="0,0,-2,-2">
+                            <Label Content="Letra:" HorizontalAlignment="Left" Margin="1,13,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.5" Height="33" Width="54" FontSize="18"/>
+                            <TextBox x:Name="txtSerieLetraIndisponiveis" HorizontalAlignment="Left" Height="33" Margin="60,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" FontSize="18" IsReadOnly="True" IsReadOnlyCaretVisible="True" Background="#FFD6F7F7"/>
+                            <Label Content="Inicial:" HorizontalAlignment="Left" Margin="157,13,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.5" Height="33" Width="59" FontSize="18"/>
+                            <TextBox x:Name="txtSerieInicialIndisponiveis" HorizontalAlignment="Left" Height="33" Margin="218,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" FontSize="18" IsReadOnly="True" IsReadOnlyCaretVisible="True" Background="#FFD6F7F7"/>
+                            <Label Content="Final:" HorizontalAlignment="Left" Margin="314,13,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.5" Height="33" Width="53" FontSize="18"/>
+                            <TextBox x:Name="txtSerieFinalIndisponiveis" HorizontalAlignment="Left" Height="33" Margin="372,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" FontSize="18" IsReadOnly="True" IsReadOnlyCaretVisible="True" Background="#FFD6F7F7"/>
+                            <Label Content="Qtd:" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.5" Height="33" Width="45" FontSize="18"/>
+                            <TextBox x:Name="txtSerieQtdIndisponiveis" HorizontalAlignment="Left" Height="33" Margin="60,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" FontSize="18" IsReadOnly="True" IsReadOnlyCaretVisible="True" Background="#FFD6F7F7"/>
+                            <Label Content="Utiliz.:" HorizontalAlignment="Left" Margin="157,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.5" Height="33" Width="59" FontSize="18"/>
+                            <TextBox x:Name="txtSerieUtilizadoIndisponiveis" HorizontalAlignment="Left" Height="33" Margin="218,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" FontSize="18" IsReadOnly="True" IsReadOnlyCaretVisible="True" Background="#FFD6F7F7"/>
+                            <Label Content="Livre:" HorizontalAlignment="Left" Margin="314,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.474,0.5" Height="33" Width="53" FontSize="18"/>
+                            <TextBox x:Name="txtSerieLivreIndisponiveis" HorizontalAlignment="Left" Height="33" Margin="372,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" FontSize="18" IsReadOnly="True" IsReadOnlyCaretVisible="True" Background="#FFD6F7F7"/>
+                        </Grid>
+                    </GroupBox>
+                    <Rectangle Fill="#FFB0B0B0" HorizontalAlignment="Left" Height="56" Margin="4,192,0,0" Stroke="Black" VerticalAlignment="Top" Width="188"/>
+                    <Label Content="Consultar Selo:" HorizontalAlignment="Left" Margin="1,169,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.763,0.077"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="16,216,0,0" TextWrapping="Wrap" CharacterCasing="Upper" MaxLength="4" x:Name="txtConsultaSerieIndisponiveis" VerticalAlignment="Top" Width="80" PreviewKeyDown="DigitarSomenteLetras" TextChanged="txtConsultaSerieIndisponiveis_TextChanged"/>
+                    <TextBox HorizontalAlignment="Left" Height="23" Margin="101,216,0,0" TextWrapping="Wrap" x:Name="txtConsultaNumeroIndisponiveis" MaxLength="5" VerticalAlignment="Top" Width="80" PreviewKeyDown="DigitarSomenteNumeros" TextChanged="txtConsultaNumeroIndisponiveis_TextChanged" IsEnabled="False"/>
+                    <Label Content="Série:" HorizontalAlignment="Left" Margin="13,192,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.763,0.077"/>
+                    <Label Content="Número:" HorizontalAlignment="Left" Margin="96,192,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.763,0.077"/>
+                    <Label Content=" Atualizar Dados" HorizontalAlignment="Left" Margin="407,248,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.763,0.077" Width="101"/>
+                    <Label Content="  Baixar Manual" HorizontalAlignment="Left" Margin="563,248,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.763,0.077" Width="101"/>
+                    <Label Content="    Liberar Selo" HorizontalAlignment="Left" Margin="719,248,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.763,0.077" Width="97"/>
+                    <StackPanel HorizontalAlignment="Left" Height="76" Margin="353,179,0,0" VerticalAlignment="Top" Width="498" Orientation="Horizontal">
+                        <StackPanel HorizontalAlignment="Left" Height="71" VerticalAlignment="Top" Width="54"/>
+                        <Button x:Name="btnAtualizarIndisponiveis" Padding="0" BorderThickness="0" Cursor="Hand" ToolTip="Atualizar Dados" RenderTransformOrigin="0.614,3.118" IsEnabled="True" Click="btnAtualizar_Click" Height="71" VerticalAlignment="Top" HorizontalAlignment="Left" Width="101">
+                            <Button.Background>
+                                <ImageBrush/>
+                            </Button.Background>
+                            <Button.ContentTemplate>
+                                <DataTemplate>
+                                    <TextBlock Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="52" Width="69">
+                                        <TextBlock.Background>
+                                            <ImageBrush ImageSource="/Cs_Gerencial;component/Imagens/Sincronizar.png"/>
+                                        </TextBlock.Background>
+                                        <TextBlock.Style>
+                                            <Style TargetType="{x:Type TextBlock}">
+                                                <Style.Triggers>
+                                                    <Trigger Property ="IsMouseOver" Value="True">
+                                                        <Setter Property= "Background" Value="Transparent"/>
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </Button.ContentTemplate>
+                        </Button>
+                        <StackPanel HorizontalAlignment="Left" Height="71" VerticalAlignment="Top" Width="54"/>
+                        <Button x:Name="btnBaixarManualIndisponiveis" IsEnabled="False" Padding="0" BorderThickness="0" Cursor="Hand" ToolTip="Baixar manualmente selo(s) marcado(s)" RenderTransformOrigin="0.614,3.118" Height="71" VerticalAlignment="Top" HorizontalAlignment="Left" Width="101">
+                            <Button.Background>
+                                <ImageBrush/>
+                            </Button.Background>
+                            <Button.ContentTemplate>
+                                <DataTemplate>
+                                    <TextBlock Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="55" Width="76">
+                                        <TextBlock.Background>
+                                            <ImageBrush ImageSource="/Cs_Gerencial;component/Imagens/Baixar Manual.png"/>
+                                        </TextBlock.Background>
+                                        <TextBlock.Style>
+                                            <Style TargetType="{x:Type TextBlock}">
+                                                <Style.Triggers>
+                                                    <Trigger Property ="IsMouseOver" Value="True">
+                                                        <Setter Property= "Background" Value="Transparent"/>
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </Button.ContentTemplate>
+                        </Button>
+                        <StackPanel HorizontalAlignment="Left" Height="71" VerticalAlignment="Top" Width="54"/>
+                        <Button x:Name="btnLiberarSeloIndisponiveis" Padding="0" BorderThickness="0" Cursor="Hand" ToolTip="Liberar selo(s) marcado(s)" RenderTransformOrigin="0.614,3.118" IsEnabled="True" Click="btnLiberarSeloIndisponiveis_Click" Height="71" VerticalAlignment="Top" HorizontalAlignment="Left" Width="101">
+                            <Button.Background>
+                                <ImageBrush/>
+                            </Button.Background>
+                            <Button.ContentTemplate>
+                                <DataTemplate>
+                                    <TextBlock Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="55" Width="76">
+                                        <TextBlock.Background>
+                                            <ImageBrush ImageSource="/Cs_Gerencial;component/Imagens/Liberar Selo.png"/>
+                                        </TextBlock.Background>
+                                        <TextBlock.Style>
+                                            <Style TargetType="{x:Type TextBlock}">
+                                                <Style.Triggers>
+                                                    <Trigger Property ="IsMouseOver" Value="True">
+                                                        <Setter Property= "Background" Value="Transparent"/>
+                                                    </Trigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                </DataTemplate>
+                            </Button.ContentTemplate>
+                        </Button>
+                    </StackPanel>
+                    <Label x:Name="lblQtdMarcadosIndisponiveis" Content="Qtd Selos Marcados: 0" HorizontalAlignment="Left" Margin="1,248,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.763,0.077" Width="350" Foreground="#FFFF1010" FontWeight="Bold"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Selos Não Importados" Name="tabItemNaoImportarSelos">
+                <Grid Background="#FFE5E5E5" Margin="0,4,0,-4">
+                    <ListView Height="188" VerticalAlignment="Top" Name="listView"  SelectionChanged="listView_SelectionChanged" Background="White">
+                        <ListView.Resources>
+                            <ControlTemplate x:Key="SelectedTemplate" TargetType="ListViewItem">
+                                <Border Background="#388095" Cursor="Hand" >
+                                    <TextBlock Text="{Binding Name}" Margin="5" />
+                                </Border>
+                            </ControlTemplate>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="ListViewItem">
+                                            <Border Background="#DCE3E5" Cursor="Hand"  >
+                                                <TextBlock Text="{Binding Name}" Margin="5" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="IsSelected" Value="true" />
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Template" Value="{StaticResource SelectedTemplate}" />
+                                    </MultiTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </ListView.Resources>
+                        <ListView.ContextMenu>
+                            <ContextMenu Name="MenuMoverImportados">
+                                <MenuItem Header="Mover para Selos Importados" Name="moverImportados" Click="moverImportados_Click" Command="{Binding Path=DataContext.MoreInfo, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ListView}}" Background="WhiteSmoke" />
+                            </ContextMenu>
+                        </ListView.ContextMenu>
+                    </ListView>
+                    <GroupBox Header="Solicitante" Margin="10,193,10,0" Height="94" VerticalAlignment="Top">
+                        <Grid Margin="0,0,-2,-12">
+                            <Label x:Name="lblNomeSolicitante" Content="Nome Solicitante: " HorizontalAlignment="Left" Margin="89,4,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblCpfSolicitante" Content="CPF Solicitante: " HorizontalAlignment="Left" Margin="102,35,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblNomeSolicitanteValor" Content="" HorizontalAlignment="Left" Margin="212,4,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblCpfSolicitanteValor" Content="" HorizontalAlignment="Left" Margin="215,35,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblGrerj" Content="Nº da Grerj: " HorizontalAlignment="Left" Margin="506,35,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblGrerjValor" Content="" HorizontalAlignment="Left" Margin="597,35,0,0" VerticalAlignment="Top" FontSize="14"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Pedido" Margin="10,283,10,0" Height="94" VerticalAlignment="Top">
+                        <Grid Margin="0,0,-2,-12">
+                            <Label x:Name="lblDataPedido" Content="Data do Pedido: " HorizontalAlignment="Left" Margin="91,5,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblDataGeracao" Content="Data da Geração: " HorizontalAlignment="Left" Margin="85,36,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblDataPedidoValor" Content="" HorizontalAlignment="Left" Margin="203,5,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblDataGeracaoValor" Content="" HorizontalAlignment="Left" Margin="203,36,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblCodigoServico" Content="Código Serviço: " HorizontalAlignment="Left" Margin="481,5,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblId" Content="Id do Pedido: " HorizontalAlignment="Left" Margin="493,36,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblCodigoServicoValor" Content="" HorizontalAlignment="Left" Margin="593,5,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblIdValor" Content="" HorizontalAlignment="Left" Margin="593,36,0,0" VerticalAlignment="Top" FontSize="14"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Série e Selos" Margin="10,373,10,0" Height="94" VerticalAlignment="Top">
+                        <Grid Margin="0,0,-2,-12">
+                            <Label x:Name="lblSerie" Content="Série: " HorizontalAlignment="Left" Margin="151,2,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="0.809,0.552"/>
+                            <Label x:Name="lblQuantidade" Content="Quantidade: " HorizontalAlignment="Left" Margin="109,31,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblSerieValor" Content="" HorizontalAlignment="Left" Margin="203,2,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblQuantidadeValor" Content="" HorizontalAlignment="Left" Margin="203,31,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblSeloInicial" Content="Selo Inical: " HorizontalAlignment="Left" Margin="513,2,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblSeloFinal" Content="Selo Final: " HorizontalAlignment="Left" Margin="516,31,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblSeloInicialValor" Content="" HorizontalAlignment="Left" Margin="592,2,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblSeloFinalValor" Content="" HorizontalAlignment="Left" Margin="592,31,0,0" VerticalAlignment="Top" FontSize="14"/>
+                        </Grid>
+                    </GroupBox>
+                    <Button x:Name="btnImportar" Padding="0" BorderThickness="0" Cursor="Hand" ToolTip="Importar Selos do arquivo selecionado" Margin="740,475,10,7" RenderTransformOrigin="0.614,3.118" IsEnabled="False" Click="btnImportar_Click">
+                        <Button.Background>
+                            <ImageBrush/>
+                        </Button.Background>
+                        <Button.ContentTemplate>
+                            <DataTemplate>
+                                <TextBlock Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="75" Width="94">
+                                    <TextBlock.Background>
+                                        <ImageBrush ImageSource="/Cs_Gerencial;component/Imagens/Importar.png"/>
+                                    </TextBlock.Background>
+                                    <TextBlock.Style>
+                                        <Style TargetType="{x:Type TextBlock}">
+                                            <Style.Triggers>
+                                                <Trigger Property ="IsMouseOver" Value="True">
+                                                    <Setter Property= "Background" Value="Transparent"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </DataTemplate>
+                        </Button.ContentTemplate>
+                    </Button>
+                    <Label x:Name="lblQuantidade_Copy" Content="Importar Arquivo Selecionado:" Margin="529,504,125,0" FontSize="14" Height="29" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Selos Importados" Name="tabItemImportarSelos">
+                <Grid Background="#FFE5E5E5" Margin="0,4,0,-4">
+                    <ListView VerticalAlignment="Top" Name="listViewImportados" Background="White" SelectionChanged="listViewImportados_SelectionChanged" Height="188">
+                        <ListView.Resources>
+                            <ControlTemplate x:Key="SelectedTemplate" TargetType="ListViewItem">
+                                <Border Background="#388095" Cursor="Hand" >
+                                    <TextBlock Text="{Binding Name}" Margin="5" />
+                                </Border>
+                            </ControlTemplate>
+                            <Style TargetType="ListViewItem">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="ListViewItem">
+                                            <Border Background="#DCE3E5" Cursor="Hand"  >
+                                                <TextBlock Text="{Binding Name}" Margin="5" />
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <MultiTrigger>
+                                        <MultiTrigger.Conditions>
+                                            <Condition Property="IsSelected" Value="true" />
+                                        </MultiTrigger.Conditions>
+                                        <Setter Property="Template" Value="{StaticResource SelectedTemplate}" />
+                                    </MultiTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </ListView.Resources>
+                        <ListView.ContextMenu>
+                            <ContextMenu Name="MenuMoverNaoImportados">
+                                <MenuItem Header="Mover para Selos Não Importados" Name="moverNaoImportados" Click="moverNaoImportados_Click" Command="{Binding Path=DataContext.MoreInfo, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ListView}}" Background="WhiteSmoke" />
+                            </ContextMenu>
+                        </ListView.ContextMenu>
+                    </ListView>
+                    <GroupBox Header="Solicitante" Margin="10,193,10,0" Height="94" VerticalAlignment="Top">
+                        <Grid Margin="0,0,-2,-12">
+                            <Label x:Name="lblNomeSolicitante1" Content="Nome Solicitante: " HorizontalAlignment="Left" Margin="89,4,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblCpfSolicitante1" Content="CPF Solicitante: " HorizontalAlignment="Left" Margin="102,35,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblNomeSolicitanteValor1" Content="" HorizontalAlignment="Left" Margin="212,4,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblCpfSolicitanteValor1" Content="" HorizontalAlignment="Left" Margin="215,35,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblGrerj1" Content="Nº da Grerj: " HorizontalAlignment="Left" Margin="506,35,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblGrerjValor1" Content="" HorizontalAlignment="Left" Margin="597,35,0,0" VerticalAlignment="Top" FontSize="14"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Pedido" Margin="10,283,10,0" Height="94" VerticalAlignment="Top">
+                        <Grid Margin="0,0,-2,-12">
+                            <Label x:Name="lblDataPedido1" Content="Data do Pedido: " HorizontalAlignment="Left" Margin="91,5,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblDataGeracao1" Content="Data da Geração: " HorizontalAlignment="Left" Margin="85,36,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblDataPedidoValor1" Content="" HorizontalAlignment="Left" Margin="203,5,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblDataGeracaoValor1" Content="" HorizontalAlignment="Left" Margin="203,36,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblCodigoServico1" Content="Código Serviço: " HorizontalAlignment="Left" Margin="481,5,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblId1" Content="Id do Pedido: " HorizontalAlignment="Left" Margin="493,36,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblCodigoServicoValor1" Content="" HorizontalAlignment="Left" Margin="593,5,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblIdValor1" Content="" HorizontalAlignment="Left" Margin="593,36,0,0" VerticalAlignment="Top" FontSize="14"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Série e Selos" Margin="10,373,10,0" Height="94" VerticalAlignment="Top">
+                        <Grid Margin="0,0,-2,-12">
+                            <Label x:Name="lblSerie1" Content="Série: " HorizontalAlignment="Left" Margin="151,2,0,0" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="0.809,0.552"/>
+                            <Label x:Name="lblQuantidade1" Content="Quantidade: " HorizontalAlignment="Left" Margin="109,31,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblSerieValor1" Content="" HorizontalAlignment="Left" Margin="203,2,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblQuantidadeValor1" Content="" HorizontalAlignment="Left" Margin="203,31,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblSeloInicial1" Content="Selo Inical: " HorizontalAlignment="Left" Margin="513,2,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblSeloFinal1" Content="Selo Final: " HorizontalAlignment="Left" Margin="516,31,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblSeloInicialValor1" Content="" HorizontalAlignment="Left" Margin="592,2,0,0" VerticalAlignment="Top" FontSize="14"/>
+                            <Label x:Name="lblSeloFinalValor1" Content="" HorizontalAlignment="Left" Margin="592,31,0,0" VerticalAlignment="Top" FontSize="14"/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Histórico de Selos Comprados" Name="tabItemHistorico">
+                <Grid Background="#FFE5E5E5" Margin="0,4,0,-4">
+                    <DataGrid AutoGenerateColumns="False" Cursor="Hand" AlternationCount="2" RowBackground="White" AlternatingRowBackground="#FF8DE1FF" IsReadOnly="True" SelectionMode="Single" x:Name="dataGridHistorico" AllowDrop="False" HeadersVisibility="All" CanUserResizeRows="False" SelectionUnit="FullRow" GridLinesVisibility="None" ClipboardCopyMode="ExcludeHeader" HorizontalScrollBarVisibility="Auto" UseLayoutRounding="True" Background="{x:Null}" IsTabStop="True" Height="450" VerticalAlignment="Top" SelectionChanged="dataGridHistorico_SelectionChanged">
+                        <DataGrid.CellStyle>
+                            <Style TargetType="{x:Type DataGridCell}">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Background" Value="#FF0086FF" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DataGrid.CellStyle>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id Pedido" Width="80" Binding="{Binding PedidoId}" CanUserResize="False" Visibility="Visible"/>
+                            <DataGridTextColumn Header="Data Pedido" Width="80" Binding="{Binding DataPedido, StringFormat='dd/MM/yyyy'}" CanUserResize="False"/>
+                            <DataGridTextColumn Header="Hora" Width="40" Binding="{Binding HoraPedido}" CanUserResize="False"/>
+                            <DataGridTextColumn Header="Grerj" Width="100" Binding="{Binding Grerj}" CanUserResize="False"/>
+                            <DataGridTextColumn Header="Solicitante" Width="300" Binding="{Binding NomeSolicitante}" CanUserResize="False"/>
+                            <DataGridTextColumn Header="Arquivo" Width="220" Binding="{Binding Arquivo}" CanUserResize="False"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Rectangle Fill="#FFF4F4F5" Height="89" Margin="10,458,0,0" Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Left" Width="833"/>
+                    <ListView ItemsSource="{Binding}" Name="listViewSeries" Height="72" Margin="20,467,0,0" VerticalAlignment="Top" FontSize="18" Foreground="#FF000104" BorderBrush="#FF1264F7" HorizontalAlignment="Left" Width="812" VerticalContentAlignment="Stretch" Grid.IsSharedSizeScope="True">
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="{x:Type ListViewItem}">
+                                <Style.Triggers>
+                                    <Trigger Property="IsSelected" Value="true">
+                                        <Setter Property="Background" >
+                                            <Setter.Value>
+                                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                    <GradientStop Color="White" Offset="0"/>
+                                                    <GradientStop Color="#FF1E88D1" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+                        <ListView.View>
+                           
+                            <GridView >
+
+                                <GridViewColumn Header="Id Série" Width="160">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding SerieId}" TextAlignment="Center" Width="160"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Letra" Width="160" >
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Letra}" TextAlignment="Center" Width="160"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>                                
+                                <GridViewColumn Header="Número Inicial" Width="160"> 
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Inicial}" TextAlignment="Center" Width="160"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Número Final" Width="160">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Final}" TextAlignment="Center" Width="160"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="Quantidade" Width="160">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Quantidade}" TextAlignment="Center" Width="160"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                
+                            </GridView>
+
+                        </ListView.View>
+                    </ListView>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+        
+    </Grid>
+</Window>
+
+

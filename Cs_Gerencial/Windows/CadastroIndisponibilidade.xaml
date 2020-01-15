@@ -1,0 +1,180 @@
+﻿<Window x:Class="Cs_Gerencial.Windows.CadastroIndisponibilidade"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Indisponibilidade" Height="562.745" Width="819.757" Icon="/Cs_Gerencial;component/Imagens/Gerencial.ico" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" ShowInTaskbar="False" Loaded="Window_Loaded">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFFFDEB6" Offset="0"/>
+            <GradientStop Color="#FFFBFBFB" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <StackPanel Height="76" VerticalAlignment="Top" Background="#FF4F4F4F" Orientation="Horizontal" HorizontalAlignment="Left" Width="814">
+            <StackPanel Width="599" Orientation="Horizontal">
+                <StackPanel Width="68">
+                    <Button x:Name="btnAdicionar" Padding="0" BorderThickness="0" Cursor="Hand" ToolTip="Adicionar Registro" Height="55" HorizontalAlignment="Left" Width="66" Click="btnAdicionar_Click">
+                        <Button.Background>
+                            <ImageBrush/>
+                        </Button.Background>
+                        <Button.ContentTemplate>
+                            <DataTemplate>
+                                <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="45" Width="62">
+                                    <TextBlock.Background>
+                                        <ImageBrush ImageSource="/Cs_Gerencial;component/Imagens/AdicionarUsuario.png"/>
+                                    </TextBlock.Background>
+                                    <TextBlock.Style>
+                                        <Style TargetType="{x:Type TextBlock}">
+                                            <Style.Triggers>
+                                                <Trigger Property ="IsMouseOver" Value="True">
+                                                    <Setter Property= "Background" Value="Transparent"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </DataTemplate>
+                        </Button.ContentTemplate>
+                    </Button>
+                    <Label Content="Adicionar" Foreground="#FFF1BF77" VerticalAlignment="Stretch" Height="30" HorizontalAlignment="Center" Width="65" Margin="1,0,2,0"/>
+                </StackPanel>
+                <StackPanel Width="68">
+                    <Button x:Name="btnAlterar" Padding="0" BorderThickness="0" Cursor="Hand" ToolTip="Alterar Registro" Height="55" HorizontalAlignment="Left" Width="66" Click="btnAlterar_Click">
+                        <Button.Background>
+                            <ImageBrush/>
+                        </Button.Background>
+                        <Button.ContentTemplate>
+                            <DataTemplate>
+                                <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="45" Width="62">
+                                    <TextBlock.Background>
+                                        <ImageBrush ImageSource="/Cs_Gerencial;component/Imagens/AlterarUsuario.png"/>
+                                    </TextBlock.Background>
+                                    <TextBlock.Style>
+                                        <Style TargetType="{x:Type TextBlock}">
+                                            <Style.Triggers>
+                                                <Trigger Property ="IsMouseOver" Value="True">
+                                                    <Setter Property= "Background" Value="Transparent"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </DataTemplate>
+                        </Button.ContentTemplate>
+                    </Button>
+                    <Label Content="   Alterar" Foreground="#FFF1BF77" VerticalAlignment="Center" Height="30" HorizontalAlignment="Center" Width="65" Margin="1,0,2,0"/>
+                </StackPanel>
+                <StackPanel Width="68">
+                    <Button x:Name="btnExcluir" Padding="0" BorderThickness="0" Cursor="Hand" ToolTip="Excluir Registro" Height="55" HorizontalAlignment="Left" Width="66" Click="btnExcluir_Click">
+                        <Button.Background>
+                            <ImageBrush/>
+                        </Button.Background>
+                        <Button.ContentTemplate>
+                            <DataTemplate>
+                                <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="45" Width="62">
+                                    <TextBlock.Background>
+                                        <ImageBrush ImageSource="/Cs_Gerencial;component/Imagens/ExcluirUsuario.png"/>
+                                    </TextBlock.Background>
+                                    <TextBlock.Style>
+                                        <Style TargetType="{x:Type TextBlock}">
+                                            <Style.Triggers>
+                                                <Trigger Property ="IsMouseOver" Value="True">
+                                                    <Setter Property= "Background" Value="Transparent"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </DataTemplate>
+                        </Button.ContentTemplate>
+                    </Button>
+                    <Label Content="   Excluir" Foreground="#FFF1BF77" VerticalAlignment="Center" Height="30" HorizontalAlignment="Center" Width="65" Margin="1,0,2,0"/>
+                </StackPanel>
+                <StackPanel Width="12"/>
+                <StackPanel Width="113">
+                    <StackPanel Height="27"/>
+                    <ComboBox Margin="0,0,10,0" Name="cmbTipoConsulta" SelectionChanged="cmbTipoConsulta_SelectionChanged" Background="White">
+                    </ComboBox>
+                </StackPanel>
+                <StackPanel Width="267">
+
+                    <TextBox Name="txtConsulta" Height="23" TextWrapping="Wrap" Text="" Margin="0,26,10,26" TextChanged="txtConsulta_TextChanged" CharacterCasing="Upper" PreviewKeyDown="txtConsulta_PreviewKeyDown"/>
+                </StackPanel>
+
+            </StackPanel>
+            <StackPanel Width="218" Orientation="Horizontal">
+                <Label Content="Importar Arquivo:" Width="120" Foreground="#FFF1BF77" FontSize="14" VerticalAlignment="Center" Margin="0,24"/>
+                <Button x:Name="btnImportar" Margin="0,0,0,1" Padding="0" BorderThickness="0" Cursor="Hand" Width="85" Click="btnImportar_Click" ToolTip="Localizar o arquivo do Cenib para Importação">
+                    <Button.Background>
+                        <ImageBrush/>
+                    </Button.Background>
+                    <Button.ContentTemplate>
+                        <DataTemplate>
+                            <TextBlock  Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="0" Padding="0" Height="64" Width="75">
+                                <TextBlock.Background>
+                                    <ImageBrush ImageSource="/Cs_Gerencial;component/Imagens/UpdateIndisponibilidade.png"/>
+                                </TextBlock.Background>
+                                <TextBlock.Style>
+                                    <Style TargetType="{x:Type TextBlock}">
+                                        <Style.Triggers>
+                                            <Trigger Property ="IsMouseOver" Value="True">
+                                                <Setter Property= "Background" Value="Transparent"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                        </DataTemplate>
+                    </Button.ContentTemplate>
+                </Button>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Margin="0,507,0,0" Background="#FF4F4F4F"/>
+        <DataGrid AutoGenerateColumns="False" AlternationCount="2" RowBackground="White" AlternatingRowBackground="#FF8DE1FF" IsReadOnly="True" SelectionMode="Single" x:Name="dataGrid1" AllowDrop="False" HeadersVisibility="All" CanUserResizeRows="False" SelectionUnit="FullRow" GridLinesVisibility="None" ClipboardCopyMode="ExcludeHeader" HorizontalScrollBarVisibility="Auto" UseLayoutRounding="True" Height="404" VerticalAlignment="Top" Background="{x:Null}" IsTabStop="True" Margin="0,103,0,0" >
+            <DataGrid.RowStyle>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <EventSetter Event="MouseDoubleClick" Handler="dataGrid1_MouseDoubleClick"/>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.CellStyle>
+                <Style TargetType="{x:Type DataGridCell}">
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#FF0086FF" />
+                        </Trigger>
+                    </Style.Triggers>                    
+                </Style>
+            </DataGrid.CellStyle>
+            <DataGrid.ContextMenu>
+                <ContextMenu Selector.IsSelected="True" ForceCursor="True" Name="menu">
+                    <MenuItem Header="Adicionar" Name="MenuItemNovo" Cursor="Hand" Click="btnAdicionar_Click" Background="#FF4F4F4F" BorderBrush="White" Foreground="#FFF1BF77">
+                        <MenuItem.Icon>
+                            <Image Source="/Cs_Gerencial;component/Imagens/AdicionarUsuarioPequeno.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Alterar" Name="MenuItemAlterar" Cursor="Hand" Click="btnAlterar_Click" Background="#FF4F4F4F" BorderBrush="White" Foreground="#FFF1BF77">
+                        <MenuItem.Icon>
+                            <Image Source="/Cs_Gerencial;component/Imagens/UsuarioAlterarPequeno.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Excluir" Name="MenuItemExcluir" Cursor="Hand" Click="btnExcluir_Click" Background="#FF4F4F4F" BorderBrush="White" Foreground="#FFF1BF77">
+                        <MenuItem.Icon>
+                            <Image Source="/Cs_Gerencial;component/Imagens/UsuarioExcluirPequeno.png" />
+                        </MenuItem.Icon>
+                    </MenuItem> 
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Ato" Width="50" Binding="{Binding IndisponibilidadeId}" CanUserResize="False" Visibility="Hidden"/>
+                <DataGridTextColumn Header="NOME" Width="280" Binding="{Binding NomeIndividuo}" CanUserResize="False"/>                
+                <DataGridTextColumn Header="CPF/CNPJ" Width="150" Binding="{Binding CpfCnpj}" CanUserResize="False" x:Name="colCpfCnpj"/>
+                <DataGridTextColumn Header="Cancel." Width="50" Binding="{Binding Cancelado}" CanUserResize="False" Foreground="#FFB40000"/>
+                <DataGridTextColumn Header="PROTOCOLO" Width="200" Binding="{Binding Protocolo}" CanUserResize="False" x:Name="colProtocolo"/>
+                <DataGridTextColumn Header="DATA PEDIDO" Width="115" Binding="{Binding DataPedido, StringFormat=dd/MM/yyyy}" CanUserResize="False"/>
+                
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Name="lblQtdRegistros" Content="Label" HorizontalAlignment="Left" Margin="0,77,0,0" VerticalAlignment="Top" Width="367"/>
+    </Grid>
+    
+</Window>
+    
